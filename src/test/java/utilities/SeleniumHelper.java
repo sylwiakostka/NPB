@@ -29,17 +29,20 @@ public class SeleniumHelper {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-//    public void waitForListOfElements(List<WebElement> elementList) {
-//        FluentWait<WebDriver> wait = new FluentWait<>(driver);
-//        wait.withTimeout(Duration.ofSeconds(15))
-//                .pollingEvery(Duration.ofMillis(1000))
-//                .ignoring(NoSuchElementException.class);
-//        wait.until(new Function<WebDriver, WebElement>() {
-//            public WebElement apply(WebDriver driver) {
-//                elementList.size()>0;
-
-
+    public void waitForListOfElements(List<WebElement> elementList) {
+        FluentWait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(15))
+                .pollingEvery(Duration.ofMillis(1000))
+                .ignoring(NoSuchElementException.class);
+        wait.until(new Function<WebDriver, WebElement>() {
+                       public WebElement apply(WebDriver driver) {
+                           if (elementList.size() > 0) {
+                               return (WebElement) elementList;
+                           }
+                           return null;
+                       }
+                   }
+        );
+    }
 }
-
-
 

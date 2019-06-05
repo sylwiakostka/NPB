@@ -16,7 +16,7 @@ public class BaseTest {
 
     @BeforeTest
     public void setUp() throws NowSuchDriverException {
-        driver = DriverFactory.getDriver(DriverType.IE);
+        driver = DriverFactory.getDriver(DriverType.CHROME);
         String startUrl = "https://phptravels.com/demo/";
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.navigate().to(startUrl);
