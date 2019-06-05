@@ -22,12 +22,12 @@ public class BaseTest {
         driver.navigate().to(startUrl);
     }
 
-    @AfterTest
-    public void quit() {
-        if (null != driver) {
-            driver.quit();
-        }
-    }
+//    @AfterTest
+//    public void quit() {
+//        if (null != driver) {
+//            driver.quit();
+//        }
+//    }
 
 
 }

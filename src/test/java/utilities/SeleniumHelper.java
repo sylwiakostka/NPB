@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
@@ -13,36 +14,23 @@ import java.util.function.Function;
 
 public class SeleniumHelper {
 
-    private WebDriver driver;
+    private static WebDriver driver;
 
     public SeleniumHelper(WebDriver driver) {
         this.driver = driver;
     }
 
 
-    @Step
-    public void waitForElementToBeDisplayed(WebElement element) {
-        FluentWait<WebDriver> wait = new FluentWait<>(driver);
-        wait.withTimeout(Duration.ofSeconds(15))
-                .pollingEvery(Duration.ofMillis(1000))
-                .ignoring(NoSuchElementException.class);
+    static final int WAIT_TIMEOUT = 10;
+    private static WebDriverWait wait = new WebDriverWait(driver, WAIT_TIMEOUT);
+
+    public static void waitForVisibilityOfElement(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void waitForListOfElements(List<WebElement> elementList) {
-        FluentWait<WebDriver> wait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(15))
-                .pollingEvery(Duration.ofMillis(1000))
-                .ignoring(NoSuchElementException.class);
-        wait.until(new Function<WebDriver, WebElement>() {
-                       public WebElement apply(WebDriver driver) {
-                           if (elementList.size() > 0) {
-                               return (WebElement) elementList;
-                           }
-                           return null;
-                       }
-                   }
-        );
+    public static void waitForElementToBeClickable(WebElement element) {
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+
     }
 }
 
