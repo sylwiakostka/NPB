@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomePageTests.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HomePageTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/HomePageTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="415">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,13 +36,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/congif/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="415">
               <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriverFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/utilities/DriverFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+              <folding>
+                <element signature="e#2217#2218#0" expanded="true" />
+                <element signature="e#2238#2239#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,7 +82,6 @@
         <option value="$PROJECT_DIR$/src/test/java/utilities/Utilities.java" />
         <option value="$PROJECT_DIR$/src/test/java/utilities/DriverType.java" />
         <option value="$PROJECT_DIR$/src/test/java/utilities/NowSuchDriverException.java" />
-        <option value="$PROJECT_DIR$/src/test/java/utilities/DriverFactory.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/utilities/SeleniumHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/BasePage.java" />
@@ -78,6 +90,7 @@
         <option value="$PROJECT_DIR$/src/test/java/pages/HomePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/HomePageTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/congif/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/utilities/DriverFactory.java" />
       </list>
     </option>
   </component>
@@ -422,9 +435,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HomePageTests_shouldCantLogIn - 2019.06.06 at 13h 41m 06s.xml">
-      <configuration name="HomePageTests.shouldCantLogIn" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="HomePageTests_shouldLogIn - 2019.06.06 at 13h 44m 52s.xml">
       <configuration name="HomePageTests.shouldLogIn" configurationId="TestNG" />
     </history-entry>
@@ -450,6 +460,9 @@
       <configuration name="HomePageTests" configurationId="TestNG" />
     </history-entry>
     <history-entry file="HomePageTests - 2019.06.06 at 14h 10m 12s.xml">
+      <configuration name="HomePageTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageTests - 2019.06.06 at 14h 12m 21s.xml">
       <configuration name="HomePageTests" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -490,7 +503,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -670,13 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/utilities/DriverFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/utilities/DriverType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -774,20 +780,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/HomePageTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/congif/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="415">
+          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/congif/BaseTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/utilities/DriverFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="e#2217#2218#0" expanded="true" />
+            <element signature="e#2238#2239#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/HomePageTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
-          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
