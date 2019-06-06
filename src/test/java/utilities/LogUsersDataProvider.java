@@ -6,7 +6,7 @@ public class LogUsersDataProvider {
 
     @DataProvider(name = "correctData")
     public Object[][] correctData() {
-        return new Object[][]{{"sylwia", "123456789"}};
+        return new Object[][]{{"sylwi", "123456789"}};
     }
 
     @DataProvider(name = "incorrectData")

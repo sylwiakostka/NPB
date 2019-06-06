@@ -1,6 +1,5 @@
 package tests;
 
-import congif.BaseTest;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
 import pages.HomePage;
