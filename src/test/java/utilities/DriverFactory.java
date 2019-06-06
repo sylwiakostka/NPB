@@ -56,4 +56,8 @@ public class DriverFactory {
 
         }
     }
+
+    public static void resetDriver() {
+        driver = null;
+    }
 }

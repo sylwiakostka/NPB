@@ -15,8 +15,8 @@
       <file leaf-file-name="HomePageTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/HomePageTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="449">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -24,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pages/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            <state relative-caret-position="427">
+              <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,23 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasePage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pages/BasePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/congif/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            <state relative-caret-position="415">
+              <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,11 +71,13 @@
         <option value="$PROJECT_DIR$/src/test/java/utilities/NowSuchDriverException.java" />
         <option value="$PROJECT_DIR$/src/test/java/utilities/DriverFactory.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/congif/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/utilities/SeleniumHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pages/HomePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/BasePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/utilities/LogInUsersDataProvider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pages/PartnerChosePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pages/HomePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/HomePageTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/congif/BaseTest.java" />
       </list>
     </option>
   </component>
@@ -263,6 +253,93 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="HomePageTests.shouldCantLogIn" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ExerciseTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.HomePageTests" />
+      <option name="METHOD_NAME" value="shouldCantLogIn" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="HomePageTests.shouldLogIn" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ExerciseTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.HomePageTests" />
+      <option name="METHOD_NAME" value="shouldLogIn" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="HomePageTests.shouldNotLogIn" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ExerciseTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.HomePageTests" />
+      <option name="METHOD_NAME" value="shouldNotLogIn" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
     <configuration name="HomePageTests.shouldOpenHomePage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NPB" />
       <extension name="coverage">
@@ -317,10 +394,16 @@
     <list>
       <item itemvalue="TestNG.HomePageTests" />
       <item itemvalue="TestNG.HomePageTests.shouldOpenHomePage" />
+      <item itemvalue="TestNG.HomePageTests.shouldCantLogIn" />
+      <item itemvalue="TestNG.HomePageTests.shouldLogIn" />
+      <item itemvalue="TestNG.HomePageTests.shouldNotLogIn" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.HomePageTests" />
+        <item itemvalue="TestNG.HomePageTests.shouldNotLogIn" />
+        <item itemvalue="TestNG.HomePageTests.shouldCantLogIn" />
+        <item itemvalue="TestNG.HomePageTests.shouldLogIn" />
         <item itemvalue="TestNG.HomePageTests.shouldOpenHomePage" />
       </list>
     </recent_temporary>
@@ -339,34 +422,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HomePageTests - 2019.06.06 at 09h 40m 54s.xml">
+    <history-entry file="HomePageTests_shouldCantLogIn - 2019.06.06 at 13h 41m 06s.xml">
+      <configuration name="HomePageTests.shouldCantLogIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageTests_shouldLogIn - 2019.06.06 at 13h 44m 52s.xml">
+      <configuration name="HomePageTests.shouldLogIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageTests_shouldLogIn - 2019.06.06 at 13h 47m 05s.xml">
+      <configuration name="HomePageTests.shouldLogIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageTests_shouldLogIn - 2019.06.06 at 13h 47m 35s.xml">
+      <configuration name="HomePageTests.shouldLogIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageTests_shouldLogIn - 2019.06.06 at 13h 51m 42s.xml">
+      <configuration name="HomePageTests.shouldLogIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageTests_shouldCantLogIn - 2019.06.06 at 13h 55m 57s.xml">
+      <configuration name="HomePageTests.shouldCantLogIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageTests_shouldCantLogIn - 2019.06.06 at 14h 07m 39s.xml">
+      <configuration name="HomePageTests.shouldCantLogIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageTests_shouldNotLogIn - 2019.06.06 at 14h 08m 33s.xml">
+      <configuration name="HomePageTests.shouldNotLogIn" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageTests - 2019.06.06 at 14h 09m 12s.xml">
       <configuration name="HomePageTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HomePageTests - 2019.06.06 at 09h 42m 05s.xml">
-      <configuration name="HomePageTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HomePageTests - 2019.06.06 at 09h 44m 07s.xml">
-      <configuration name="HomePageTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HomePageTests - 2019.06.06 at 10h 12m 55s.xml">
-      <configuration name="HomePageTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HomePageTests - 2019.06.06 at 10h 15m 19s.xml">
-      <configuration name="HomePageTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HomePageTests - 2019.06.06 at 10h 25m 09s.xml">
-      <configuration name="HomePageTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HomePageTests - 2019.06.06 at 10h 26m 29s.xml">
-      <configuration name="HomePageTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HomePageTests - 2019.06.06 at 10h 46m 04s.xml">
-      <configuration name="HomePageTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HomePageTests - 2019.06.06 at 10h 51m 04s.xml">
-      <configuration name="HomePageTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HomePageTests - 2019.06.06 at 10h 51m 37s.xml">
+    <history-entry file="HomePageTests - 2019.06.06 at 14h 10m 12s.xml">
       <configuration name="HomePageTests" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -383,11 +466,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29726368" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29726368" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2328581" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2328581" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -407,24 +490,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/utilities/SeleniumHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/LogInPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testng.xml" />
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/HomePageTests.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -465,7 +534,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test-output/emailable-report.html" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/LogInPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/PartnerChosePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
@@ -500,7 +569,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/LogInPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/PartnerChosePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
@@ -537,7 +606,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testng.fxml" />
     <entry file="file://$PROJECT_DIR$/testng.xml" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/LogInPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/PartnerChosePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
@@ -587,20 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/PricingPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/LogInPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -664,16 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/congif/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.141.5/selenium-support-3.141.5.jar!/org/openqa/selenium/support/ui/WebDriverWait.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -691,20 +736,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/HomePageTests.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/qameta/allure/allure-java-commons/2.7.0/allure-java-commons-2.7.0.jar!/io/qameta/allure/Step.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="204">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/utilities/LogUsersDataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/PricingPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/PartnerChosePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/HomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/HomePageTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="449">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/congif/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,24 +1,31 @@
 package tests;
 
 import congif.BaseTest;
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 import pages.HomePage;
+import utilities.LogUsersDataProvider;
 
 public class HomePageTests extends BaseTest {
 
 
-    @Test(priority = 0)
-    @Description("Description: Open first Page")
-    @Story("Open correctly page")
+    @Test(priority = 0, dataProvider = "correctData", dataProviderClass = LogUsersDataProvider.class)
+    @Description("Description: Log in with good username and password")
+    @Story("Log in correctly")
     @Severity(SeverityLevel.BLOCKER)
-    public void shouldOpenHomePage() {
-        new HomePage(driver).verifyURL().logIn("sylwia", "123456789");
+    @Feature("LogIn Test")
+    public void shouldLogIn(String username, String password) {
+        new HomePage(driver).logIn(username,password).verifyURL();
 
     }
 
+    @Test (dataProvider = "incorrectData", dataProviderClass = LogUsersDataProvider.class)
+    @Description("Description: Log in with wrong username and password")
+    @Story("Log in ")
+    @Severity(SeverityLevel.BLOCKER)
+    @Feature("LogIn Test")
+    public void shouldNotLogIn (String username, String password, String expectedResult){
+        new HomePage(driver).cantLogIn(username,password,expectedResult);
+    }
 
 }

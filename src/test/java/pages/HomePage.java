@@ -1,13 +1,14 @@
 package pages;
 
 
+import com.sun.xml.internal.ws.policy.AssertionSet;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-
+import org.testng.asserts.Assertion;
 
 
 public class HomePage  extends BasePage{
@@ -26,20 +27,32 @@ public class HomePage  extends BasePage{
     @FindBy(tagName = "button")
     private WebElement logInButton;
 
+    @FindBy (xpath = "//div[contains(text(),'Niepoprawny login/hasło.')]")
+    private WebElement cantLogInInfo;
+
+
 
     @Step
-    public HomePage verifyURL() {
-        Assert.assertEquals(driver.getCurrentUrl(), "https://taxi.demo.eo.pl/taxi-business-client-web/login.html?iTaxiCookieCheck=check");
-        return this;
-    }
-
-    @Step
-    public HomePage logIn(String username, String password) {
+    public PartnerChosePage logIn(String username, String password) {
         waitForVisibilityOfElement(driver.findElement(By.id("loginForm")));
         usernameField.clear();
         usernameField.sendKeys(username);
         passwordField.clear();
         passwordField.sendKeys(password);
-        return this;
+        logInButton.click();
+        return new PartnerChosePage(driver);
+    }
+
+    @Step
+    public void cantLogIn(String username, String password, String expectedResult) {
+        waitForVisibilityOfElement(driver.findElement(By.id("loginForm")));
+        usernameField.clear();
+        usernameField.sendKeys(username);
+        passwordField.clear();
+        passwordField.sendKeys(password);
+        logInButton.click();
+        Assert.assertTrue(cantLogInInfo.isDisplayed());
+        Assert.assertEquals(cantLogInInfo.getText(), expectedResult);
+
     }
 }
