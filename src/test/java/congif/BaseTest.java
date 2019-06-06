@@ -2,6 +2,7 @@ package congif;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import utilities.DriverFactory;
 import utilities.DriverType;
@@ -17,7 +18,7 @@ public class BaseTest {
     @BeforeTest
     public void setUp() throws NowSuchDriverException {
         driver = DriverFactory.getDriver(DriverType.CHROME);
-        String startUrl = "https://phptravels.com/demo/";
+        String startUrl = "https://taxi.demo.eo.pl/taxi-business-client-web/login.html";
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.navigate().to(startUrl);
     }

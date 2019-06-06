@@ -10,17 +10,15 @@ import pages.HomePage;
 
 public class HomePageTests extends BaseTest {
 
+
+    @Test(priority = 0)
     @Description("Description: Open first Page")
     @Story("Open correctly page")
     @Severity(SeverityLevel.BLOCKER)
-
-    @Test (priority = 0)
     public void shouldOpenHomePage() {
-        new HomePage(driver).verifyURL();
+        new HomePage(driver).verifyURL().logIn("sylwia", "123456789");
+
     }
 
-    @Test (priority = 1)
-    public void denyNotification (){
-        new HomePage(driver).denyNotifications();
-    }
+
 }
