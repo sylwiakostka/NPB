@@ -1,13 +1,15 @@
 package tests;
 
+import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
+import org.testng.TestListenerAdapter;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import utilities.DriverFactory;
 import utilities.DriverType;
 import utilities.NowSuchDriverException;
@@ -16,7 +18,6 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
 
 public class BaseTest {
 
@@ -31,6 +32,7 @@ public class BaseTest {
     }
 
     @AfterMethod
+    @Attachment (value ="Error screenshot", type = "image/png")
     public void TakeScreenshotOfFailure(ITestResult result) {
         if (ITestResult.FAILURE == result.getStatus()) {
             try {
@@ -44,19 +46,13 @@ public class BaseTest {
 
             } catch (Exception e) {
                 System.out.println("Exception while taking screenshot " + e.getMessage());
-            }
-            finally {
+            } finally {
                 driver.quit();
                 DriverFactory.resetDriver();
             }
         }
     }
 
-//    @AfterTest
-//    public void quit() {
-//        driver.quit();
-//        DriverFactory.resetDriver();
-//    }
 }
 
 
