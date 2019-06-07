@@ -6,21 +6,20 @@ import pages.HomePage;
 import utilities.LogUsersDataProvider;
 
 
-
 @Feature("LogIn Test")
-public class HomePageTests extends BaseTest {
+public class HomePageTests extends BaseTests {
 
 
-    @Test(priority = 0, dataProvider = "correctData", dataProviderClass = LogUsersDataProvider.class)
+    @Test(dataProvider = "correctDataLogIn", dataProviderClass = LogUsersDataProvider.class)
     @Description("Description: Log in with good username and password")
     @Story("Log in correctly")
     @Severity(SeverityLevel.BLOCKER)
     public void shouldLogIn(String username, String password) {
-        new HomePage(driver).logIn(username,password).verifyURL();
+        new HomePage(driver).logIn(username,password).verifyPartnerChosePageURL();
 
     }
 
-    @Test (dataProvider = "incorrectData", dataProviderClass = LogUsersDataProvider.class)
+    @Test (dataProvider = "incorrectDataLogIn", dataProviderClass = LogUsersDataProvider.class)
     @Description("Description: Log in with wrong username and password")
     @Story("Log in ")
     @Severity(SeverityLevel.BLOCKER)

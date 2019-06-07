@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class BaseTest {
+public class BaseTests {
 
     protected WebDriver driver;
 
@@ -32,7 +32,7 @@ public class BaseTest {
     }
 
     @AfterMethod
-    @Attachment (value ="Error screenshot", type = "image/png")
+    @Attachment(value = "Error screenshot", type = "image/png")
     public void TakeScreenshotOfFailure(ITestResult result) {
         if (ITestResult.FAILURE == result.getStatus()) {
             try {
@@ -46,14 +46,15 @@ public class BaseTest {
 
             } catch (Exception e) {
                 System.out.println("Exception while taking screenshot " + e.getMessage());
-            } finally {
-                driver.quit();
-                DriverFactory.resetDriver();
+//            } finally {
+//                driver.quit();
+//                DriverFactory.resetDriver();
+
             }
         }
     }
-
 }
+
 
 
 
