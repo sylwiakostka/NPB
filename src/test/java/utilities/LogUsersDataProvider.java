@@ -8,12 +8,12 @@ import java.util.List;
 
 public class LogUsersDataProvider {
 
-    @DataProvider(name = "correctData")
+    @DataProvider(name = "correctDataLogIn")
     public Object[][] correctDataLogIn() {
         return new Object[][]{{"sylwia", "123456789"}};
     }
 
-    @DataProvider(name = "incorrectData")
+    @DataProvider(name = "incorrectDataLogIn")
     public Object[][] incorrectDataLogIn() {
         return new Object[][]{
                 {"", "", "Niepoprawny login/hasło."},

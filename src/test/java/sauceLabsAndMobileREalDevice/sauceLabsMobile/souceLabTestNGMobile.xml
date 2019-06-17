@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SouceLabTests">
+
+
+
+    <test name="AND-CH-SGalaxy7-8.0">
+        <parameter name="browserName" value="Chrome"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="deviceName" value="Samsung Galaxy S9 FHD GoogleAPI Emulator"/>
+        <parameter name="platformVersion" value="8.0"/>
+        <classes>
+            <class name="sauceLabsAndMobileREalDevice.sauceLabsMobile.LogInTestMobile"/>
+        </classes>
+    </test>
+
+
+</suite>
+
+
+

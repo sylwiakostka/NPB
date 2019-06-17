@@ -56,7 +56,7 @@ public class VoucherCodesPage extends BasePage {
     @Step
     public VoucherCodesPage selectVoucherForGuest() {
         guestRadioButton.click();
-        Assert.assertTrue(guestRadioButton.isSelected());
+        Assert.assertFalse(employeeRadioButton.isSelected());
         return new VoucherCodesPage(driver);
     }
 

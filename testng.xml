@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/user/Desktop/NPB">
+        <classes>
+            <class name="tests.CentralBPPageTests">
+                <methods>
+                    <include name="goToVoucherCodesPage"/>
+                </methods>
+            </class>
+            <class name="tests.HomePageTests">
+                <methods>
+                    <include name="shouldLogIn"/>
+                    <include name="shouldNotLogIn"/>
+                </methods>
+            </class>
+            <class name="tests.PartnerChoseTests">
+                <methods>
+                    <include name="choseWrongPartner"/>
+                    <include name="choseCorrectPartner"/>
+                </methods>
+            </class>
+            <class name="tests.VoucherCodesPageTests">
+                <methods>
+                    <include name="generateOneUseVoucherForGuest"/>
+                    <include name="generateMultiUseVoucher"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
