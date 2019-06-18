@@ -3,24 +3,24 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/user/Desktop/NPB">
         <classes>
-            <class name="tests.CentralBPPageTests">
+            <class name="CentralBPPageTests">
                 <methods>
                     <include name="goToVoucherCodesPage"/>
                 </methods>
             </class>
-            <class name="tests.HomePageTests">
+            <class name="HomePageTests">
                 <methods>
                     <include name="shouldLogIn"/>
                     <include name="shouldNotLogIn"/>
                 </methods>
             </class>
-            <class name="tests.PartnerChoseTests">
+            <class name="PartnerChoseTests">
                 <methods>
                     <include name="choseWrongPartner"/>
                     <include name="choseCorrectPartner"/>
                 </methods>
             </class>
-            <class name="tests.VoucherCodesPageTests">
+            <class name="VoucherCodesPageTests">
                 <methods>
                     <include name="generateOneUseVoucherForGuest"/>
                     <include name="generateMultiUseVoucher"/>
