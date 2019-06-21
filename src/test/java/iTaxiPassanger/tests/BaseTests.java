@@ -27,9 +27,9 @@ public class BaseTests {
     }
 
 
-    @AfterMethod
-    public void quit() {
-        driver.closeApp();
-    }
+//    @AfterMethod
+//    public void quit() {
+//        driver.closeApp();
+//    }
 
 }

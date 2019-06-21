@@ -11,12 +11,12 @@ public class SplashPageTests extends BaseTests {
 
 
     @Test
-    public void openLogInPage() {
+    public void shouldOpenLogInPage() {
         new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToLogInPage().verifyLogInPageHeader();
     }
 
     @Test
-    public void openVoucherPageAndBack() throws InterruptedException, TesseractException, IOException {
+    public void shouldOpenVoucherPageAndBack() throws InterruptedException, TesseractException, IOException {
         new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToVoucherPage().verifyVoucherPageHeader().backToSplashPage().verifyMainScreen();
     }
 }

@@ -1,20 +1,22 @@
 package iTaxiPassanger.pages;
 
 
+import io.appium.java_client.android.AndroidDriver;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 import net.sourceforge.tess4j.util.LoadLibs;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -24,7 +26,6 @@ public class BasePage {
     private WebDriverWait wait;
 
     static String scrShotDir = "screenshots";
-    File scrFile;
     static File scrShotDirPath = new java.io.File("./" + scrShotDir + "//");
     String destFile;
 
@@ -46,7 +47,7 @@ public class BasePage {
     }
 
     protected String readToastMessage() throws TesseractException, IOException {
-        String imgName = takeScreenShot();
+        String imgName = takeScreenShotOfPage();
         String result;
         File imageFile = new File(scrShotDirPath, imgName);
         System.out.println("Image name is :" + imageFile.toString());
@@ -71,7 +72,7 @@ public class BasePage {
     }
 
 
-    protected String takeScreenShot()  {
+    protected String takeScreenShotOfPage() {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy__hh_mm_ssaa");
@@ -94,7 +95,10 @@ public class BasePage {
         }
         return destFile;
     }
+
 }
+
+
 
 
 
