@@ -24,7 +24,7 @@ import java.util.Date;
 
 public class BasePage {
 
-    protected AndroidDriver driver;
+    static protected AndroidDriver driver;
     private WebDriverWait wait;
 
     static String scrShotDir = "screenshots";
@@ -33,7 +33,7 @@ public class BasePage {
 
 
     public BasePage(AndroidDriver driver) {
-        this.driver = driver;
+        BasePage.driver = driver;
         wait = new WebDriverWait(driver, WAIT_TIMEOUT);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
@@ -48,7 +48,7 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    protected String readToastMessage() throws TesseractException, IOException {
+    protected String readToastMessage() throws TesseractException {
         String imgName = takeScreenShotOfPage();
         String result;
         File imageFile = new File(scrShotDirPath, imgName);

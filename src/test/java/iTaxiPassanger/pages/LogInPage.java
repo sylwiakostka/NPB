@@ -2,7 +2,6 @@ package iTaxiPassanger.pages;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -28,6 +27,8 @@ public class LogInPage extends BasePage {
     @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/headerBackIconLeft")
     private WebElement backButton;
 
+    @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/fragLoginPassForget")
+    private WebElement forgetDateButton;
 
 
 
@@ -43,7 +44,6 @@ public class LogInPage extends BasePage {
     }
 
     public MapPage logAsB2CUser(String userName, String password) {
-
         List<WebElement> logInFields = driver.findElements(By.className("android.widget.EditText"));
         logInFields.get(0).clear();
         logInFields.get(1).clear();
@@ -61,7 +61,6 @@ public class LogInPage extends BasePage {
     }
 
     public MapPage logAsB2BUser(String username, String password) {
-
         List<WebElement> logInFields = driver.findElements(By.className("android.widget.EditText"));
         logInFields.get(0).clear();
         logInFields.get(1).clear();
@@ -111,5 +110,13 @@ public class LogInPage extends BasePage {
         }
         return this;
     }
+
+    public PasswordResetPage goToPasswordResetPage (){
+        forgetDateButton.click();
+        new PasswordResetPage(driver).verifyPasswordResetPage();
+        return new PasswordResetPage(driver);
+    }
+
+
 }
 

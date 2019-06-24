@@ -80,4 +80,11 @@ public class RegisterTestsB2B extends BaseTests {
                 .markFirstAndThirdAgreementsB2B();
     }
 
+    @Test
+    public void test() {
+        new RegisterPageB2B(driver)
+                .openRegisterPage().move();
+    }
+
+
 }

@@ -17,6 +17,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
+import static iTaxiPassanger.utilities.MobileGestures.ScrollDown;
+import static iTaxiPassanger.utilities.MobileGestures.ScrollUp;
+
 public class RegisterPageB2B extends BasePage {
     public RegisterPageB2B(AndroidDriver driver) {
         super(driver);
@@ -91,7 +94,7 @@ public class RegisterPageB2B extends BasePage {
 
     public RegisterPageB2B markAllAgreementsAndAcceptB2B() {
         allAgreementsCheckboxB2B.click();
-        new MobileGestures(driver).ScrollDown();
+        ScrollDown();
         sendB2bButton.click();
         return this;
     }
@@ -106,7 +109,7 @@ public class RegisterPageB2B extends BasePage {
     public RegisterPageB2B doNotSetDataB2B() {
         waitForVisibilityOfElement(profileSwitch);
         profileSwitch.click();
-        new MobileGestures(driver).ScrollDown();
+        ScrollDown();
         sendB2bButton.click();
         List<WebElement> errorTextElements = driver.findElements(By.id("com.geckolab.eotaxi.passenger.demo:id/editWithIconErrorText"));
         for (WebElement ele : errorTextElements) {
@@ -127,7 +130,7 @@ public class RegisterPageB2B extends BasePage {
             registerFieldsB2B.get(2).sendKeys(email);
             registerFieldsB2B.get(3).sendKeys(phoneNumber);
             registerFieldsB2B.get(4).sendKeys(password);
-            new MobileGestures(driver).ScrollDown();
+            ScrollDown();
             sendB2bButton.click();
             Thread.sleep(3000);
 
@@ -146,7 +149,7 @@ public class RegisterPageB2B extends BasePage {
             registerFieldsB2B.get(2).sendKeys(email);
             registerFieldsB2B.get(3).sendKeys(phoneNumber);
             registerFieldsB2B.get(4).sendKeys(password);
-            new MobileGestures(driver).ScrollDown();
+            ScrollDown();
             sendB2bButton.click();
             Thread.sleep(3000);
             List<WebElement> errorTextElements = driver.findElements(By.id("com.geckolab.eotaxi.passenger.demo:id/editWithIconErrorText"));
@@ -160,14 +163,14 @@ public class RegisterPageB2B extends BasePage {
     }
 
     public RegisterPageB2B markFirstAgreementB2B() {
-        new MobileGestures(driver).ScrollDown();
+        ScrollDown();
         firstAgreementCheckboxB2B.click();
         sendB2bButton.click();
         return this;
     }
 
     public RegisterPageB2B markSecondAgreementB2B() throws InterruptedException, TesseractException, IOException {
-        new MobileGestures(driver).ScrollDown();
+        ScrollDown();
         secondAgreementCheckboxB2B.click();
         sendB2bButton.click();
         Thread.sleep(3000);
@@ -178,7 +181,7 @@ public class RegisterPageB2B extends BasePage {
     }
 
     public RegisterPageB2B markThirdAgreementB2B() throws InterruptedException, TesseractException, IOException {
-        new MobileGestures(driver).ScrollDown();
+        ScrollDown();
         thirdAgreementCheckboxB2B.click();
         sendB2bButton.click();
         Thread.sleep(3000);
@@ -189,7 +192,7 @@ public class RegisterPageB2B extends BasePage {
     }
 
     public RegisterPageB2B markFirstAndSecondAgreementsB2B() {
-        new MobileGestures(driver).ScrollDown();
+        ScrollDown();
         firstAgreementCheckboxB2B.click();
         secondAgreementCheckboxB2B.click();
         sendB2bButton.click();
@@ -197,11 +200,18 @@ public class RegisterPageB2B extends BasePage {
     }
 
     public RegisterPageB2B markFirstAndThirdAgreementsB2B() {
-        new MobileGestures(driver).ScrollDown();
+        ScrollDown();
         firstAgreementCheckboxB2B.click();
         secondAgreementCheckboxB2B.click();
         sendB2bButton.click();
         return this;
     }
+
+    public void move (){
+        ScrollDown();
+        ScrollUp();
+    }
+
+
 }
 

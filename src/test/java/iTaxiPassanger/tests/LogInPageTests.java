@@ -4,6 +4,7 @@ package iTaxiPassanger.tests;
 import iTaxiPassanger.pages.LogInPage;
 import iTaxiPassanger.pages.MapPage;
 import iTaxiPassanger.utilities.LogUsersWrongDataProvider;
+import net.sourceforge.tess4j.TesseractException;
 import org.testng.annotations.Test;
 
 
@@ -31,5 +32,10 @@ public class LogInPageTests extends BaseTests {
     @Test (dataProvider = "incorrectDataLogInB2B", dataProviderClass = LogUsersWrongDataProvider.class)
     public void shouldNotLogInB2B (String username, String password){
         new LogInPage(driver).verifyLogInPageHeader().cantLogInB2B(username,password).verifyLogInPageHeader();
+    }
+
+    @Test
+    public void remindPassword () throws TesseractException, InterruptedException {
+        new LogInPage(driver).verifyLogInPageHeader().goToPasswordResetPage().verifyPasswordResetPage().verifyPasswordResetPage().resetPassword();
     }
 }

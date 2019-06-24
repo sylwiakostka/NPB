@@ -6,6 +6,8 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.touch.TouchActions;
+
 
 public class MobileGestures extends BasePage {
 
@@ -13,7 +15,7 @@ public class MobileGestures extends BasePage {
         super(driver);
     }
 
-    public void ScrollDown() {
+    public static void ScrollDown() {
         TouchAction action = new TouchAction(driver);
         Dimension dimensions = driver.manage().window().getSize();
         Double screenHeightStart = dimensions.getHeight() * 0.5;
@@ -31,7 +33,7 @@ public class MobileGestures extends BasePage {
                 .release().perform();
     }
 
-    public void ScrollUp() {
+    public static void ScrollUp() {
         TouchAction action = new TouchAction(driver);
         Dimension dimensions = driver.manage().window().getSize();
         Double screenHeightStart = dimensions.getHeight() * 0.5;
@@ -48,4 +50,10 @@ public class MobileGestures extends BasePage {
                 .point(w1, h1))
                 .release().perform();
     }
+
+    public static void longPressOnElement(WebElement element) {
+        TouchActions touchActions = new TouchActions(driver);
+        touchActions.longPress(element).release().perform();
+    }
+
 }
