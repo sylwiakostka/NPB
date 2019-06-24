@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class SignUpPage extends BasePage {
-    public SignUpPage(WebDriver driver) {
+    public SignUpPage(AndroidDriver driver) {
         super(driver);
     }
 

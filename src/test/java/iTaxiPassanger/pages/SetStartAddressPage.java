@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class SetStartAddressPage extends BasePage {
-    public SetStartAddressPage(WebDriver driver) {
+    public SetStartAddressPage(AndroidDriver driver) {
         super(driver);
     }
 

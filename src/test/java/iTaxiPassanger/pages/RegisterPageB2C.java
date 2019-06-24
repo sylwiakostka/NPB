@@ -3,26 +3,22 @@ package iTaxiPassanger.pages;
 import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
-import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidTouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import net.sourceforge.tess4j.TesseractException;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
 
-public class RegisterPage extends BasePage {
-    public RegisterPage(WebDriver driver) {
+public class RegisterPageB2C extends BasePage {
+    public RegisterPageB2C(AndroidDriver driver) {
         super(driver);
     }
+
 
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/fragRegisterBackHeader")
     private WebElement registerPageHeader;
@@ -45,19 +41,22 @@ public class RegisterPage extends BasePage {
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/fragRegBtnFeelForm")
     private WebElement nextButton;
 
+    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/fragRegPrivateFormTermDesc")
+    private WebElement regulationsButton;
 
-    public RegisterPage verifyRegisterPage() {
+
+    public RegisterPageB2C verifyRegisterPage() {
         waitForVisibilityOfElement(registerPageHeader);
         Assert.assertTrue(registerPageHeader.isDisplayed());
         return this;
     }
 
-    public RegisterPage openRegisterPage() {
+    public RegisterPageB2C openRegisterPage() {
         new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToRegisterPage().verifyRegisterPage();
         return this;
     }
 
-    public RegisterPage completeFieldsCorrectlyB2C() {
+    public RegisterPageB2C completeFieldsCorrectlyB2C() {
         Faker plFaker = new Faker(new Locale("pl"));
         FakeValuesService fakeValuesService = new FakeValuesService(
                 new Locale("pl"), new RandomService());
@@ -65,36 +64,38 @@ public class RegisterPage extends BasePage {
         String password = fakeValuesService.regexify("[a-z1-9]{10}");
         String nameAndSurname = plFaker.name().fullName();
         String phoneNumber = "508264455";
-        List<WebElement> registerFields = driver.findElements(By.className("android.widget.EditText"));
 
         if (profileSwitch.getText().equals("WYŁ.")) {
+            List<WebElement> registerFields = driver.findElements(By.className("android.widget.EditText"));
             registerFields.get(0).sendKeys(nameAndSurname);
             registerFields.get(1).sendKeys(email);
             registerFields.get(2).sendKeys(phoneNumber);
             registerFields.get(3).sendKeys(password);
-
-        } else if (profileSwitch.getText().equals("WŁ."))
+            System.out.println(profileSwitch.getText());
+        } else if (profileSwitch.getText().equals("WŁ.")) {
             profileSwitch.click();
-        registerFields.get(0).sendKeys(nameAndSurname);
-        registerFields.get(1).sendKeys(email);
-        registerFields.get(2).sendKeys(phoneNumber);
-        registerFields.get(3).sendKeys(password);
+            List<WebElement> registerFields = driver.findElements(By.className("android.widget.EditText"));
+            registerFields.get(0).sendKeys(nameAndSurname);
+            registerFields.get(1).sendKeys(email);
+            registerFields.get(2).sendKeys(phoneNumber);
+            registerFields.get(3).sendKeys(password);
+        }
         return this;
     }
 
-    public RegisterPage markAllAgreementsAndAccept() {
+    public RegisterPageB2C markAllAgreementsAndAcceptB2C() {
         allAgreementsCheckbox.click();
-//        nextButton.click();
+        nextButton.click();
         return this;
     }
 
-    public RegisterPage markFirstAgreement() {
+    public RegisterPageB2C markFirstAgreementB2C() {
         firstAgreementCheckbox.click();
         nextButton.click();
         return this;
     }
 
-    public RegisterPage markSecondAgreement() throws InterruptedException, TesseractException, IOException {
+    public RegisterPageB2C markSecondAgreementB2C() throws InterruptedException, TesseractException, IOException {
         secondAgreementCheckbox.click();
         nextButton.click();
         Thread.sleep(3000);
@@ -104,7 +105,7 @@ public class RegisterPage extends BasePage {
         return this;
     }
 
-    public RegisterPage markThirdAgreement() throws InterruptedException, TesseractException, IOException {
+    public RegisterPageB2C markThirdAgreementB2C() throws InterruptedException, TesseractException, IOException {
         thirdAgreementCheckbox.click();
         nextButton.click();
         Thread.sleep(3000);
@@ -114,21 +115,21 @@ public class RegisterPage extends BasePage {
         return this;
     }
 
-    public RegisterPage markFirstAndSecondAgreements() {
+    public RegisterPageB2C markFirstAndSecondAgreementsB2C() {
         firstAgreementCheckbox.click();
         secondAgreementCheckbox.click();
         nextButton.click();
         return this;
     }
 
-    public RegisterPage markFirstAndThirdAgreements() {
+    public RegisterPageB2C markFirstAndThirdAgreementsB2C() {
         firstAgreementCheckbox.click();
         secondAgreementCheckbox.click();
         nextButton.click();
         return this;
     }
 
-    public RegisterPage doNotSetData() {
+    public RegisterPageB2C doNotSetDataB2C() {
         nextButton.click();
         List<WebElement> errorTextElements = driver.findElements(By.id("com.geckolab.eotaxi.passenger.demo:id/editWithIconErrorText"));
         for (WebElement ele : errorTextElements) {
@@ -138,11 +139,11 @@ public class RegisterPage extends BasePage {
         return this;
     }
 
-    public RegisterPage setWrongData(String nameAndSurname, String errorText0, String email, String errorText1,
-                                     String phoneNumber, String errorText2, String password, String errorText3) throws InterruptedException {
-        List<WebElement> registerFields = driver.findElements(By.className("android.widget.EditText"));
+    public RegisterPageB2C setWrongDataB2C(String nameAndSurname, String errorText0, String email, String errorText1,
+                                           String phoneNumber, String errorText2, String password, String errorText3) throws InterruptedException {
 
         if (profileSwitch.getText().equals("WYŁ.")) {
+            List<WebElement> registerFields = driver.findElements(By.className("android.widget.EditText"));
             registerFields.get(0).sendKeys(nameAndSurname);
             registerFields.get(1).sendKeys(email);
             registerFields.get(2).sendKeys(phoneNumber);
@@ -158,6 +159,7 @@ public class RegisterPage extends BasePage {
 
         } else if (profileSwitch.getText().equals("WŁ.")) {
             profileSwitch.click();
+            List<WebElement> registerFields = driver.findElements(By.className("android.widget.EditText"));
             registerFields.get(0).sendKeys(nameAndSurname);
             registerFields.get(1).sendKeys(email);
             registerFields.get(2).sendKeys(phoneNumber);
@@ -171,7 +173,7 @@ public class RegisterPage extends BasePage {
             Assert.assertEquals(errorTextElements.get(3).getText(), errorText3);
         }
         return this;
-    }
 
+    }
 
 }

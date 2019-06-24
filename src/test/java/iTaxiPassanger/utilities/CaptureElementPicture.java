@@ -1,6 +1,7 @@
 package iTaxiPassanger.utilities;
 
 import iTaxiPassanger.pages.BasePage;
+import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import javax.imageio.ImageIO;
@@ -11,7 +12,7 @@ import java.io.IOException;
 
 public class CaptureElementPicture extends BasePage {
 
-    public CaptureElementPicture(WebDriver driver) {
+    public CaptureElementPicture(AndroidDriver driver) {
         super(driver);
     }
 

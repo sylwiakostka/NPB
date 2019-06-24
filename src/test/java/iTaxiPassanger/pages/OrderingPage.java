@@ -9,7 +9,7 @@ import org.testng.Assert;
 
 public class OrderingPage extends BasePage {
 
-    public OrderingPage(WebDriver driver) {
+    public OrderingPage(AndroidDriver driver) {
         super(driver);
     }
 

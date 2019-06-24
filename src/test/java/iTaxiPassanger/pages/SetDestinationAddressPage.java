@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class SetDestinationAddressPage extends BasePage {
-    public SetDestinationAddressPage(WebDriver driver) {
+    public SetDestinationAddressPage(AndroidDriver driver) {
         super(driver);
     }
 

@@ -1,16 +1,12 @@
 package iTaxiPassanger.pages;
 
 import io.appium.java_client.android.AndroidDriver;
-import net.sourceforge.tess4j.TesseractException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-import java.io.IOException;
-
 public class SplashPage extends BasePage {
-    public SplashPage(WebDriver driver) {
+    public SplashPage(AndroidDriver driver) {
         super(driver);
     }
 
@@ -39,14 +35,14 @@ public class SplashPage extends BasePage {
         return new LogInPage(driver);
     }
 
-    public VoucherPage goToVoucherPage() throws InterruptedException {
+    public VoucherPage goToVoucherPage() {
         voucherButton.click();
         return new VoucherPage(driver).verifyVoucherPageHeader().verifyVoucherPageHeader();
     }
 
-    public RegisterPage goToRegisterPage() {
+    public RegisterPageB2C goToRegisterPage() {
         registerButton.click();
-        new RegisterPage(driver).verifyRegisterPage();
-        return new RegisterPage(driver);
+        new RegisterPageB2C(driver).verifyRegisterPage();
+        return new RegisterPageB2C(driver);
     }
 }

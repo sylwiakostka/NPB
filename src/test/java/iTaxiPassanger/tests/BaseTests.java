@@ -1,6 +1,8 @@
 package iTaxiPassanger.tests;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
@@ -23,13 +25,15 @@ public class BaseTests {
         caps.setCapability("appPackage", "com.geckolab.eotaxi.passenger.demo");
         caps.setCapability("appActivity", "pl.itaxi.MainActivity");
         caps.setCapability("appWaitDuration", 5000);
-        driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
+
+
     }
 
 
-//    @AfterMethod
-//    public void quit() {
-//        driver.closeApp();
-//    }
+    @AfterMethod
+    public void quit() {
+        driver.closeApp();
+    }
 
 }

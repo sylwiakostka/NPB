@@ -1,6 +1,7 @@
 package iTaxiPassanger.pages;
 
 
+import io.appium.java_client.android.AndroidDriver;
 import net.sourceforge.tess4j.TesseractException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class VoucherPage extends BasePage {
-    public VoucherPage(WebDriver driver) {
+    public VoucherPage(AndroidDriver driver) {
         super(driver);
     }
 

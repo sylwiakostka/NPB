@@ -1,5 +1,6 @@
 package iTaxiPassanger.pages;
 
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,7 @@ import java.util.List;
 
 
 public class LogInPage extends BasePage {
-    public LogInPage(WebDriver driver) {
+    public LogInPage(AndroidDriver driver) {
         super(driver);
     }
 
@@ -26,6 +27,8 @@ public class LogInPage extends BasePage {
 
     @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/headerBackIconLeft")
     private WebElement backButton;
+
+
 
 
     public LogInPage verifyLogInPageHeader() {

@@ -1,28 +1,30 @@
 package iTaxiPassanger.pages;
 
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidTouchAction;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 import net.sourceforge.tess4j.util.LoadLibs;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 public class BasePage {
 
-    protected WebDriver driver;
+    protected AndroidDriver driver;
     private WebDriverWait wait;
 
     static String scrShotDir = "screenshots";
@@ -30,10 +32,10 @@ public class BasePage {
     String destFile;
 
 
-    public BasePage(WebDriver driver) {
+    public BasePage(AndroidDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, WAIT_TIMEOUT);
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     private static final int WAIT_TIMEOUT = 10;
@@ -97,6 +99,7 @@ public class BasePage {
     }
 
 }
+
 
 
 

@@ -1,70 +1,72 @@
 package iTaxiPassanger.tests;
 
-import iTaxiPassanger.pages.RegisterPage;
+import iTaxiPassanger.pages.RegisterPageB2C;
+import iTaxiPassanger.utilities.MobileGestures;
 import iTaxiPassanger.utilities.RegisterWrongDataProvider;
 import net.sourceforge.tess4j.TesseractException;
+import org.openqa.selenium.Point;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
 
-public class RegisterTests extends BaseTests {
+public class RegisterTestsB2C extends BaseTests {
 
     @Test
     public void shouldRegisterCorrectlyB2CAllAgreements() {
-        new RegisterPage(driver)
+        new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
-                .markAllAgreementsAndAccept();
+                .markAllAgreementsAndAcceptB2C();
     }
 
     @Test
     public void shouldRegisterCorrectlyB2CFirstAgreement() {
-        new RegisterPage(driver)
+        new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
-                .markFirstAgreement();
+                .markFirstAgreementB2C();
     }
 
     @Test
     public void shouldNotRegisterCorrectlyB2CSecondAgreement() throws InterruptedException, IOException, TesseractException {
-        new RegisterPage(driver)
+        new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
-                .markSecondAgreement()
+                .markSecondAgreementB2C()
                 .verifyRegisterPage();
     }
 
     @Test
     public void shouldNotRegisterCorrectlyB2CThirdAgreement() throws InterruptedException, IOException, TesseractException {
-        new RegisterPage(driver)
+        new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
-                .markThirdAgreement()
+                .markThirdAgreementB2C()
                 .verifyRegisterPage();
     }
 
     @Test
     public void shouldRegisterCorrectlyB2CFirstAndSecondAgreements() {
-        new RegisterPage(driver)
+        new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
-                .markFirstAndSecondAgreements();
+                .markFirstAndSecondAgreementsB2C();
     }
 
     @Test
     public void shouldRegisterCorrectlyB2CFirstAndThirdAgreements() {
-        new RegisterPage(driver)
+        new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
-                .markFirstAndThirdAgreements();
+                .markFirstAndThirdAgreementsB2C();
     }
 
     @Test
     public void shouldNotRegisterB2CWithoutData() {
-        new RegisterPage(driver)
+        new RegisterPageB2C(driver)
                 .openRegisterPage()
-                .doNotSetData()
+                .doNotSetDataB2C()
                 .verifyRegisterPage();
 
     }
@@ -72,11 +74,17 @@ public class RegisterTests extends BaseTests {
     @Test(dataProvider = "incorrectDataRegisterB2C", dataProviderClass = RegisterWrongDataProvider.class)
     public void shouldNotRegisterB2CWrongData(String nameAndSurname, String errorText0, String email, String errorText1,
                                               String phoneNumber, String errorText2, String password, String errorText3) throws InterruptedException {
-        new RegisterPage(driver)
+        new RegisterPageB2C(driver)
                 .openRegisterPage()
-                .setWrongData(nameAndSurname, errorText0, email, errorText1, phoneNumber, errorText2, password, errorText3)
+                .setWrongDataB2C(nameAndSurname, errorText0, email, errorText1, phoneNumber, errorText2, password, errorText3)
                 .verifyRegisterPage();
     }
 
 
+
+
+
 }
+
+
+

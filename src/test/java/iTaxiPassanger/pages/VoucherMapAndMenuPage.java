@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class VoucherMapAndMenuPage extends BasePage {
 
-    public VoucherMapAndMenuPage(WebDriver driver) {
+    public VoucherMapAndMenuPage(AndroidDriver driver) {
         super(driver);
     }
 

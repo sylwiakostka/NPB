@@ -7,12 +7,14 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class MapPage extends BasePage {
-    public MapPage(WebDriver driver) {
+
+
+    public MapPage(AndroidDriver driver) {
         super(driver);
     }
-
     @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/taxiMapRoot")
     private WebElement map;
+
 
 
     public MapPage verifyMap() {
