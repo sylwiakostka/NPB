@@ -49,11 +49,19 @@ public class MobileGestures extends BasePage {
                 .waitAction().moveTo(PointOption
                 .point(w1, h1))
                 .release().perform();
+
     }
 
     public static void longPressOnElement(WebElement element) {
         TouchActions touchActions = new TouchActions(driver);
         touchActions.longPress(element).release().perform();
+    }
+
+    public static void scrollToElement (WebElement element){
+        TouchActions touchActions = new TouchActions(driver);
+        int xCoord = element.getLocation().getX();
+        int yCoord = element.getLocation().getY();
+        touchActions.scroll(element,xCoord,yCoord );
     }
 
 }

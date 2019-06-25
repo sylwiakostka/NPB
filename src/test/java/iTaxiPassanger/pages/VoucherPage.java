@@ -4,11 +4,9 @@ package iTaxiPassanger.pages;
 import io.appium.java_client.android.AndroidDriver;
 import net.sourceforge.tess4j.TesseractException;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-
 import java.io.IOException;
 import java.util.List;
 

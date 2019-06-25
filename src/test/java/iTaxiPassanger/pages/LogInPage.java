@@ -115,6 +115,7 @@ public class LogInPage extends BasePage {
         forgetDateButton.click();
         new PasswordResetPage(driver).verifyPasswordResetPage();
         return new PasswordResetPage(driver);
+
     }
 
 

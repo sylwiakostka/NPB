@@ -81,9 +81,9 @@ public class VoucherMapAndMenuPage extends BasePage {
         new CaptureElementPicture(driver).takeScreenshotOfElement(selectTimeLayout);
         Assert.assertEquals(CompareScreens.Result.Matched, CompareScreens.CompareImage(naTerazExpected, scrFile));
 
-        String VoucherWiecejOpcjiExpectedExpected = "C://Users//user//Desktop//NPB//src//test//java//iTaxiPassanger//tests//screenshotsToCompareInTests//VoucherWiecejOpcjiExpected.png";
+        String VoucherWiecejOpcjiExpected = "C://Users//user//Desktop//NPB//src//test//java//iTaxiPassanger//tests//screenshotsToCompareInTests//VoucherWiecejOpcjiExpected.png";
         new CaptureElementPicture(driver).takeScreenshotOfElement(voucherAndMoreOptionsLayout);
-        Assert.assertEquals(CompareScreens.Result.Matched, CompareScreens.CompareImage(VoucherWiecejOpcjiExpectedExpected, scrFile));
+        Assert.assertEquals(CompareScreens.Result.Matched, CompareScreens.CompareImage(VoucherWiecejOpcjiExpected, scrFile));
     }
 
     public VoucherMapAndMenuPage setStartAddress(String address) throws InterruptedException {
@@ -103,7 +103,7 @@ public class VoucherMapAndMenuPage extends BasePage {
         waitForVisibilityOfElement(driver.findElement(By.id("com.geckolab.eotaxi.passenger.demo:id/selectData")));
         luxuryTaxiButton.click();
         Assert.assertTrue(confirmationOfExtraCharge.isDisplayed());
-//        Assert.assertEquals(confirmationOfExtraCharge.getText(), "Taksówka Luksusowa: dopłata 40,00 zł");
+        Assert.assertEquals(confirmationOfExtraCharge.getText(), "Taksówka Luksusowa: dopłata 40,00 zł");
         return new VoucherMapAndMenuPage(driver);
     }
 
