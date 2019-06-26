@@ -3,7 +3,11 @@ package iTaxiPassanger.pages;
 import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
+import iTaxiPassanger.utilities.MobileGestures;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.offset.PointOption;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import net.sourceforge.tess4j.TesseractException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,6 +16,8 @@ import org.testng.Assert;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
+
+import static iTaxiPassanger.utilities.MobileGestures.ScrollDown;
 
 
 public class RegisterPageB2C extends BasePage {
@@ -174,6 +180,52 @@ public class RegisterPageB2C extends BasePage {
         }
         return this;
 
+    }
+
+    public RegisterPageB2C setExistingEmail () throws InterruptedException, TesseractException {
+        Faker plFaker = new Faker(new Locale("pl"));
+        FakeValuesService fakeValuesService = new FakeValuesService(
+                new Locale("pl"), new RandomService());
+        String email = "wanna@ii.pl";
+        String password = fakeValuesService.regexify("[a-z1-9]{10}");
+        String nameAndSurname = plFaker.name().fullName();
+        String phoneNumber = "508264455";
+        waitForVisibilityOfElement(profileSwitch);
+
+        if (profileSwitch.getText().equals("WYŁ.")) {
+            List<WebElement> registerFields = driver.findElements(By.className("android.widget.EditText"));
+            registerFields.get(0).sendKeys(nameAndSurname);
+            registerFields.get(1).sendKeys(email);
+            registerFields.get(2).sendKeys(phoneNumber);
+            registerFields.get(3).sendKeys(password);
+
+        } else if (profileSwitch.getText().equals("WŁ.")) {
+            profileSwitch.click();
+            List<WebElement> registerFields = driver.findElements(By.className("android.widget.EditText"));
+            registerFields.get(0).sendKeys(nameAndSurname);
+            registerFields.get(1).sendKeys(email);
+            registerFields.get(2).sendKeys(phoneNumber);
+            registerFields.get(3).sendKeys(password);
+        }
+        firstAgreementCheckbox.click();
+        nextButton.click();
+        Thread.sleep(3000);
+        String toastMessage = readToastMessage();
+        String toastText = "Btedne dane w polach: email is already used";
+        Assert.assertTrue((toastMessage).contains(toastText));
+        Assert.assertTrue(registerPageHeader.isDisplayed());
+        return this;
+
+    }
+
+    public RegisterPageB2C tapOnRegulation() {
+        ScrollDown();
+        TouchAction touchAction = new TouchAction(driver);
+        touchAction.tap(PointOption.point(748,1320)).release().perform();
+        WebElement urlBar = driver.findElement(By.id("com.android.chrome:id/url_bar"));
+        waitForVisibilityOfElement(urlBar);
+        Assert.assertEquals("www.itaxi.pl/regulamin", urlBar.getText());
+        return this;
     }
 
 }

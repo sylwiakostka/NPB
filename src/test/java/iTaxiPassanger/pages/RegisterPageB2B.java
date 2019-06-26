@@ -207,9 +207,43 @@ public class RegisterPageB2B extends BasePage {
         return this;
     }
 
-    public void move (){
+
+    public RegisterPageB2B setExistingEmailB2B () throws InterruptedException, TesseractException {
+        Faker plFaker = new Faker(new Locale("pl"));
+        FakeValuesService fakeValuesService = new FakeValuesService(
+                new Locale("pl"), new RandomService());
+        String email = "jarsar888@gmail.com";
+        String password = fakeValuesService.regexify("[a-z1-9]{10}");
+        String nameAndSurname = plFaker.name().fullName();
+        String phoneNumber = "508264455";
+        waitForVisibilityOfElement(profileSwitch);
+
+        if (profileSwitch.getText().equals("WŁ.")) {
+            List<WebElement> registerFieldsB2B = driver.findElements(By.className("android.widget.EditText"));
+            registerFieldsB2B.get(0).sendKeys(nameAndSurname);
+            registerFieldsB2B.get(1).sendKeys(GetNIP.generateNIP());
+            registerFieldsB2B.get(2).sendKeys(email);
+            registerFieldsB2B.get(3).sendKeys(phoneNumber);
+            registerFieldsB2B.get(4).sendKeys(password);
+
+        } else if (profileSwitch.getText().equals("WYŁ.")) {
+            profileSwitch.click();
+            List<WebElement> registerFieldsB2B = driver.findElements(By.className("android.widget.EditText"));
+            registerFieldsB2B.get(0).sendKeys(nameAndSurname);
+            registerFieldsB2B.get(1).sendKeys(GetNIP.generateNIP());
+            registerFieldsB2B.get(2).sendKeys(email);
+            registerFieldsB2B.get(3).sendKeys(phoneNumber);
+            registerFieldsB2B.get(4).sendKeys(password);
+        }
+        firstAgreementCheckboxB2B.click();
         ScrollDown();
-        ScrollUp();
+        sendB2bButton.click();
+        Thread.sleep(3000);
+        String toastMessage = readToastMessage();
+        String toastText = "Btedne dane w polach: email is already used";
+        Assert.assertTrue((toastMessage).contains(toastText));
+        Assert.assertTrue(registerPageHeader.isDisplayed());
+        return this;
     }
 
 

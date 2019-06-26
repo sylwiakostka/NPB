@@ -81,9 +81,10 @@ public class RegisterTestsB2B extends BaseTests {
     }
 
     @Test
-    public void test() {
+    public void shouldNotRegisterB2CExistingEmailB2B() throws TesseractException, InterruptedException {
         new RegisterPageB2B(driver)
-                .openRegisterPage().move();
+                .openRegisterPage()
+                .setExistingEmailB2B();
     }
 
 

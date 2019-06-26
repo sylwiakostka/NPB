@@ -80,9 +80,20 @@ public class RegisterTestsB2C extends BaseTests {
                 .verifyRegisterPage();
     }
 
+    @Test
+    public void shouldNotRegisterB2CExistingEmailB2C () throws TesseractException, InterruptedException {
+        new RegisterPageB2C(driver)
+                .openRegisterPage()
+                .setExistingEmail();
+    }
+
+    @Test
+    public void shouldOpenReg() throws InterruptedException {
+        new RegisterPageB2C(driver)
+                .openRegisterPage().tapOnRegulation();
 
 
-
+    }
 
 }
 

@@ -26,7 +26,7 @@ public class BaseTests {
         driver = DriverFactory.getDriver(DriverType.CHROME);
         String startUrl = "https://taxi.demo.eo.pl/taxi-business-client-web/login.html";
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.navigate().to(startUrl);
+        driver.get(startUrl);
     }
 
     @AfterMethod

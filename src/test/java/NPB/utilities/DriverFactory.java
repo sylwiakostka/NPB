@@ -1,5 +1,6 @@
 package NPB.utilities;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -27,27 +28,18 @@ public class DriverFactory {
     private static void getSpecificDriver(DriverType driverType) throws NowSuchDriverException {
         switch (driverType) {
             case IE:
-                File ieExe = new File("src/main/resources/IEDriverServer.exe");
-                InternetExplorerDriverService ieService = new InternetExplorerDriverService.Builder()
-                        .usingDriverExecutable(ieExe)
-                        .usingAnyFreePort().build();
-                driver = new InternetExplorerDriver(ieService);
+                WebDriverManager.iedriver().setup();
+                driver = new InternetExplorerDriver();
                 break;
 
             case FIREFOX:
-                File firefoxExe = new File("src/main/resources/geckodriver.exe");
-                GeckoDriverService geckoService = new GeckoDriverService.Builder()
-                        .usingDriverExecutable(firefoxExe)
-                        .usingAnyFreePort().build();
-                driver = new FirefoxDriver(geckoService);
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
                 break;
 
             case CHROME:
-                File chromeExe = new File("src/main/resources/chromedriver.exe");
-                ChromeDriverService chromeService = new ChromeDriverService.Builder()
-                        .usingDriverExecutable(chromeExe)
-                        .usingAnyFreePort().build();
-                driver = new ChromeDriver(chromeService);
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
                 break;
 
             default:
