@@ -2,11 +2,14 @@ package iTaxiPassanger.tests;
 
 import iTaxiPassanger.pages.LogInPage;
 import iTaxiPassanger.pages.VoucherPage;
+import io.qameta.allure.Feature;
 import net.sourceforge.tess4j.TesseractException;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+
+@Feature("Splash Page Tests")
 public class SplashPageTests extends BaseTests {
 
 
@@ -16,7 +19,7 @@ public class SplashPageTests extends BaseTests {
     }
 
     @Test
-    public void shouldOpenVoucherPageAndBack() throws InterruptedException, TesseractException, IOException {
+    public void shouldOpenVoucherPageAndBack() {
         new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToVoucherPage().verifyVoucherPageHeader().backToSplashPage().verifyMainScreen();
     }
 }

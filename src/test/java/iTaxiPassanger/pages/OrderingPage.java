@@ -1,6 +1,7 @@
 package iTaxiPassanger.pages;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Step;
 import org.aspectj.weaver.ast.And;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,7 @@ public class OrderingPage extends BasePage {
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/progress")
     private WebElement progressBar;
 
+    @Step
     public OrderingPage verifyOrderingPage() {
         waitForVisibilityOfElement(progressBar);
         Assert.assertTrue(progressBar.isDisplayed());

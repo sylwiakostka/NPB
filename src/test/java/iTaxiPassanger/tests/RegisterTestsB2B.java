@@ -4,12 +4,14 @@ import iTaxiPassanger.pages.RegisterPageB2B;
 import iTaxiPassanger.pages.RegisterPageB2C;
 import iTaxiPassanger.tests.BaseTests;
 import iTaxiPassanger.utilities.RegisterWrongDataProvider;
+import io.qameta.allure.Feature;
 import net.sourceforge.tess4j.TesseractException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+@Feature("Register Tests B2B")
 public class RegisterTestsB2B extends BaseTests {
 
     @Test

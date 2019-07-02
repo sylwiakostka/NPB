@@ -1,6 +1,7 @@
 package iTaxiPassanger.pages;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,25 +25,27 @@ public class LogInPage extends BasePage {
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/customButtonText")
     private WebElement logInButton;
 
-    @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/headerBackIconLeft")
+    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/headerBackIconLeft")
     private WebElement backButton;
 
-    @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/fragLoginPassForget")
+    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/fragLoginPassForget")
     private WebElement forgetDateButton;
 
 
-
+    @Step
     public LogInPage verifyLogInPageHeader() {
         waitForVisibilityOfElement(logInPageHeader);
         Assert.assertEquals(logInPageHeader.getText(), "Logowanie");
         return this;
     }
 
-    public SplashPage backToSplashPage (){
+    @Step
+    public SplashPage backToSplashPage() {
         backButton.click();
         return new SplashPage(driver);
     }
 
+    @Step
     public MapPage logAsB2CUser(String userName, String password) {
         List<WebElement> logInFields = driver.findElements(By.className("android.widget.EditText"));
         logInFields.get(0).clear();
@@ -60,6 +63,7 @@ public class LogInPage extends BasePage {
         return new MapPage(driver);
     }
 
+    @Step
     public MapPage logAsB2BUser(String username, String password) {
         List<WebElement> logInFields = driver.findElements(By.className("android.widget.EditText"));
         logInFields.get(0).clear();
@@ -77,6 +81,7 @@ public class LogInPage extends BasePage {
         return new MapPage(driver);
     }
 
+    @Step
     public LogInPage cantLogInB2B(String username, String password) {
         List<WebElement> logInFields = driver.findElements(By.className("android.widget.EditText"));
         logInFields.get(0).clear();
@@ -94,6 +99,7 @@ public class LogInPage extends BasePage {
         return this;
     }
 
+    @Step
     public LogInPage cantLogInB2C(String username, String password) {
         List<WebElement> logInFields = driver.findElements(By.className("android.widget.EditText"));
         logInFields.get(0).clear();
@@ -111,7 +117,8 @@ public class LogInPage extends BasePage {
         return this;
     }
 
-    public PasswordResetPage goToPasswordResetPage (){
+    @Step
+    public PasswordResetPage goToPasswordResetPage() {
         forgetDateButton.click();
         new PasswordResetPage(driver).verifyPasswordResetPage();
         return new PasswordResetPage(driver);

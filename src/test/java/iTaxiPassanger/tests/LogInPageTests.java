@@ -4,17 +4,17 @@ package iTaxiPassanger.tests;
 import iTaxiPassanger.pages.LogInPage;
 import iTaxiPassanger.pages.MapPage;
 import iTaxiPassanger.utilities.LogUsersWrongDataProvider;
+import io.qameta.allure.Feature;
 import net.sourceforge.tess4j.TesseractException;
 import org.testng.annotations.Test;
 
-
+@Feature("LogIn Tests B2C and B2B")
 public class LogInPageTests extends BaseTests {
-
 
 
     @Test
     public void shouldLogInCorrectlyB2C (){
-        new LogInPage(driver).verifyLogInPageHeader().logAsB2CUser("sara@gmail.com", "sara1234");
+        new LogInPage(driver).verifyLogInPageHeader().logAsB2CUser("wkruk98@gmail.com", "wojkru");
         new MapPage(driver).verifyMap();
     }
 

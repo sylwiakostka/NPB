@@ -1,6 +1,7 @@
 package iTaxiPassanger.pages;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,7 @@ public class SetDestinationAddressPage extends BasePage {
     @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/searchAddressPhrase")
     private WebElement destinationAddressField;
 
+    @Step
     public VoucherMapAndMenuPage setDestinationAddressOnPage(String address) throws InterruptedException {
         waitForVisibilityOfElement(destinationAddressField);
         destinationAddressField.sendKeys(address);

@@ -4,6 +4,7 @@ package iTaxiPassanger.pages;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.PointOption;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -55,12 +56,15 @@ public class OrderDetailsPage extends BasePage {
     private WebElement confirmTaxiFromListButton;
 
 
+
+    @Step
     public OrderDetailsPage makeBeReadyToOrder() {
-        new LogInPage(driver).verifyLogInPageHeader().logAsB2CUser("sara@gmail.com", "sara1234");
+        new LogInPage(driver).verifyLogInPageHeader().logAsB2CUser("wasmarc12@gmail.com", "was1234");
         firstOrderButton.click();
         return this;
     }
 
+    @Step
     public OrderDetailsPage addHours(int numberOfHours) {
         waitForVisibilityOfElement(setTimeButton);
         setTimeButton.click();
@@ -81,6 +85,7 @@ public class OrderDetailsPage extends BasePage {
         return this;
     }
 
+    @Step
     public OrderDetailsPage addMinutes(int numberOfScrollsMinutes) {
         waitForVisibilityOfElement(setTimeButton);
         setTimeButton.click();
@@ -99,6 +104,7 @@ public class OrderDetailsPage extends BasePage {
         return this;
     }
 
+    @Step
     public OrderDetailsPage addDay(int numberOfDays) {
         waitForVisibilityOfElement(setTimeButton);
         setTimeButton.click();
@@ -118,6 +124,7 @@ public class OrderDetailsPage extends BasePage {
         return this;
     }
 
+    @Step
     public OrderDetailsPage setTimeIn30Minutes() {
         waitForVisibilityOfElement(setTimeButton);
         setTimeButton.click();
@@ -125,6 +132,7 @@ public class OrderDetailsPage extends BasePage {
         return this;
     }
 
+    @Step
     public OrderDetailsPage verifyIsFutureOrderSet() {
         waitForVisibilityOfElement(setTimeButton);
         String timeOfOrder = setTimeButton.getAttribute("text");
@@ -132,6 +140,7 @@ public class OrderDetailsPage extends BasePage {
         return this;
     }
 
+    @Step
     public OrderDetailsPage setLuxuryTaxi() {
         waitForVisibilityOfElement(luxuryTaxiButton);
         luxuryTaxiButton.click();
@@ -140,6 +149,7 @@ public class OrderDetailsPage extends BasePage {
         return this;
     }
 
+    @Step
     public OrderDetailsPage chooseTaxiFromList() throws InterruptedException {
         Thread.sleep(5000);
         waitForVisibilityOfElement(chooseFromListButton);

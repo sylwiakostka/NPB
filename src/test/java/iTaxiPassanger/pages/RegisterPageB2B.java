@@ -4,21 +4,18 @@ import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
 import iTaxiPassanger.utilities.GetNIP;
-import iTaxiPassanger.utilities.MobileGestures;
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Step;
 import net.sourceforge.tess4j.TesseractException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-
-
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
-
 import static iTaxiPassanger.utilities.MobileGestures.ScrollDown;
-import static iTaxiPassanger.utilities.MobileGestures.ScrollUp;
+
 
 public class RegisterPageB2B extends BasePage {
     public RegisterPageB2B(AndroidDriver driver) {
@@ -53,17 +50,20 @@ public class RegisterPageB2B extends BasePage {
     private WebElement thirdAgreementCheckboxB2B;
 
 
+    @Step
     public RegisterPageB2B verifyRegisterPage() {
         waitForVisibilityOfElement(registerPageHeader);
         Assert.assertTrue(registerPageHeader.isDisplayed());
         return this;
     }
 
+    @Step
     public RegisterPageB2B openRegisterPage() {
         new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToRegisterPage().verifyRegisterPage();
         return this;
     }
 
+    @Step
     public RegisterPageB2B completeFieldsCorrectlyB2B() {
         Faker plFaker = new Faker(new Locale("pl"));
         FakeValuesService fakeValuesService = new FakeValuesService(
@@ -92,6 +92,7 @@ public class RegisterPageB2B extends BasePage {
         return this;
     }
 
+    @Step
     public RegisterPageB2B markAllAgreementsAndAcceptB2B() {
         allAgreementsCheckboxB2B.click();
         ScrollDown();
@@ -99,6 +100,7 @@ public class RegisterPageB2B extends BasePage {
         return this;
     }
 
+    @Step
     public void verifyConfirmationPopup() {
         waitForVisibilityOfElement(driver.findElement(By.id("android:id/parentPanel")));
         Assert.assertEquals(popupMessage.getText(), "Dziękujemy! Wkrótce skontaktujemy się z Tobą, by dokończyć rejestrację!");
@@ -106,6 +108,7 @@ public class RegisterPageB2B extends BasePage {
         new SplashPage(driver).verifyMainScreen();
     }
 
+    @Step
     public RegisterPageB2B doNotSetDataB2B() {
         waitForVisibilityOfElement(profileSwitch);
         profileSwitch.click();
@@ -119,7 +122,7 @@ public class RegisterPageB2B extends BasePage {
         return this;
     }
 
-
+    @Step
     public RegisterPageB2B setWrongDataB2B(String nameAndSurname, String errorText0, String nip, String errorText1, String email, String errorText2,
                                            String phoneNumber, String errorText3, String password, String errorText4) throws InterruptedException {
         waitForVisibilityOfElement(profileSwitch);
@@ -162,6 +165,7 @@ public class RegisterPageB2B extends BasePage {
         return this;
     }
 
+    @Step
     public RegisterPageB2B markFirstAgreementB2B() {
         ScrollDown();
         firstAgreementCheckboxB2B.click();
@@ -169,6 +173,7 @@ public class RegisterPageB2B extends BasePage {
         return this;
     }
 
+    @Step
     public RegisterPageB2B markSecondAgreementB2B() throws InterruptedException, TesseractException, IOException {
         ScrollDown();
         secondAgreementCheckboxB2B.click();
@@ -180,6 +185,7 @@ public class RegisterPageB2B extends BasePage {
         return this;
     }
 
+    @Step
     public RegisterPageB2B markThirdAgreementB2B() throws InterruptedException, TesseractException, IOException {
         ScrollDown();
         thirdAgreementCheckboxB2B.click();
@@ -191,6 +197,7 @@ public class RegisterPageB2B extends BasePage {
         return this;
     }
 
+    @Step
     public RegisterPageB2B markFirstAndSecondAgreementsB2B() {
         ScrollDown();
         firstAgreementCheckboxB2B.click();
@@ -207,7 +214,7 @@ public class RegisterPageB2B extends BasePage {
         return this;
     }
 
-
+    @Step
     public RegisterPageB2B setExistingEmailB2B () throws InterruptedException, TesseractException {
         Faker plFaker = new Faker(new Locale("pl"));
         FakeValuesService fakeValuesService = new FakeValuesService(

@@ -1,6 +1,7 @@
 package iTaxiPassanger.pages;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Step;
 import net.sourceforge.tess4j.TesseractException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,12 +19,14 @@ public class PasswordResetPage extends BasePage {
     private WebElement resetPasswordButton;
 
 
+    @Step
     public PasswordResetPage verifyPasswordResetPage() {
         waitForVisibilityOfElement(passwordResetPageHeader);
         Assert.assertTrue(passwordResetPageHeader.isDisplayed());
         return this;
     }
 
+    @Step
     public LogInPage resetPassword() throws TesseractException, InterruptedException {
         resetPasswordButton.click();
         Thread.sleep(2000);

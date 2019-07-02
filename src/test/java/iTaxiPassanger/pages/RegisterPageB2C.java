@@ -3,11 +3,10 @@ package iTaxiPassanger.pages;
 import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
-import iTaxiPassanger.utilities.MobileGestures;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.PointOption;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Step;
 import net.sourceforge.tess4j.TesseractException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -50,18 +49,20 @@ public class RegisterPageB2C extends BasePage {
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/fragRegPrivateFormTermDesc")
     private WebElement regulationsButton;
 
-
+    @Step
     public RegisterPageB2C verifyRegisterPage() {
         waitForVisibilityOfElement(registerPageHeader);
         Assert.assertTrue(registerPageHeader.isDisplayed());
         return this;
     }
 
+    @Step
     public RegisterPageB2C openRegisterPage() {
         new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToRegisterPage().verifyRegisterPage();
         return this;
     }
 
+    @Step
     public RegisterPageB2C completeFieldsCorrectlyB2C() {
         Faker plFaker = new Faker(new Locale("pl"));
         FakeValuesService fakeValuesService = new FakeValuesService(
@@ -89,18 +90,22 @@ public class RegisterPageB2C extends BasePage {
         return this;
     }
 
+    @Step
     public RegisterPageB2C markAllAgreementsAndAcceptB2C() {
         allAgreementsCheckbox.click();
         nextButton.click();
         return this;
     }
 
+
+    @Step
     public RegisterPageB2C markFirstAgreementB2C() {
         firstAgreementCheckbox.click();
         nextButton.click();
         return this;
     }
 
+    @Step
     public RegisterPageB2C markSecondAgreementB2C() throws InterruptedException, TesseractException, IOException {
         secondAgreementCheckbox.click();
         nextButton.click();
@@ -111,6 +116,7 @@ public class RegisterPageB2C extends BasePage {
         return this;
     }
 
+    @Step
     public RegisterPageB2C markThirdAgreementB2C() throws InterruptedException, TesseractException, IOException {
         thirdAgreementCheckbox.click();
         nextButton.click();
@@ -121,6 +127,7 @@ public class RegisterPageB2C extends BasePage {
         return this;
     }
 
+    @Step
     public RegisterPageB2C markFirstAndSecondAgreementsB2C() {
         firstAgreementCheckbox.click();
         secondAgreementCheckbox.click();
@@ -128,6 +135,7 @@ public class RegisterPageB2C extends BasePage {
         return this;
     }
 
+    @Step
     public RegisterPageB2C markFirstAndThirdAgreementsB2C() {
         firstAgreementCheckbox.click();
         secondAgreementCheckbox.click();
@@ -135,6 +143,7 @@ public class RegisterPageB2C extends BasePage {
         return this;
     }
 
+    @Step
     public RegisterPageB2C doNotSetDataB2C() {
         nextButton.click();
         List<WebElement> errorTextElements = driver.findElements(By.id("com.geckolab.eotaxi.passenger.demo:id/editWithIconErrorText"));
@@ -145,6 +154,7 @@ public class RegisterPageB2C extends BasePage {
         return this;
     }
 
+    @Step
     public RegisterPageB2C setWrongDataB2C(String nameAndSurname, String errorText0, String email, String errorText1,
                                            String phoneNumber, String errorText2, String password, String errorText3) throws InterruptedException {
 
@@ -182,6 +192,8 @@ public class RegisterPageB2C extends BasePage {
 
     }
 
+
+    @Step
     public RegisterPageB2C setExistingEmail () throws InterruptedException, TesseractException {
         Faker plFaker = new Faker(new Locale("pl"));
         FakeValuesService fakeValuesService = new FakeValuesService(
@@ -218,6 +230,7 @@ public class RegisterPageB2C extends BasePage {
 
     }
 
+    @Step
     public RegisterPageB2C tapOnRegulation() {
         ScrollDown();
         TouchAction touchAction = new TouchAction(driver);

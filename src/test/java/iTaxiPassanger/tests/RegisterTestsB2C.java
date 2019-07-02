@@ -1,18 +1,19 @@
 package iTaxiPassanger.tests;
 
 import iTaxiPassanger.pages.RegisterPageB2C;
-import iTaxiPassanger.utilities.MobileGestures;
 import iTaxiPassanger.utilities.RegisterWrongDataProvider;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import net.sourceforge.tess4j.TesseractException;
-import org.openqa.selenium.Point;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-
+@Feature("Register Tests B2C")
 public class RegisterTestsB2C extends BaseTests {
 
     @Test
+    @Description("Description: B2C Login test with correct username and password, with all agreements - can log in.")
     public void shouldRegisterCorrectlyB2CAllAgreements() {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
@@ -21,6 +22,7 @@ public class RegisterTestsB2C extends BaseTests {
     }
 
     @Test
+    @Description("Description: B2C Login test with correct username and password, with only first agreement - can log in.")
     public void shouldRegisterCorrectlyB2CFirstAgreement() {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
@@ -29,6 +31,7 @@ public class RegisterTestsB2C extends BaseTests {
     }
 
     @Test
+    @Description("Description: B2C Login test with correct username and password with, with only second agreement. - can not log in")
     public void shouldNotRegisterCorrectlyB2CSecondAgreement() throws InterruptedException, IOException, TesseractException {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
@@ -38,6 +41,7 @@ public class RegisterTestsB2C extends BaseTests {
     }
 
     @Test
+    @Description("Description: B2C Login test with correct username and password with, with only third agreement. - can not log in")
     public void shouldNotRegisterCorrectlyB2CThirdAgreement() throws InterruptedException, IOException, TesseractException {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
@@ -47,6 +51,7 @@ public class RegisterTestsB2C extends BaseTests {
     }
 
     @Test
+    @Description("Description: B2C Login test with correct username and password, with first and second agreement - can log in.")
     public void shouldRegisterCorrectlyB2CFirstAndSecondAgreements() {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
@@ -55,6 +60,7 @@ public class RegisterTestsB2C extends BaseTests {
     }
 
     @Test
+    @Description("Description: B2C Login test with correct username and password, with first and third agreement - can log in.")
     public void shouldRegisterCorrectlyB2CFirstAndThirdAgreements() {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
@@ -63,6 +69,7 @@ public class RegisterTestsB2C extends BaseTests {
     }
 
     @Test
+    @Description("Description: B2C Login test without username and password - can not log in.")
     public void shouldNotRegisterB2CWithoutData() {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
@@ -72,6 +79,7 @@ public class RegisterTestsB2C extends BaseTests {
     }
 
     @Test(dataProvider = "incorrectDataRegisterB2C", dataProviderClass = RegisterWrongDataProvider.class)
+    @Description("Description: B2C Login test with wrong username and password - can not log in.")
     public void shouldNotRegisterB2CWrongData(String nameAndSurname, String errorText0, String email, String errorText1,
                                               String phoneNumber, String errorText2, String password, String errorText3) throws InterruptedException {
         new RegisterPageB2C(driver)
@@ -81,6 +89,7 @@ public class RegisterTestsB2C extends BaseTests {
     }
 
     @Test
+    @Description("Description: B2C Login test with existing username and password - can not log in.")
     public void shouldNotRegisterB2CExistingEmailB2C () throws TesseractException, InterruptedException {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
@@ -88,10 +97,10 @@ public class RegisterTestsB2C extends BaseTests {
     }
 
     @Test
-    public void shouldOpenReg() throws InterruptedException {
+    @Description("Description: B2C user can open regulations page.")
+    public void shouldOpenReg() {
         new RegisterPageB2C(driver)
                 .openRegisterPage().tapOnRegulation();
-
 
     }
 

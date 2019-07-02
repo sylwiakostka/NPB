@@ -4,8 +4,7 @@ package iTaxiPassanger.pages;
 import iTaxiPassanger.utilities.CaptureElementPicture;
 import iTaxiPassanger.utilities.CompareScreens;
 import io.appium.java_client.android.AndroidDriver;
-import net.sourceforge.tess4j.TesseractException;
-import org.aspectj.weaver.ast.And;
+import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -55,11 +54,13 @@ public class VoucherMapAndMenuPage extends BasePage {
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/confirmConfirm")
     private WebElement confirmOrderButton;
 
+    @Step
     public VoucherMapAndMenuPage makeBeReadyToOrderWithVoucher(String phoneNumber, String code) throws InterruptedException {
         new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToVoucherPage().verifyVoucherPageHeader().putCorrectVoucherCode(phoneNumber, code);
         return new VoucherMapAndMenuPage(driver);
     }
 
+    @Step
     public VoucherMapAndMenuPage verifyVoucherMapPage() {
         waitForVisibilityOfElement(voucherRideMap);
         waitForVisibilityOfElement(goBackButton);
@@ -68,12 +69,14 @@ public class VoucherMapAndMenuPage extends BasePage {
         return new VoucherMapAndMenuPage(driver);
     }
 
+    @Step
     public void verifyDetailsOfScreenElements() {
         orderButton.click();
         waitForVisibilityOfElement(driver.findElement(By.id("com.geckolab.eotaxi.passenger.demo:id/confirmScroll")));
         Assert.assertFalse(selectTimeDisabled.isEnabled());
     }
 
+    @Step
     public void compareScreens() throws IOException {
         String scrFile = "C://Users//user//Desktop//NPB//src//test//java//iTaxiPassanger//tests//screenshotsToCompareInTests//screenshot.png";
 
@@ -86,6 +89,7 @@ public class VoucherMapAndMenuPage extends BasePage {
         Assert.assertEquals(CompareScreens.Result.Matched, CompareScreens.CompareImage(VoucherWiecejOpcjiExpected, scrFile));
     }
 
+    @Step
     public VoucherMapAndMenuPage setStartAddress(String address) throws InterruptedException {
         addressField.click();
         new SetStartAddressPage(driver).setStartAddress(address);
@@ -93,12 +97,14 @@ public class VoucherMapAndMenuPage extends BasePage {
         return new VoucherMapAndMenuPage(driver);
     }
 
+    @Step
     public VoucherMapAndMenuPage setDestinationAddress(String address) throws InterruptedException {
         destinationAddressButton.click();
         new SetDestinationAddressPage(driver).setDestinationAddressOnPage(address);
         return new VoucherMapAndMenuPage(driver);
     }
 
+    @Step
     public VoucherMapAndMenuPage setLuxuryTaxi() {
         waitForVisibilityOfElement(driver.findElement(By.id("com.geckolab.eotaxi.passenger.demo:id/selectData")));
         luxuryTaxiButton.click();
@@ -107,6 +113,7 @@ public class VoucherMapAndMenuPage extends BasePage {
         return new VoucherMapAndMenuPage(driver);
     }
 
+    @Step
     public OrderingPage confirmOrder() {
         waitForVisibilityOfElement(confirmOrderButton);
         confirmOrderButton.click();

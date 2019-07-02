@@ -27,13 +27,12 @@ public class BaseTests {
         caps.setCapability("appWaitDuration", 5000);
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 
-
     }
 
 
-//    @AfterMethod
-//    public void quit() {
-//        driver.closeApp();
-//    }
+    @AfterMethod
+    public void quit() {
+        driver.closeApp();
+    }
 
 }

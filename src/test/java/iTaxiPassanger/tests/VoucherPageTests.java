@@ -3,11 +3,13 @@ package iTaxiPassanger.tests;
 import iTaxiPassanger.pages.LogInPage;
 import iTaxiPassanger.pages.VoucherMapAndMenuPage;
 import iTaxiPassanger.utilities.VouchersDataProvider;
+import io.qameta.allure.Feature;
 import net.sourceforge.tess4j.TesseractException;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+@Feature("Set voucher before ride tests")
 public class VoucherPageTests extends BaseTests {
 
     @Test(dataProvider = "incorrectDataForVoucher", dataProviderClass = VouchersDataProvider.class)
@@ -23,7 +25,7 @@ public class VoucherPageTests extends BaseTests {
 
 
     @Test(dataProvider = "voucherCodesValid", dataProviderClass = VouchersDataProvider.class)
-    public void shouldIntroduceVoucherCodeValidation(String phoneNumber, String code) throws InterruptedException {
+    public void shouldIntroduceVoucherCodeValidation(String phoneNumber, String code)  {
         new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToVoucherPage().verifyVoucherPageHeader().putCorrectVoucherCode(phoneNumber, code);
         new VoucherMapAndMenuPage(driver).verifyVoucherMapPage();
     }

@@ -2,6 +2,7 @@ package iTaxiPassanger.pages;
 
 
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Step;
 import net.sourceforge.tess4j.TesseractException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -25,17 +26,20 @@ public class VoucherPage extends BasePage {
     private WebElement backButton;
 
 
+    @Step
     public VoucherPage verifyVoucherPageHeader() {
         waitForVisibilityOfElement(voucherHeader);
         Assert.assertTrue(voucherHeader.isDisplayed());
         return this;
     }
 
+    @Step
     public SplashPage backToSplashPage() {
         backButton.click();
         return new SplashPage(driver).verifyMainScreen();
     }
 
+    @Step
     public VoucherPage putIncorrectData(String phoneNumber, String code) throws InterruptedException {
         List<WebElement> logInFields = driver.findElements(By.className("android.widget.EditText"));
         logInFields.get(0).sendKeys(phoneNumber);
@@ -45,16 +49,19 @@ public class VoucherPage extends BasePage {
         return new VoucherPage(driver);
     }
 
+    @Step
     public void verifyToastMessage() throws TesseractException, IOException {
         String toastMessage = new VoucherPage(driver).readToastMessage();
         Assert.assertTrue((toastMessage).contains("Prosze uzupetni¢ wszystkie pola"));
     }
 
+    @Step
     public void verifyToastMessageDataProvider(String toastText) throws TesseractException, IOException {
         String toastMessage = new VoucherPage(driver).readToastMessage();
         Assert.assertTrue((toastMessage).contains(toastText));
     }
 
+    @Step
     public VoucherPage putIncorrectVoucherCode(String phoneNumber, String code, String toastText) throws TesseractException, IOException, InterruptedException {
         List<WebElement> logInFields = driver.findElements(By.className("android.widget.EditText"));
         logInFields.get(0).sendKeys(phoneNumber);
@@ -65,6 +72,7 @@ public class VoucherPage extends BasePage {
         return new VoucherPage(driver).verifyVoucherPageHeader();
     }
 
+    @Step
     public VoucherMapAndMenuPage putCorrectVoucherCode(String phoneNumber, String code) {
         List<WebElement> logInFields = driver.findElements(By.className("android.widget.EditText"));
         logInFields.get(0).sendKeys(phoneNumber);

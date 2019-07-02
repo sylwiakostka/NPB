@@ -1,8 +1,10 @@
 package iTaxiPassanger.tests;
 
 import iTaxiPassanger.pages.OrderDetailsPage;
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 
+@Feature("Order Details Tests")
 public class OrderDetailsTests extends BaseTests {
 
     @Test
