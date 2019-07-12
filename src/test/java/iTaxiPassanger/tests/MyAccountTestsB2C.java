@@ -15,7 +15,7 @@ public class MyAccountTestsB2C extends BaseTests {
     @Severity(SeverityLevel.CRITICAL)
     public void shouldVerifyUserDataB2C() {
         new MenuPage(driver)
-                .makeBeReadyToUseMenu("wasmarc12@gmail.com", "was1234")
+                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
                 .verifyUserDataB2C();
@@ -26,7 +26,7 @@ public class MyAccountTestsB2C extends BaseTests {
     @Severity(SeverityLevel.NORMAL)
     public void shouldSetAddresses() throws InterruptedException {
         new MenuPage(driver)
-                .makeBeReadyToUseMenu("wasmarc12@gmail.com", "was1234")
+                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
                 .addHomeAddress("Jasna 5, Warszawa")
@@ -38,7 +38,7 @@ public class MyAccountTestsB2C extends BaseTests {
     @Severity(SeverityLevel.NORMAL)
     public void shouldSwitchSilent() {
         new MenuPage(driver)
-                .makeBeReadyToUseMenu("wasmarc12@gmail.com", "was1234")
+                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
                 .switchSilent();
@@ -49,7 +49,7 @@ public class MyAccountTestsB2C extends BaseTests {
     @Severity(SeverityLevel.MINOR)
     public void shouldChangeNameAndSurname() {
         new MenuPage(driver)
-                .makeBeReadyToUseMenu("wasmarc12@gmail.com", "was1234")
+                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
                 .changeNameAndSurname("Andrzej Wszoła")
@@ -61,7 +61,7 @@ public class MyAccountTestsB2C extends BaseTests {
     @Severity(SeverityLevel.NORMAL)
     public void shouldTryToChangePhoneNumber() throws InterruptedException {
         new MenuPage(driver)
-                .makeBeReadyToUseMenu("wasmarc12@gmail.com", "was1234")
+                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
                 .tryToChangePhoneNumber();
@@ -72,7 +72,7 @@ public class MyAccountTestsB2C extends BaseTests {
     @Severity(SeverityLevel.NORMAL)
     public void shouldTryToChangeEmail()  {
         new MenuPage(driver)
-                .makeBeReadyToUseMenu("wasmarc12@gmail.com", "was1234")
+                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
                 .tryToChangeEmail();

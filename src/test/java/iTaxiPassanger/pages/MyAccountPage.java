@@ -143,7 +143,7 @@ public class MyAccountPage extends BasePage {
         waitForVisibilityOfElement(changePhoneNumberHeader);
         Assert.assertTrue(changePhoneNumberHeader.isDisplayed());
         changePhoneNumberField.clear();
-        changePhoneNumberField.sendKeys("574777590");
+        changePhoneNumberField.sendKeys("508264455");
         saveChangesPhoneNumberButton.click();
         waitForVisibilityOfElement(verifyPhoneNumberHeader);
         verifyPhoneNumberBackButton.click();

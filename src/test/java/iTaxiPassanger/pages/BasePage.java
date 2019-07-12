@@ -38,15 +38,12 @@ public class BasePage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    private static final int WAIT_TIMEOUT = 10;
+    private static final int WAIT_TIMEOUT = 30;
 
     protected void waitForVisibilityOfElement(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    protected void waitForElementToBeClickable(WebElement element) {
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-    }
 
     protected String readToastMessage() throws TesseractException {
         String imgName = takeScreenShotOfPage();

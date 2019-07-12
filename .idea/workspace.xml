@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/PaymentPage.java" line="161" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="63782d80-154d-4f5c-b6b9-984c879fc4c3" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,11 +23,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyAccountTestsB2C.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/MyAccountTestsB2C.java">
+      <file leaf-file-name="VerifyUserBySMSCodePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/VerifyUserBySMSCodePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="162">
+              <caret line="26" column="32" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="26" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#226#227#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PromotionsPageTests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/PromotionsPageTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogInPage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/LogInPage.java">
+      <file leaf-file-name="PromotionsPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/PromotionsPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+            <state relative-caret-position="283">
+              <caret line="37" column="57" lean-forward="true" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,36 +61,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyAccountPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/MyAccountPage.java">
+      <file leaf-file-name="MapPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/MapPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1490">
-              <caret line="148" column="44" lean-forward="true" selection-start-line="148" selection-start-column="44" selection-end-line="148" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidKey.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/appium/java-client/7.0.0/java-client-7.0.0.jar!/io/appium/java_client/android/nativekey/AndroidKey.class">
+      <file leaf-file-name="BasePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/BasePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/BaseTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="27" column="82" selection-start-line="27" selection-start-column="82" selection-end-line="27" selection-end-column="82" />
+            <state relative-caret-position="162">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1122#1123#0" expanded="true" />
-                <element signature="e#1155#1156#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,6 +98,12 @@
       <find>wr</find>
       <find>all</find>
       <find>scro</find>
+      <find>poi</find>
+      <find>get</find>
+      <find>getCe</find>
+      <find>right</find>
+      <find>back</find>
+      <find>BACK</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,34 +112,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/LogUsersWrongDataProvider.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/ReadDataFromExcel.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/VouchersDataProvider.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/VoucherMapPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/TakeScreenshotsOfElements.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/TakeScreenshotOfElement.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/CompareScreens.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/classToMakeMethosTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/classToMakeMethodsTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SetAddressPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/classToVerifyMethodsTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/Scroll.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/CaptureElementPicture.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/GetNIP.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/RegisterTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/RegisterPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/screenshotsToCompareInTests/RegisterTestsB2B.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/RegisterWrongDataProvider.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/BasePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/MobileGestures.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/utilities/DriverFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/tests/BaseTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/LogInPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/OrderingPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/PasswordResetPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/RegisterPageB2B.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/RegisterPageB2C.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/RegulationsPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SetDestinationAddressPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SetStartAddressPage.java" />
@@ -146,28 +132,54 @@
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/OrderDetailsPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/MapPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/LogInPageTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/MenuPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SetWorkAddressPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SetHomeAddressPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/MyAccountTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/RegisterTestsB2C.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/MyAccountTestsB2C.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/BaseTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/MyAccountPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/ExcelToDataProviderCreditCard.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/ReadExcel.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/PaymentsPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/ExcelReader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/DataProviderCreditCardFromExcel.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/ExcelReaderDataProvider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/BraintreeScreenToAddCardPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/CreditCardDataProvider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/PaymentPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/LogInPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/AddCreditCardAfterRegisterPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/MyAccountTestsB2C.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/PaymentsPageTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/RegisterPageB2C.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/RegisterPageB2B.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/ReadOTPValue.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/BasePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/BaseTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/ReadSMS.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/classToVerifyMethodsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/SwithLoodForNumber.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/RegisterTestsB2C.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/VerifyUserBySMSCodePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/MenuPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/PromotionsPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/PromotionsPageTests.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2072" />
-    <option name="y" value="144" />
-    <option name="width" value="1765" />
-    <option name="height" value="1030" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1922" />
+    <option name="y" value="26" />
+    <option name="width" value="1819" />
+    <option name="height" value="988" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,13 +240,18 @@
               <item name="iTaxiPassanger" type="462c0819:PsiDirectoryNode" />
               <item name="utilities" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="NPB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NPB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="MobileSittings" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,9 +282,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.MyAccountTestsB2C.shouldVerifyUserDataB2C">
+  <component name="RunManager" selected="TestNG.PromotionsPageTests.introduceCorrectPromotionCode">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="classToVerifyMethodsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="iTaxiPassanger.utilities.classToVerifyMethodsTest" />
+      <module name="ExerciseTests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iTaxiPassanger.utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -295,7 +323,7 @@
       <option name="WORKING_DIRECTORY" />
       <module name="" />
     </configuration>
-    <configuration name="MyAccountTestsB2C" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="BaseTests.readSMS" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ExerciseTests" />
       <extension name="coverage">
         <pattern>
@@ -307,95 +335,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="iTaxiPassanger.tests" />
-      <option name="MAIN_CLASS_NAME" value="iTaxiPassanger.tests.MyAccountTestsB2C" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="MyAccountTestsB2C.shouldSwitchSilent" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ExerciseTests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="iTaxiPassanger.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="iTaxiPassanger.tests" />
-      <option name="MAIN_CLASS_NAME" value="iTaxiPassanger.tests.MyAccountTestsB2C" />
-      <option name="METHOD_NAME" value="shouldSwitchSilent" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="0" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="MyAccountTestsB2C.shouldTryToChangePhoneNumber (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ExerciseTests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="iTaxiPassanger.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="iTaxiPassanger.tests" />
-      <option name="MAIN_CLASS_NAME" value="iTaxiPassanger.tests.MyAccountTestsB2C" />
-      <option name="METHOD_NAME" value="shouldTryToChangePhoneNumber" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="0" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="MyAccountTestsB2C.shouldTryToChangePhoneNumber" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ExerciseTests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="iTaxiPassanger.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="iTaxiPassanger.tests" />
-      <option name="MAIN_CLASS_NAME" value="iTaxiPassanger.tests.MyAccountTestsB2C" />
-      <option name="METHOD_NAME" value="shouldTryToChangePhoneNumber" />
+      <option name="MAIN_CLASS_NAME" value="iTaxiPassanger.tests.BaseTests" />
+      <option name="METHOD_NAME" value="readSMS" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -411,7 +352,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="MyAccountTestsB2C.shouldVerifyUserDataB2C" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PromotionsPageTests.introduceCorrectPromotionCode" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ExerciseTests" />
       <extension name="coverage">
         <pattern>
@@ -423,8 +364,66 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="iTaxiPassanger.tests" />
-      <option name="MAIN_CLASS_NAME" value="iTaxiPassanger.tests.MyAccountTestsB2C" />
-      <option name="METHOD_NAME" value="shouldVerifyUserDataB2C" />
+      <option name="MAIN_CLASS_NAME" value="iTaxiPassanger.tests.PromotionsPageTests" />
+      <option name="METHOD_NAME" value="introduceCorrectPromotionCode" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="ReadOTPValue.readSMS" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ExerciseTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iTaxiPassanger.utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="iTaxiPassanger.utilities" />
+      <option name="MAIN_CLASS_NAME" value="iTaxiPassanger.utilities.ReadOTPValue" />
+      <option name="METHOD_NAME" value="readSMS" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="RegisterTestsB2C.shouldRegisterCorrectlyB2CFirstAgreement" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ExerciseTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iTaxiPassanger.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="iTaxiPassanger.tests" />
+      <option name="MAIN_CLASS_NAME" value="iTaxiPassanger.tests.RegisterTestsB2C" />
+      <option name="METHOD_NAME" value="shouldRegisterCorrectlyB2CFirstAgreement" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -463,19 +462,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="TestNG.MyAccountTestsB2C" />
-      <item itemvalue="TestNG.MyAccountTestsB2C.shouldSwitchSilent" />
-      <item itemvalue="TestNG.MyAccountTestsB2C.shouldTryToChangePhoneNumber" />
-      <item itemvalue="TestNG.MyAccountTestsB2C.shouldTryToChangePhoneNumber (1)" />
-      <item itemvalue="TestNG.MyAccountTestsB2C.shouldVerifyUserDataB2C" />
+      <item itemvalue="TestNG.BaseTests.readSMS" />
+      <item itemvalue="TestNG.ReadOTPValue.readSMS" />
+      <item itemvalue="TestNG.RegisterTestsB2C.shouldRegisterCorrectlyB2CFirstAgreement" />
+      <item itemvalue="Application.classToVerifyMethodsTest" />
+      <item itemvalue="TestNG.PromotionsPageTests.introduceCorrectPromotionCode" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.MyAccountTestsB2C.shouldVerifyUserDataB2C" />
-        <item itemvalue="TestNG.MyAccountTestsB2C.shouldTryToChangePhoneNumber (1)" />
-        <item itemvalue="TestNG.MyAccountTestsB2C.shouldTryToChangePhoneNumber" />
-        <item itemvalue="TestNG.MyAccountTestsB2C.shouldSwitchSilent" />
-        <item itemvalue="TestNG.MyAccountTestsB2C" />
+        <item itemvalue="TestNG.PromotionsPageTests.introduceCorrectPromotionCode" />
+        <item itemvalue="TestNG.RegisterTestsB2C.shouldRegisterCorrectlyB2CFirstAgreement" />
+        <item itemvalue="Application.classToVerifyMethodsTest" />
+        <item itemvalue="TestNG.BaseTests.readSMS" />
+        <item itemvalue="TestNG.ReadOTPValue.readSMS" />
       </list>
     </recent_temporary>
   </component>
@@ -493,35 +492,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MyAccountTestsB2C - 2019.07.02 at 15h 27m 32s.xml">
-      <configuration name="MyAccountTestsB2C" configurationId="TestNG" />
+    <history-entry file="RegisterTestsB2C_shouldRegisterCorrectlyB2CFirstAgreement - 2019.07.10 at 14h 17m 36s.xml">
+      <configuration name="RegisterTestsB2C.shouldRegisterCorrectlyB2CFirstAgreement" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="MyAccountTestsB2C - 2019.07.02 at 15h 28m 12s.xml">
-      <configuration name="MyAccountTestsB2C" configurationId="TestNG" />
+    <history-entry file="RegisterTestsB2C_shouldRegisterCorrectlyB2CFirstAgreement - 2019.07.10 at 14h 18m 24s.xml">
+      <configuration name="RegisterTestsB2C.shouldRegisterCorrectlyB2CFirstAgreement" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="MyAccountTestsB2C - 2019.07.02 at 15h 31m 09s.xml">
-      <configuration name="MyAccountTestsB2C" configurationId="TestNG" />
+    <history-entry file="RegisterTestsB2C_shouldRegisterCorrectlyB2CFirstAgreement - 2019.07.10 at 14h 21m 46s.xml">
+      <configuration name="RegisterTestsB2C.shouldRegisterCorrectlyB2CFirstAgreement" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="MyAccountTestsB2C_shouldSwitchSilent - 2019.07.02 at 15h 38m 21s.xml">
-      <configuration name="MyAccountTestsB2C.shouldSwitchSilent" configurationId="TestNG" />
+    <history-entry file="RegisterTestsB2C_shouldRegisterCorrectlyB2CFirstAgreement - 2019.07.10 at 14h 34m 32s.xml">
+      <configuration name="RegisterTestsB2C.shouldRegisterCorrectlyB2CFirstAgreement" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="MyAccountTestsB2C_shouldSwitchSilent - 2019.07.02 at 15h 38m 22s.xml">
-      <configuration name="MyAccountTestsB2C.shouldSwitchSilent" configurationId="TestNG" />
+    <history-entry file="RegisterTestsB2C_shouldRegisterCorrectlyB2CFirstAgreement - 2019.07.10 at 14h 37m 26s.xml">
+      <configuration name="RegisterTestsB2C.shouldRegisterCorrectlyB2CFirstAgreement" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="MyAccountTestsB2C_shouldSwitchSilent - 2019.07.02 at 15h 39m 15s.xml">
-      <configuration name="MyAccountTestsB2C.shouldSwitchSilent" configurationId="TestNG" />
+    <history-entry file="RegisterTestsB2C_shouldRegisterCorrectlyB2CFirstAgreement - 2019.07.10 at 14h 42m 15s.xml">
+      <configuration name="RegisterTestsB2C.shouldRegisterCorrectlyB2CFirstAgreement" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="MyAccountTestsB2C_shouldTryToChangePhoneNumber - 2019.07.02 at 15h 40m 16s.xml">
-      <configuration name="MyAccountTestsB2C.shouldTryToChangePhoneNumber" configurationId="TestNG" />
+    <history-entry file="RegisterTestsB2C_shouldRegisterCorrectlyB2CFirstAgreement - 2019.07.10 at 14h 48m 44s.xml">
+      <configuration name="RegisterTestsB2C.shouldRegisterCorrectlyB2CFirstAgreement" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="MyAccountTestsB2C_shouldTryToChangePhoneNumber_(1) - 2019.07.02 at 15h 46m 53s.xml">
-      <configuration name="MyAccountTestsB2C.shouldTryToChangePhoneNumber (1)" configurationId="TestNG" />
+    <history-entry file="RegisterTestsB2C_shouldRegisterCorrectlyB2CFirstAgreement - 2019.07.10 at 14h 54m 22s.xml">
+      <configuration name="RegisterTestsB2C.shouldRegisterCorrectlyB2CFirstAgreement" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="MyAccountTestsB2C_shouldVerifyUserDataB2C - 2019.07.02 at 15h 47m 54s.xml">
-      <configuration name="MyAccountTestsB2C.shouldVerifyUserDataB2C" configurationId="TestNG" />
+    <history-entry file="PromotionsPageTests_introduceCorrectPromotionCode - 2019.07.10 at 15h 00m 26s.xml">
+      <configuration name="PromotionsPageTests.introduceCorrectPromotionCode" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="MyAccountTestsB2C_shouldVerifyUserDataB2C - 2019.07.02 at 15h 49m 26s.xml">
-      <configuration name="MyAccountTestsB2C.shouldVerifyUserDataB2C" configurationId="TestNG" />
+    <history-entry file="PromotionsPageTests_introduceCorrectPromotionCode - 2019.07.10 at 15h 03m 09s.xml">
+      <configuration name="PromotionsPageTests.introduceCorrectPromotionCode" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -534,64 +533,64 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1922" y="26" width="1819" height="988" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32729805" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3187572" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.31559855" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32729805" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.326257" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32622334" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32681242" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35308343" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3256617" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18283582" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20636725" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32527205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3963964" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39470655" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24946696" />
       <window_info anchor="right" id="Coverage" order="4" side_tool="true" visible="true" weight="0.11914324" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32622334" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24946696" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32729805" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3360184" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3250346" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21610738" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32729805" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29749632" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32622334" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39972144" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39470655" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.10638298" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3256617" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32681242" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32622334" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.31760645" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.11914324" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2058651" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -599,198 +598,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="39" />
+      <option name="time" value="47" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/classToVerifyMethodsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="21" column="52" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/Scroll.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/VouchersDataProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.141.5/selenium-api-3.141.5.jar!/org/openqa/selenium/WebElement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/CompareScreens.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/CaptureElementPicture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="22" column="52" lean-forward="true" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/GetNIP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.141.5/selenium-api-3.141.5.jar!/org/openqa/selenium/interactions/touch/TouchActions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/BasePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/DriverFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="40" column="56" lean-forward="true" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/BaseTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/HomePageTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/appium/java-client/7.0.0/java-client-7.0.0.jar!/io/appium/java_client/TouchAction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/MobileGestures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MobileSittings/sauceLabsMobile/LogInTestMobile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MobileSittings/sauceLabsMobile/TestConfigMobile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MobileSittings/sauceLabsMobile/souceLabTestNGMobile.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/RegisterPageB2C.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="232" column="9" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/RegulationsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SetDestinationAddressPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SetStartAddressPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SignUpPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SplashPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/VoucherMapAndMenuPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="115" column="9" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/VoucherPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -811,10 +622,156 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/OrderingPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/OrderDetailsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SetWorkAddressPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="44" column="39" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/appium/java-client/7.0.0/java-client-7.0.0.jar!/io/appium/java_client/android/nativekey/AndroidKey.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.0.1/poi-4.0.1.jar!/org/apache/poi/ss/usermodel/Cell.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SetHomeAddressPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/appium/java-client/7.0.0/java-client-7.0.0.jar!/io/appium/java_client/android/nativekey/PressesKey.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="68" column="45" lean-forward="true" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/DataProviderCreditCardFromExcel.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/SuiteRunnerWorker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="735" selection-start-line="735" selection-end-line="735" />
+          <folding>
+            <element signature="e#20831#20832#0" expanded="true" />
+            <element signature="e#20871#20872#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/BraintreeScreenToAddCardPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/CreditCardDataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/AddCreditCardAfterRegisterPage.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/MyAccountPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="149" column="55" lean-forward="true" selection-start-line="149" selection-start-column="7" selection-end-line="149" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/PaymentPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="216" column="43" selection-start-line="216" selection-start-column="43" selection-end-line="216" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/MyAccountTestsB2C.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="74" column="34" lean-forward="true" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/LogInPageTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/RegisterTestsB2B.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/SplashPageTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="102">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -832,38 +789,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/PaymentsPageTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/OrderDetailsTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="85">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/OrderingPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SplashPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/OrderDetailsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/MapPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/RegisterWrongDataProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="359">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -874,44 +823,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/LogInPageTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/VouchersDataProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SetHomeAddressPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/RegisterWrongDataProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/SetWorkAddressPage.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/appium/java-client/7.0.0/java-client-7.0.0.jar!/io/appium/java_client/InteractsWithApps.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="44" column="39" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/RegisterTestsB2B.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        <state relative-caret-position="119">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/RegisterPageB2B.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="216" column="9" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
+        <state relative-caret-position="3366">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/MobileGestures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/appium/java-client/7.0.0/java-client-7.0.0.jar!/io/appium/java_client/android/StartsActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/appium/java-client/7.0.0/java-client-7.0.0.jar!/io/appium/java_client/android/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="41" column="62" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MobileSittings/mobileRealDevice/NativeApps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="15" column="136" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.141.5/selenium-support-3.141.5.jar!/org/openqa/selenium/support/FindBy.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/BaseTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="82" lean-forward="true" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/ReadSMS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/ChooseCorrectDigitOnKeyboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/classToVerifyMethodsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/LogInPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/RegisterPageB2C.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1182">
+          <caret line="101" column="27" selection-start-line="101" selection-start-column="27" selection-end-line="101" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -920,77 +946,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/RegisterTestsB2C.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/BasePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="230">
+          <caret line="33" column="47" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="33" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/MenuPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="162">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/BaseTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/MapPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" column="82" selection-start-line="27" selection-start-column="82" selection-end-line="27" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
-            <element signature="e#1155#1156#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/appium/java-client/7.0.0/java-client-7.0.0.jar!/io/appium/java_client/android/nativekey/AndroidKey.class">
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/BasePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/MyAccountPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1490">
-          <caret line="148" column="44" lean-forward="true" selection-start-line="148" selection-start-column="44" selection-end-line="148" selection-end-column="44" />
+        <state relative-caret-position="162">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/MyAccountTestsB2C.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/VerifyUserBySMSCodePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="162">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/PromotionsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="37" column="57" lean-forward="true" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/LogInPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/PromotionsPageTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+        <state relative-caret-position="102">
+          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

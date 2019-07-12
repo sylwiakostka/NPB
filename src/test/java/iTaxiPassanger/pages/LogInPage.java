@@ -125,6 +125,5 @@ public class LogInPage extends BasePage {
 
     }
 
-
 }
 

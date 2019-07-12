@@ -71,7 +71,7 @@ public class RegisterPageB2B extends BasePage {
         String email = fakeValuesService.bothify("????##@xyz.xyz");
         String password = fakeValuesService.regexify("[a-z1-9]{10}");
         String nameAndSurname = plFaker.name().fullName();
-        String phoneNumber = "508264455";
+        String phoneNumber = "574777590";
         waitForVisibilityOfElement(profileSwitch);
         if (profileSwitch.getText().equals("WŁ.")) {
             List<WebElement> registerFieldsB2B = driver.findElements(By.className("android.widget.EditText"));
@@ -212,6 +212,7 @@ public class RegisterPageB2B extends BasePage {
         secondAgreementCheckboxB2B.click();
         sendB2bButton.click();
         return this;
+
     }
 
     @Step

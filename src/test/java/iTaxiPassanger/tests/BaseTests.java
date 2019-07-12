@@ -1,19 +1,20 @@
 package iTaxiPassanger.tests;
 
-import io.appium.java_client.AppiumDriver;
+
+import iTaxiPassanger.utilities.ReadSMS;
+import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
+import org.testng.annotations.Test;
 
 
 import java.net.URL;
 
 public class BaseTests {
-    protected AndroidDriver driver;
+    public AndroidDriver driver;
 
     @BeforeMethod
     public void setUp() throws Exception {
@@ -24,15 +25,23 @@ public class BaseTests {
         caps.setCapability("noReset", "true");
         caps.setCapability("appPackage", "com.geckolab.eotaxi.passenger.demo");
         caps.setCapability("appActivity", "pl.itaxi.MainActivity");
-        caps.setCapability("appWaitDuration", 5000);
+        caps.setCapability("appWaitDuration", 10000);
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
-
     }
 
 
-    @AfterMethod
-    public void quit() {
-        driver.closeApp();
-    }
-
+//    @Test
+//    public void readSMS() {
+//        ReadSMS readOTPValue = new ReadSMS();
+//        readOTPValue.readSMS();
+//
+//    }
 }
+
+
+//    @AfterMethod
+//    public void quit() {
+//        driver.closeApp();
+//    }
+
+

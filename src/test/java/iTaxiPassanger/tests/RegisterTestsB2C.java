@@ -1,6 +1,8 @@
 package iTaxiPassanger.tests;
 
 import iTaxiPassanger.pages.RegisterPageB2C;
+import iTaxiPassanger.pages.VerifyUserBySMSCodePage;
+import iTaxiPassanger.utilities.ReadSMS;
 import iTaxiPassanger.utilities.RegisterWrongDataProvider;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
@@ -23,16 +25,18 @@ public class RegisterTestsB2C extends BaseTests {
 
     @Test
     @Description("Description: B2C Login test with correct username and password, with only first agreement - can log in.")
-    public void shouldRegisterCorrectlyB2CFirstAgreement() {
+    public void shouldRegisterCorrectlyB2CFirstAgreement() throws InterruptedException {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
                 .markFirstAgreementB2C();
+        new VerifyUserBySMSCodePage(driver)
+                .readAndPutSMSIfNeedToVerify();
     }
 
     @Test
     @Description("Description: B2C Login test with correct username and password with, with only second agreement. - can not log in")
-    public void shouldNotRegisterCorrectlyB2CSecondAgreement() throws InterruptedException, IOException, TesseractException {
+    public void shouldNotRegisterCorrectlyB2CSecondAgreement() throws InterruptedException, TesseractException {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
@@ -42,7 +46,7 @@ public class RegisterTestsB2C extends BaseTests {
 
     @Test
     @Description("Description: B2C Login test with correct username and password with, with only third agreement. - can not log in")
-    public void shouldNotRegisterCorrectlyB2CThirdAgreement() throws InterruptedException, IOException, TesseractException {
+    public void shouldNotRegisterCorrectlyB2CThirdAgreement() throws InterruptedException,  TesseractException {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()

@@ -70,7 +70,7 @@ public class RegisterPageB2C extends BasePage {
         String email = fakeValuesService.bothify("????##@xyz.xyz");
         String password = fakeValuesService.regexify("[a-z1-9]{10}");
         String nameAndSurname = plFaker.name().fullName();
-        String phoneNumber = "508264455";
+        String phoneNumber = "574777590";
 
         if (profileSwitch.getText().equals("WYŁ.")) {
             List<WebElement> registerFields = driver.findElements(By.className("android.widget.EditText"));
@@ -106,7 +106,7 @@ public class RegisterPageB2C extends BasePage {
     }
 
     @Step
-    public RegisterPageB2C markSecondAgreementB2C() throws InterruptedException, TesseractException, IOException {
+    public RegisterPageB2C markSecondAgreementB2C() throws InterruptedException, TesseractException {
         secondAgreementCheckbox.click();
         nextButton.click();
         Thread.sleep(3000);
@@ -117,7 +117,7 @@ public class RegisterPageB2C extends BasePage {
     }
 
     @Step
-    public RegisterPageB2C markThirdAgreementB2C() throws InterruptedException, TesseractException, IOException {
+    public RegisterPageB2C markThirdAgreementB2C() throws InterruptedException, TesseractException {
         thirdAgreementCheckbox.click();
         nextButton.click();
         Thread.sleep(3000);

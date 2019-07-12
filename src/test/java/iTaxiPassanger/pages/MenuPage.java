@@ -1,6 +1,8 @@
 package iTaxiPassanger.pages;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +21,12 @@ public class MenuPage extends BasePage {
 
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/menuProfileUserName")
     private WebElement profileButton;
+
+    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/menuProfilePayments")
+    private WebElement paymentsButton;
+
+    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/menuProfilePromotionCodes")
+    private WebElement promotionsButton;
 
 
     @Step
@@ -40,14 +48,37 @@ public class MenuPage extends BasePage {
         return new MyAccountPage(driver);
     }
 
+    @Step
+    public PaymentPage openPaymentPage() {
+        paymentsButton.click();
+        new PaymentPage(driver).verifyPaymentPage();
+        return new PaymentPage(driver);
+    }
+
 
     @Step
-    public MenuPage makeBeReadyToUseMenu(String userName, String password) {
+    public MenuPage logInAndOpenMenu(String userName, String password) {
         new LogInPage(driver)
                 .verifyLogInPageHeader()
                 .logAsB2CUser(userName, password)
                 .openMenu()
                 .verifyMenuPage();
-        return new MenuPage(driver);
+        return this;
+    }
+
+    @Step
+    public MenuPage registerAndOpenMenu() throws InterruptedException {
+        new RegisterPageB2C(driver)
+                .openRegisterPage()
+                .completeFieldsCorrectlyB2C()
+                .markAllAgreementsAndAcceptB2C();
+        return this;
+    }
+
+    @Step
+    public PromotionsPage openPromotionsPage() {
+        promotionsButton.click();
+        new PromotionsPage(driver).verifyPromotionPageHeader();
+        return new PromotionsPage(driver);
     }
 }
