@@ -25,7 +25,7 @@ public class SetStartAddressPage extends BasePage {
         waitForVisibilityOfElement(driver.findElement(By.id("com.geckolab.eotaxi.passenger.demo:id/rowAddressName")));
         Thread.sleep(3000);
         List<WebElement> addressesList = driver.findElements(By.id("com.geckolab.eotaxi.passenger.demo:id/rowAddressName"));
-        addressesList.get(1).click();
+        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+address+"\").instance(0))").click();
         return new VoucherMapAndMenuPage(driver);
     }
 

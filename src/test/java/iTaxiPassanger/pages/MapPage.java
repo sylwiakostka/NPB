@@ -30,6 +30,7 @@ public class MapPage extends BasePage {
 
     @Step
     public MenuPage openMenu() {
+        waitForVisibilityOfElement(openMenuButton);
         openMenuButton.click();
         new MenuPage(driver).verifyMenuPage();
         return new MenuPage(driver);

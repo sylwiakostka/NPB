@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Locale;
 
 import static iTaxiPassanger.utilities.MobileGestures.ScrollDown;
+import static iTaxiPassanger.utilities.MobileGestures.scrollToElement;
 
 
 public class RegisterPageB2C extends BasePage {
@@ -221,6 +222,7 @@ public class RegisterPageB2C extends BasePage {
             registerFields.get(3).sendKeys(password);
         }
         firstAgreementCheckbox.click();
+        ScrollDown();
         nextButton.click();
         Thread.sleep(3000);
         String toastMessage = readToastMessage();

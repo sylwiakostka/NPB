@@ -4,10 +4,15 @@ import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.FindBy;
+import org.springframework.ui.context.support.UiApplicationContextUtils;
 import org.testng.Assert;
 
 import java.util.List;
+
+import static iTaxiPassanger.utilities.MobileGestures.scrollToElement;
 
 public class SetWorkAddressPage extends BasePage {
     public SetWorkAddressPage(AndroidDriver driver) {
@@ -17,15 +22,15 @@ public class SetWorkAddressPage extends BasePage {
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/headerBackTitle")
     private WebElement setWorkAddressPageHeader;
 
-    @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/fragAddAddressName")
+    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/fragAddAddressName")
     private WebElement pinName;
 
-    @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/afragAdAddressSearchPhrase")
+    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/afragAdAddressSearchPhrase")
     private WebElement addressSearchField;
 
-    @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/fragAddAddressButton")
+    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/fragAddAddressButton")
     private WebElement addAddressButton;
-    
+
 
     @Step
     public SetWorkAddressPage verifySetWorkAddressPage() {
@@ -37,7 +42,7 @@ public class SetWorkAddressPage extends BasePage {
     }
 
     @Step
-    public MyAccountPage setWorkAddress (String address) throws InterruptedException {
+    public MyAccountPage setWorkAddress(String address) throws InterruptedException {
         addressSearchField.clear();
         addressSearchField.sendKeys(address);
         Thread.sleep(2000);

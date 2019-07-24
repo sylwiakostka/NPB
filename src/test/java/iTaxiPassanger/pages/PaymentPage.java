@@ -123,19 +123,7 @@ public class PaymentPage extends BasePage {
             sizeOfPaymentList--;
         }
         Thread.sleep(3000);
-        driver.pressKey(new KeyEvent(AndroidKey.BACK));
-        waitForVisibilityOfElement(paymentList);
         waitForVisibilityOfElement(paymentPageHeader);
-        return this;
-    }
-
-    @Step
-    public PaymentPage checkAutomationPaymentCheckbox() {
-        if (automaticPaymentCheckbox.getAttribute("content-desc").equals("Potwierdzaj płatność automatycznie. Odznaczone")) {
-            automaticPaymentCheckbox.click();
-            Assert.assertTrue(automaticPaymentCheckbox.getAttribute("content-desc").equals("Potwierdzaj płatność automatycznie. Zaznaczone"));
-        } else
-            Assert.assertTrue((automaticPaymentCheckbox.getAttribute("content-desc").equals("Potwierdzaj płatność automatycznie. Zaznaczone")));
         return this;
     }
 
@@ -146,6 +134,19 @@ public class PaymentPage extends BasePage {
             Assert.assertTrue(automaticPaymentCheckbox.getAttribute("content-desc").equals("Potwierdzaj płatność automatycznie. Odznaczone"));
         } else
             Assert.assertTrue((automaticPaymentCheckbox.getAttribute("content-desc").equals("Potwierdzaj płatność automatycznie. Odznaczone")));
+        return this;
+    }
+
+    @Step
+    public PaymentPage checkAutomationPaymentCheckbox() throws InterruptedException {
+        Thread.sleep(2000);
+        System.out.println(automaticPaymentCheckbox.getAttribute("content-desc"));
+        if (automaticPaymentCheckbox.getAttribute("content-desc").equals("Potwierdzaj płatność automatycznie. Odznaczone")) {
+            automaticPaymentCheckbox.click();
+            Assert.assertTrue(automaticPaymentCheckbox.getAttribute("content-desc").equals("Potwierdzaj płatność automatycznie. Zaznaczone"));
+        } else
+            Assert.assertTrue((automaticPaymentCheckbox.getAttribute("content-desc").equals("Potwierdzaj płatność automatycznie.Odznaczone")));
+
         return this;
     }
 

@@ -30,8 +30,8 @@ public class MyAccountTestsB2B extends BaseTests {
                 .logInB2BAndOpenMenu("ola.tola@gmail.com", "1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
+                .addWorkAddress("Al. Jerozolimskie 200, Warszawa")
                 .addHomeAddress("Jasna 5, Warszawa")
-                .addWorkAddress("Sasanki 2, Warszawa")
                 .logOut();
     }
 

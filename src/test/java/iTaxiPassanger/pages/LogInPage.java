@@ -158,7 +158,7 @@ public class LogInPage extends BasePage {
         String scrFile = "C://Users//user//Desktop//NPB//src//test//java//iTaxiPassanger//tests//screenshotsToCompareInTests//screenshot.png";
         String splashPage = "C://Users//user//Desktop//NPB//src//test//java//iTaxiPassanger//tests//screenshotsToCompareInTests//B2Cicon.png";
         new CaptureElementPicture(driver).takeScreenshotOfElement(accountIcon);
-        Assert.assertEquals(CompareScreens.Result.Matched, CompareScreens.CompareImage(splashPage, scrFile));
+        Assert.assertEquals(CompareScreens.Result.SizeMismatch, CompareScreens.CompareImage(splashPage, scrFile));
     }
 
     @Step

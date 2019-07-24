@@ -32,7 +32,7 @@ public class PaymentsPageTests extends BaseTests {
     }
 
     @Test
-    public void shouldVerifyAutomationPaymentCheckbox() {
+    public void shouldVerifyAutomationPaymentCheckbox() throws InterruptedException {
         new MenuPage(driver)
                 .logInB2CAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openPaymentPage()
