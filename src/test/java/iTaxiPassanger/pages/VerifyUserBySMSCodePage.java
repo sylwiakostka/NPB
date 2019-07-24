@@ -29,9 +29,6 @@ public class VerifyUserBySMSCodePage extends BasePage {
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/confirmButtonPhoneNumber")
     private WebElement confirmCodeButton;
 
-    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/cardFormView")
-    private WebElement addCardPageHeader;
-
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/cardFormViewSkip")
     private WebElement cardFormViewSkipButton;
 
@@ -43,44 +40,71 @@ public class VerifyUserBySMSCodePage extends BasePage {
     }
 
     public void readAndPutSMSIfNeedToVerify() throws InterruptedException {
-        Thread.sleep(5000);
-        if (addCardPageHeader.isDisplayed()) {
-            Assert.assertTrue(cardFormViewSkipButton.isDisplayed());
-            cardFormViewSkipButton.click();
-            new MapPage(driver).verifyMap();
+        verifyVerifyUserBySMSCodePage();
+        driver.openNotifications();
+        Thread.sleep(10000);
+        waitForVisibilityOfElement(itaxiSMS);
+        Assert.assertTrue(itaxiSMS.isDisplayed());
+        try {
+            List<WebElement> notifList = driver.findElements(By.id("android:id/text"));
+            for (WebElement notifElem : notifList)
+                if (notifElem.getAttribute("text").contains("Twoj kod aktywacyjny to")) {
+                    String splitedFirstPart = notifElem.getAttribute("text").split("to")[1].trim();
+                    String splittedSecondPart = splitedFirstPart.split(". K")[0];
+                    driver.pressKey(new KeyEvent(AndroidKey.BACK));
+                    String digit1 = splittedSecondPart.substring(0, 1);
+                    String digit2 = splittedSecondPart.substring(1, 2);
+                    String digit3 = splittedSecondPart.substring(2, 3);
+                    String digit4 = splittedSecondPart.substring(3, 4);
+                    ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit1);
+                    ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit2);
+                    ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit3);
+                    ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit4);
+                    confirmCodeButton.click();
+                    driver.hideKeyboard();
+                    waitForVisibilityOfElement(cardFormViewSkipButton);
+                    Assert.assertTrue(cardFormViewSkipButton.isDisplayed());
+                    cardFormViewSkipButton.click();
+                    new MapPage(driver).verifyMap();
+                }
+        } catch (StaleElementReferenceException e) {
+        }
+    }
 
-        } else if (!cardFormViewSkipButton.isDisplayed()){
-            verifyVerifyUserBySMSCodePage();
-            driver.openNotifications();
-            Thread.sleep(10000);
-            waitForVisibilityOfElement(itaxiSMS);
-            Assert.assertTrue(itaxiSMS.isDisplayed());
-            try {
-                List<WebElement> notifList = driver.findElements(By.id("android:id/text"));
-                for (WebElement notifElem : notifList)
-                    if (notifElem.getAttribute("text").contains("Twoj kod aktywacyjny to")) {
-                        String splitedFirstPart = notifElem.getAttribute("text").split("to")[1].trim();
-                        String splittedSecondPart = splitedFirstPart.split(". K")[0];
-                        driver.pressKey(new KeyEvent(AndroidKey.BACK));
-                        String digit1 = splittedSecondPart.substring(0, 1);
-                        String digit2 = splittedSecondPart.substring(1, 2);
-                        String digit3 = splittedSecondPart.substring(2, 3);
-                        String digit4 = splittedSecondPart.substring(3, 4);
-                        ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit1);
-                        ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit2);
-                        ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit3);
-                        ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit4);
-                        confirmCodeButton.click();
-                        waitForVisibilityOfElement(addCardPageHeader);
-                        Assert.assertTrue(addCardPageHeader.isDisplayed());
-                        cardFormViewSkipButton.click();
-                        new MapPage(driver).verifyMap();
-                    }
-            } catch (StaleElementReferenceException e) {
-            }
+
+    public void readAndPutSMSToVerifyVoucher() throws InterruptedException {
+        verifyVerifyUserBySMSCodePage();
+        driver.openNotifications();
+        Thread.sleep(10000);
+        waitForVisibilityOfElement(itaxiSMS);
+        Assert.assertTrue(itaxiSMS.isDisplayed());
+        try {
+            List<WebElement> notifList = driver.findElements(By.id("android:id/text"));
+            for (WebElement notifElem : notifList)
+                if (notifElem.getAttribute("text").contains("Twoj kod aktywacyjny to")) {
+                    String splitedFirstPart = notifElem.getAttribute("text").split("to")[1].trim();
+                    String splittedSecondPart = splitedFirstPart.split(". K")[0];
+                    driver.pressKey(new KeyEvent(AndroidKey.BACK));
+                    String digit1 = splittedSecondPart.substring(0, 1);
+                    String digit2 = splittedSecondPart.substring(1, 2);
+                    String digit3 = splittedSecondPart.substring(2, 3);
+                    String digit4 = splittedSecondPart.substring(3, 4);
+                    ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit1);
+                    ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit2);
+                    ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit3);
+                    ChooseCorrectDigitOnKeyboard.chooseCorrectDigit(digit4);
+                    confirmCodeButton.click();
+                }
+        } catch (StaleElementReferenceException e) {
         }
     }
 }
+
+
+
+
+
+
 
 
 

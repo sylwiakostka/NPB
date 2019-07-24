@@ -18,6 +18,9 @@ public class PasswordResetPage extends BasePage {
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/fragResetPassBtn")
     private WebElement resetPasswordButton;
 
+    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/editWithIconEdit")
+    private WebElement putEmailField;
+
 
     @Step
     public PasswordResetPage verifyPasswordResetPage() {
@@ -27,9 +30,10 @@ public class PasswordResetPage extends BasePage {
     }
 
     @Step
-    public LogInPage resetPassword() throws TesseractException, InterruptedException {
+    public LogInPage resetPassword(String emailToResetPassword) throws TesseractException, InterruptedException {
+        putEmailField.sendKeys(emailToResetPassword);
         resetPasswordButton.click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         String toastMessage = readToastMessage();
         Assert.assertTrue(toastMessage.contains("OK, sprawdz e-mail"));
         return new LogInPage(driver);

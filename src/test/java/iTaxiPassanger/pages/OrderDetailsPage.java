@@ -59,7 +59,7 @@ public class OrderDetailsPage extends BasePage {
 
     @Step
     public OrderDetailsPage makeBeReadyToOrder() {
-        new LogInPage(driver).verifyLogInPageHeader().logAsB2CUser("wasmarc12@gmail.com", "was1234");
+        new SplashPage(driver).allowPermision().verifyMainScreen().goToLogInPage().verifyLogInPageHeader().logAsB2CUser("wasmarc12@gmail.com", "was1234");
         firstOrderButton.click();
         return this;
     }

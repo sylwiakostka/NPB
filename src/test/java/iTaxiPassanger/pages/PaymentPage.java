@@ -1,6 +1,8 @@
 package iTaxiPassanger.pages;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -38,7 +40,7 @@ public class PaymentPage extends BasePage {
     @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/payMethTxtChargeWithDefault")
     private WebElement automaticPaymentCheckbox;
 
-    @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/headerBackIconLeft")
+    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/headerBackIconLeft")
     private WebElement backFromPaymentsPageButton;
 
     @Step
@@ -68,8 +70,7 @@ public class PaymentPage extends BasePage {
         List<WebElement> addedPayments = driver.findElements(By.id("com.geckolab.eotaxi.passenger.demo:id/rowPaymText"));
 
         for (WebElement addPayment : addedPayments)
-            if (addPayment.getAttribute("text").contains(finalCreditCardFourNumbers))
-            {
+            if (addPayment.getAttribute("text").contains(finalCreditCardFourNumbers)) {
                 return true;
             }
         return false;
@@ -82,13 +83,11 @@ public class PaymentPage extends BasePage {
         List<WebElement> addedPayments = driver.findElements(By.id("com.geckolab.eotaxi.passenger.demo:id/rowPaymText"));
 
         for (WebElement addPayment : addedPayments)
-            if (addPayment.getAttribute("content-desc").contains(finalCreditCardFourNumbers + " " + "Wybrana"))
-            {
+            if (addPayment.getAttribute("content-desc").contains(finalCreditCardFourNumbers + " " + "Wybrana")) {
                 return true;
             }
         return false;
     }
-
 
 
     @Step
@@ -112,23 +111,19 @@ public class PaymentPage extends BasePage {
         List<WebElement> listOfAddedPaymentsInEditionScreen = driver.findElements(By.id("com.geckolab.eotaxi.passenger.demo:id/rowPaymText"));
         int sizeOfPaymentList = listOfAddedPaymentsInEditionScreen.size();
         System.out.println(sizeOfPaymentList);
-        if (sizeOfPaymentList > 0) {
-            while (sizeOfPaymentList > 0) {
-                Thread.sleep(3000);
-                List<WebElement> deletePaymentButtons = driver.findElements(By.id("com.geckolab.eotaxi.passenger.demo:id/rowPaymRightIcon"));
-                for (WebElement deleteButton : deletePaymentButtons) {
-                    if (deleteButton.getAttribute("content-desc").equals("Usuń kartę")) {
-                        deleteButton.click();
-                    }
-                }
-                confirmDeletePaymentButton.click();
-                sizeOfPaymentList--;
-                waitForVisibilityOfElement(paymentList);
-                editButton.click();
-            }
-        } else
+        while (sizeOfPaymentList > 0) {
             Thread.sleep(3000);
-        backFromEditPaymentScreen.click();
+            List<WebElement> deletePaymentButtons = driver.findElements(By.id("com.geckolab.eotaxi.passenger.demo:id/rowPaymRightIcon"));
+            for (WebElement deleteButton : deletePaymentButtons) {
+                if (deleteButton.getAttribute("content-desc").equals("Usuń kartę")) {
+                    deleteButton.click();
+                }
+            }
+            confirmDeletePaymentButton.click();
+            sizeOfPaymentList--;
+        }
+        Thread.sleep(3000);
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
         waitForVisibilityOfElement(paymentList);
         waitForVisibilityOfElement(paymentPageHeader);
         return this;
@@ -161,7 +156,7 @@ public class PaymentPage extends BasePage {
         for (WebElement payment : listOfPayments) {
             if (payment.getAttribute("text").equals("Gotówka")) {
                 payment.click();
-                Assert.assertEquals(payment.getAttribute("content-desc"),"Gotówka Wybrana");
+                Assert.assertEquals(payment.getAttribute("content-desc"), "Gotówka Wybrana");
             }
         }
         return this;
@@ -174,7 +169,7 @@ public class PaymentPage extends BasePage {
         for (WebElement payment : listOfPayments) {
             if (payment.getAttribute("text").equals("Karta u kierowcy")) {
                 payment.click();
-                Assert.assertEquals(payment.getAttribute("content-desc"),"Karta u kierowcy Wybrana");
+                Assert.assertEquals(payment.getAttribute("content-desc"), "Karta u kierowcy Wybrana");
             }
         }
         return this;
@@ -188,7 +183,7 @@ public class PaymentPage extends BasePage {
         for (WebElement payment : listOfPayments) {
             if (payment.getAttribute("text").equals("BLIK")) {
                 payment.click();
-                Assert.assertEquals(payment.getAttribute("content-desc"),"BLIK Wybrana");
+                Assert.assertEquals(payment.getAttribute("content-desc"), "BLIK Wybrana");
             }
         }
         return this;
@@ -201,20 +196,16 @@ public class PaymentPage extends BasePage {
         for (WebElement payment : listOfPayments) {
             if (payment.getAttribute("text").equals("Google Pay")) {
                 payment.click();
-                Assert.assertEquals(payment.getAttribute("content-desc"),"Google Pay Wybrana");
+                Assert.assertEquals(payment.getAttribute("content-desc"), "Google Pay Wybrana");
             }
         }
         return this;
     }
 
 
-
-
-
-
     @Step
-    public MapPage backFromPaymentPage (){
-        backFromPaymentsPageButton.click();
+    public MapPage backFromPaymentPage() {
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
         return new MapPage(driver).verifyMap();
     }
 

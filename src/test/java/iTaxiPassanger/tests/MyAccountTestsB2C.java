@@ -15,10 +15,11 @@ public class MyAccountTestsB2C extends BaseTests {
     @Severity(SeverityLevel.CRITICAL)
     public void shouldVerifyUserDataB2C() {
         new MenuPage(driver)
-                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
+                .logInB2CAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
-                .verifyUserDataB2C();
+                .verifyUserDataB2C()
+                .logOut();
     }
 
     @Test
@@ -26,11 +27,12 @@ public class MyAccountTestsB2C extends BaseTests {
     @Severity(SeverityLevel.NORMAL)
     public void shouldSetAddresses() throws InterruptedException {
         new MenuPage(driver)
-                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
+                .logInB2CAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
                 .addHomeAddress("Jasna 5, Warszawa")
-                .addWorkAddress("Sasanki 2, Warszawa");
+                .addWorkAddress("Sasanki 2, Warszawa")
+                .logOut();
     }
 
     @Test
@@ -38,10 +40,11 @@ public class MyAccountTestsB2C extends BaseTests {
     @Severity(SeverityLevel.NORMAL)
     public void shouldSwitchSilent() {
         new MenuPage(driver)
-                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
+                .logInB2CAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
-                .switchSilent();
+                .switchSilent()
+                .logOut();
     }
 
     @Test
@@ -49,32 +52,35 @@ public class MyAccountTestsB2C extends BaseTests {
     @Severity(SeverityLevel.MINOR)
     public void shouldChangeNameAndSurname() {
         new MenuPage(driver)
-                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
+                .logInB2CAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
-                .changeNameAndSurname("Andrzej Wszoła")
-                .changeNameAndSurname("Marek Wąs");
+                .changeNameAndSurnameB2C("Andrzej Wszoła")
+                .changeNameAndSurnameB2C("Marek Wąs")
+                .logOut();
     }
 
-    @Test
+    @Test (enabled = false)
     @Description("Description: B2C My account page - test to verify if user can change phone number. New phone number is not set.")
     @Severity(SeverityLevel.NORMAL)
     public void shouldTryToChangePhoneNumber() throws InterruptedException {
         new MenuPage(driver)
-                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
+                .logInB2CAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
-                .tryToChangePhoneNumber();
+                .tryToChangePhoneNumberB2C()
+                .logOut();
     }
 
     @Test
     @Description("Description: B2C My account page - test to verify if user can not change email.")
     @Severity(SeverityLevel.NORMAL)
-    public void shouldTryToChangeEmail()  {
+    public void shouldTryToChangeEmail() {
         new MenuPage(driver)
-                .logInAndOpenMenu("wasmarc12@gmail.com", "was1234")
+                .logInB2CAndOpenMenu("wasmarc12@gmail.com", "was1234")
                 .openMyAccountPage()
                 .verifyMyAccountPage()
-                .tryToChangeEmail();
+                .tryToChangeEmailB2C()
+                .logOut();
     }
 }

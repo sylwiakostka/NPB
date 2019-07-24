@@ -56,7 +56,7 @@ public class VoucherMapAndMenuPage extends BasePage {
 
     @Step
     public VoucherMapAndMenuPage makeBeReadyToOrderWithVoucher(String phoneNumber, String code) throws InterruptedException {
-        new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToVoucherPage().verifyVoucherPageHeader().putCorrectVoucherCode(phoneNumber, code);
+        new SplashPage(driver).allowPermision().verifyMainScreen().goToVoucherPage().verifyVoucherPageHeader().putCorrectVoucherCode(phoneNumber, code);
         return new VoucherMapAndMenuPage(driver);
     }
 

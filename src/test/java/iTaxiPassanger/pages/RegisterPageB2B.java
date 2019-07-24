@@ -59,7 +59,7 @@ public class RegisterPageB2B extends BasePage {
 
     @Step
     public RegisterPageB2B openRegisterPage() {
-        new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToRegisterPage().verifyRegisterPage();
+        new SplashPage(driver).allowPermision().verifyMainScreen().goToRegisterPage().verifyRegisterPage();
         return this;
     }
 

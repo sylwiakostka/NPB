@@ -72,7 +72,7 @@ public class BasePage {
 
 
     protected String takeScreenShotOfPage() {
-        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File scrFile = (driver).getScreenshotAs(OutputType.FILE);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy__hh_mm_ssaa");
         new File(scrShotDir).mkdirs(); // Create folder under project with name

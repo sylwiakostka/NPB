@@ -16,11 +16,13 @@ public class RegisterTestsB2C extends BaseTests {
 
     @Test
     @Description("Description: B2C Login test with correct username and password, with all agreements - can log in.")
-    public void shouldRegisterCorrectlyB2CAllAgreements() {
+    public void shouldRegisterCorrectlyB2CAllAgreements() throws InterruptedException {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
                 .markAllAgreementsAndAcceptB2C();
+        new VerifyUserBySMSCodePage(driver).verifyVerifyUserBySMSCodePage()
+                .readAndPutSMSIfNeedToVerify();
     }
 
     @Test
@@ -30,7 +32,7 @@ public class RegisterTestsB2C extends BaseTests {
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
                 .markFirstAgreementB2C();
-        new VerifyUserBySMSCodePage(driver)
+        new VerifyUserBySMSCodePage(driver).verifyVerifyUserBySMSCodePage()
                 .readAndPutSMSIfNeedToVerify();
     }
 
@@ -56,20 +58,24 @@ public class RegisterTestsB2C extends BaseTests {
 
     @Test
     @Description("Description: B2C Login test with correct username and password, with first and second agreement - can log in.")
-    public void shouldRegisterCorrectlyB2CFirstAndSecondAgreements() {
+    public void shouldRegisterCorrectlyB2CFirstAndSecondAgreements() throws InterruptedException {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
                 .markFirstAndSecondAgreementsB2C();
+        new VerifyUserBySMSCodePage(driver).verifyVerifyUserBySMSCodePage()
+                .readAndPutSMSIfNeedToVerify();
     }
 
     @Test
     @Description("Description: B2C Login test with correct username and password, with first and third agreement - can log in.")
-    public void shouldRegisterCorrectlyB2CFirstAndThirdAgreements() {
+    public void shouldRegisterCorrectlyB2CFirstAndThirdAgreements() throws InterruptedException {
         new RegisterPageB2C(driver)
                 .openRegisterPage()
                 .completeFieldsCorrectlyB2C()
                 .markFirstAndThirdAgreementsB2C();
+        new VerifyUserBySMSCodePage(driver).verifyVerifyUserBySMSCodePage()
+                .readAndPutSMSIfNeedToVerify();
     }
 
     @Test

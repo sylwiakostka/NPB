@@ -14,6 +14,12 @@ public class ChooseCorrectDigitOnKeyboard extends BasePage {
     public static void chooseCorrectDigit (String numberOfCode){
 
         switch (numberOfCode) {
+            case "0":
+                if (numberOfCode.equals("0")) {
+                    driver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
+                }
+                break;
+
             case "1":
                 if (numberOfCode.equals("1")) {
                     driver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));

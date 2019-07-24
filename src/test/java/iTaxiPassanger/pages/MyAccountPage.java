@@ -79,12 +79,35 @@ public class MyAccountPage extends BasePage {
     public MyAccountPage verifyUserDataB2C() {
         String nameAndSurname = "Marek Wąs";
         String email = "wasmarc12@gmail.com";
-        String phoneNumber = "+48508264455";
+        String phoneNumber = "+48574777590";
         Assert.assertEquals(nameAndSurname, userName.getAttribute("content-desc"));
         Assert.assertEquals(email, userEmail.getAttribute("content-desc"));
         Assert.assertEquals(phoneNumber, userPhone.getAttribute("content-desc"));
         return this;
     }
+
+    @Step
+    public MyAccountPage verifyUserDataB2B(){
+        String nameAndSurname = "Ola Tola";
+        String email = "ola.tola@gmail.com";
+        String phoneNumber = "+48111111111";
+        Assert.assertEquals(nameAndSurname, userName.getAttribute("content-desc"));
+        Assert.assertEquals(email, userEmail.getAttribute("content-desc"));
+        Assert.assertEquals(phoneNumber, userPhone.getAttribute("content-desc"));
+        return this;
+    }
+
+    @Step
+    public MyAccountPage verifyIfCanNotChangeDataUserB2B(){
+        userName.click();
+        Assert.assertTrue(myAccountPageHeader.isDisplayed());
+        userEmail.click();
+        Assert.assertTrue(myAccountPageHeader.isDisplayed());
+        userPhone.click();
+        Assert.assertTrue(myAccountPageHeader.isDisplayed());
+        return this;
+    }
+
 
     @Step
     public MyAccountPage addHomeAddress(String address) throws InterruptedException {
@@ -123,7 +146,7 @@ public class MyAccountPage extends BasePage {
     }
 
     @Step
-    public MyAccountPage changeNameAndSurname(String newNameAndSurname) {
+    public MyAccountPage changeNameAndSurnameB2C(String newNameAndSurname) {
         userName.click();
         waitForVisibilityOfElement(changeNameAndSurnameHeader);
         Assert.assertTrue(changeNameAndSurnameHeader.isDisplayed());
@@ -131,32 +154,38 @@ public class MyAccountPage extends BasePage {
         changeNameAndSurnameField.sendKeys(newNameAndSurname);
         saveChangesNameAndSurnameButton.click();
         waitForVisibilityOfElement(myAccountPageHeader);
-        backButton.click();
-        new MapPage(driver).openMenu().openMyAccountPage().verifyMyAccountPage();
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        new MapPage(driver).verifyMap().openMenu().openMyAccountPage().verifyMyAccountPage();
         Assert.assertEquals(newNameAndSurname, userName.getAttribute("content-desc"));
         return this;
     }
 
     @Step
-    public MyAccountPage tryToChangePhoneNumber() throws InterruptedException {
+    public MyAccountPage tryToChangePhoneNumberB2C() throws InterruptedException {
         userPhone.click();
         waitForVisibilityOfElement(changePhoneNumberHeader);
         Assert.assertTrue(changePhoneNumberHeader.isDisplayed());
         changePhoneNumberField.clear();
-        changePhoneNumberField.sendKeys("508264455");
+        changePhoneNumberField.sendKeys("574777590");
         saveChangesPhoneNumberButton.click();
-        waitForVisibilityOfElement(verifyPhoneNumberHeader);
-        verifyPhoneNumberBackButton.click();
-        driver.pressKey(new KeyEvent(AndroidKey.BACK));
-        Assert.assertEquals("+48508264455", userPhone.getAttribute("content-desc"));
+        new VerifyUserBySMSCodePage(driver).readAndPutSMSIfNeedToVerify();
+        waitForVisibilityOfElement(changePhoneNumberHeader);
+        Assert.assertEquals(changePhoneNumberField.getAttribute("text"), "+48574777590");
         return this;
     }
 
     @Step
-    public MyAccountPage tryToChangeEmail() {
+    public MyAccountPage tryToChangeEmailB2C() {
         userEmail.click();
         Assert.assertTrue(myAccountPageHeader.isDisplayed());
         return this;
+    }
+
+    @Step
+    public void logOut(){
+        waitForVisibilityOfElement(myAccountPageHeader);
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        new MapPage(driver).verifyMap().openMenu().logOut();
     }
 
 

@@ -20,26 +20,26 @@ public class VouchersDataProvider {
     @DataProvider(name = "correctDataForVoucher")
     public Object[][] correctDataVoucher() {
         return new Object[][]{
-                {"508264455", "oladni"},
+                {"574777590", "oladni"},
         };
     }
 
     @DataProvider(name = "voucherCodesInvalid")
     public Object[][] invalidVoucherCodes() {
         return new Object[][]{
-                {"508264455", "kuba", "Ten voucher jest przypisany do konkretnego"},
-                {"508264455", "VON-5778AP", "Ten voucher jest przypisany do konkretnego"},
-                {"508264455", "zzz", "Ten voucher nie moze by¢ wykorzystany w"},
-                {"508264455", "marcin", "Ten voucher nie moze by¢ wykorzystany w"},
-                {"508264455", "trewq", "Brak vouchera o podanym kodzie"},
-                {"508264455", "VON-1188IU", "Voucher ma limit przedziatu godzin, w ktdrych"}
+                {"574777590", "kuba", "Ten voucher jest przypisany do konkretnego"},
+                {"574777590", "VON-5778AP", "Ten voucher jest przypisany do konkretnego"},
+                {"574777590", "zzz", "Ten voucher nie moze by¢ wykorzystany w"},
+                {"574777590", "marcin", "Ten voucher nie moze by¢ wykorzystany w"},
+                {"574777590", "trewq", "Brak vouchera o podanym kodzie"},
+                {"574777590", "VON-1188IU", "Voucher ma limit przedziatu godzin"}
         };
     }
 
     @DataProvider(name = "voucherCodesValid")
     public Object[][] validVoucherCodes() {
         return new Object[][]{
-                {"508264455", "adec"},
+                {"574777590", "adec"},
 //                {"508264455", "VON-8865GI"}
         };
     }

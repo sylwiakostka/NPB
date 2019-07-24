@@ -67,17 +67,19 @@ public class VoucherPage extends BasePage {
         logInFields.get(0).sendKeys(phoneNumber);
         logInFields.get(1).sendKeys(code);
         acceptButton.click();
-        Thread.sleep(3000);
+        new VerifyUserBySMSCodePage(driver).readAndPutSMSToVerifyVoucher();
+        Thread.sleep(2000);
         verifyToastMessageDataProvider(toastText);
         return new VoucherPage(driver).verifyVoucherPageHeader();
     }
 
     @Step
-    public VoucherMapAndMenuPage putCorrectVoucherCode(String phoneNumber, String code) {
+    public VoucherMapAndMenuPage putCorrectVoucherCode(String phoneNumber, String code) throws InterruptedException {
         List<WebElement> logInFields = driver.findElements(By.className("android.widget.EditText"));
         logInFields.get(0).sendKeys(phoneNumber);
         logInFields.get(1).sendKeys(code);
         acceptButton.click();
+        new VerifyUserBySMSCodePage(driver).readAndPutSMSToVerifyVoucher();
         return new VoucherMapAndMenuPage(driver).verifyVoucherMapPage();
     }
 

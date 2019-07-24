@@ -58,7 +58,8 @@ public class RegisterPageB2C extends BasePage {
 
     @Step
     public RegisterPageB2C openRegisterPage() {
-        new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToRegisterPage().verifyRegisterPage();
+        new SplashPage(driver).allowPermision().verifyMainScreen()
+                .goToRegisterPage().verifyRegisterPage();
         return this;
     }
 
@@ -223,7 +224,7 @@ public class RegisterPageB2C extends BasePage {
         nextButton.click();
         Thread.sleep(3000);
         String toastMessage = readToastMessage();
-        String toastText = "Btedne dane w polach: email is already used";
+        String toastText = "Podany email juz istnieje";
         Assert.assertTrue((toastMessage).contains(toastText));
         Assert.assertTrue(registerPageHeader.isDisplayed());
         return this;
@@ -237,7 +238,7 @@ public class RegisterPageB2C extends BasePage {
         touchAction.tap(PointOption.point(748,1320)).release().perform();
         WebElement urlBar = driver.findElement(By.id("com.android.chrome:id/url_bar"));
         waitForVisibilityOfElement(urlBar);
-        Assert.assertEquals("www.itaxi.pl/regulamin", urlBar.getText());
+        Assert.assertEquals("https://www.itaxi.pl/regulamin", urlBar.getText());
         return this;
     }
 

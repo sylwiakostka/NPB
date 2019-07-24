@@ -1,6 +1,8 @@
 package iTaxiPassanger.pages;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -33,6 +35,12 @@ public class PromotionsPage extends BasePage {
     @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/fragPromotionCodeViewerView")
     private WebElement fragPromotionCodeViewerView;
 
+    @FindBy(id = "com.geckolab.eotaxi.passenger.demo:id/promoCodeChangeContainer")
+    private WebElement changeCodeButton;
+
+    @FindBy (id = "com.geckolab.eotaxi.passenger.demo:id/dialogButtonRight")
+    private WebElement acceptChangeButton;
+
     @Step
     public PromotionsPage verifyPromotionPageHeader() {
         waitForVisibilityOfElement(promotionsPageHeader);
@@ -45,9 +53,22 @@ public class PromotionsPage extends BasePage {
         putPromotionCodeField.sendKeys(correctPromotionCodeNumber);
         savePromotionCodeButton.click();
         waitForVisibilityOfElement(fragPromotionCodeViewerView);
-//        Assert.assertEquals(infoAboutAddedCodeNumber.getText(), correctPromotionCodeNumber);
+        Assert.assertEquals(infoAboutAddedCodeNumber.getText(), correctPromotionCodeNumber);
         return this;
     }
+
+    @Step
+    public PromotionsPage changeCode(String newPromotionCode){
+        driver.hideKeyboard();
+        changeCodeButton.click();
+        acceptChangeButton.click();
+        putPromotionCodeField.sendKeys(newPromotionCode);
+        savePromotionCodeButton.click();
+        waitForVisibilityOfElement(fragPromotionCodeViewerView);
+        Assert.assertEquals(infoAboutAddedCodeNumber.getText(), newPromotionCode);
+        return this;
+    }
+
 
     @Step
     public PromotionsPage doNotPutCode() {
@@ -70,9 +91,10 @@ public class PromotionsPage extends BasePage {
 
     @Step
     public MapPage backFromPromotionPage (){
+        driver.hideKeyboard();
         waitForVisibilityOfElement(backFromPromotionsPageButton);
         Assert.assertTrue(backFromPromotionsPageButton.isDisplayed());
-        backFromPromotionsPageButton.click();
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
         return new MapPage(driver).verifyMap();
     }
 }

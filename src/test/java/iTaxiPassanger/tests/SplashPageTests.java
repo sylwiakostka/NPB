@@ -1,6 +1,7 @@
 package iTaxiPassanger.tests;
 
 import iTaxiPassanger.pages.LogInPage;
+import iTaxiPassanger.pages.SplashPage;
 import iTaxiPassanger.pages.VoucherPage;
 import io.qameta.allure.Feature;
 import net.sourceforge.tess4j.TesseractException;
@@ -15,11 +16,17 @@ public class SplashPageTests extends BaseTests {
 
     @Test
     public void shouldOpenLogInPage() {
-        new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToLogInPage().verifyLogInPageHeader();
+        new SplashPage(driver).allowPermision().verifyMainScreen().goToLogInPage().verifyLogInPageHeader();
     }
 
     @Test
     public void shouldOpenVoucherPageAndBack() {
-        new LogInPage(driver).verifyLogInPageHeader().backToSplashPage().verifyMainScreen().goToVoucherPage().verifyVoucherPageHeader().backToSplashPage().verifyMainScreen();
+        new SplashPage(driver).allowPermision().verifyMainScreen().goToVoucherPage().verifyVoucherPageHeader().backToSplashPage().verifyMainScreen();
     }
+    @Test
+    public void compareScreenshotsOfSplash() throws IOException {
+        new SplashPage(driver).allowPermision().verifyMainScreen().compareScreensSplash();
+
+    }
+
 }
