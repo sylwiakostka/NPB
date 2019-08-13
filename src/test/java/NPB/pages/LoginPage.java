@@ -1,9 +1,11 @@
 package NPB.pages;
 
 
+import NPB.utilities.CaptureScreenshotOfElement;
 import iTaxiPassanger.pages.LogInPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -47,7 +49,7 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//h2[.='Wybierz partnera biznesowego']")
     private WebElement chooseBusinesPartnerSection;
 
-    @FindBy (xpath = "//input[@placeholder='Wpisz aby wyszukać...']")
+    @FindBy(xpath = "//input[@placeholder='Wpisz aby wyszukać...']")
     private WebElement typeBusinesPartnerField;
 
     @FindBy(xpath = "//button[@id='button']//span[.='Wybierz']")
@@ -56,11 +58,22 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//div[@class='notifications']//p[.='Zalogowano poprawnie.']")
     private WebElement correctLoginNotifications;
 
+    @FindBy(xpath = "//p[.='Podaj hasło']")
+    private WebElement errorPasswordInfo;
+
+    @FindBy(xpath = "//p[.='Podaj prawidłowy login']")
+    private WebElement errorLoginInfo;
+
+    @FindBy(xpath = "//div[@class='notifications']//p[.='Błędny login lub hasło']")
+    private WebElement incorrectLoginAndPasswordNotifications;
+
+
     @Step
     public LoginPage verify_loginPage() {
         waitForVisibilityOfElement(headerLogin);
         Assert.assertEquals(headerLogin.getText(), "LOGOWANIE");
         waitForVisibilityOfElement(benefitsSection);
+        new CaptureScreenshotOfElement(driver).takeScreenshotOfElement();
         return this;
     }
 
@@ -79,7 +92,7 @@ public class LoginPage extends BasePage {
     }
 
     @Step
-    public DashboardPage login_as_employee(String login, String password){
+    public DashboardPage login_as_employee(String login, String password) {
         waitForPresenceOfElement(usernameField);
         waitForPresenceOfElement(passwordField);
         usernameField.clear();
@@ -118,6 +131,11 @@ public class LoginPage extends BasePage {
 
     @Step
     public RemindPasswordPage go_to_remindPasswordPage() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         waitForPresenceOfElement(remindButton);
         waitForElementToBeClickable(remindButton);
         remindButton.click();
@@ -125,7 +143,7 @@ public class LoginPage extends BasePage {
     }
 
     @Step
-    public DashboardPage loginWithNewPassword(String newPassword) {
+    public DashboardPage login_with_new_password(String newPassword) {
         waitForPresenceOfElement(usernameField);
         waitForPresenceOfElement(passwordField);
         usernameField.sendKeys(EMAIL);
@@ -133,4 +151,83 @@ public class LoginPage extends BasePage {
         loginButton.click();
         return new DashboardPage(driver);
     }
+
+    @Step
+    public LoginPage try_login_without_login_and_password() {
+        waitForPresenceOfElement(usernameField);
+        waitForPresenceOfElement(passwordField);
+        usernameField.clear();
+        passwordField.clear();
+        loginButton.click();
+        waitForPresenceOfElement(errorLoginInfo);
+        waitForPresenceOfElement(errorPasswordInfo);
+        Assert.assertTrue(errorLoginInfo.isDisplayed());
+        Assert.assertTrue(errorPasswordInfo.isDisplayed());
+        Assert.assertEquals(errorLoginInfo.getText(), "Podaj prawidłowy login");
+        Assert.assertEquals(errorPasswordInfo.getText(), "Podaj hasło");
+        verify_loginPage();
+        return this;
+    }
+
+    @Step
+    public LoginPage try_login_with_correct_login_and_incorrect_password() {
+        waitForPresenceOfElement(usernameField);
+        waitForPresenceOfElement(passwordField);
+        usernameField.clear();
+        passwordField.clear();
+        usernameField.sendKeys("jolakama666@gmail.com");
+        passwordField.sendKeys("123");
+        loginButton.click();
+        waitForPresenceOfElement(errorPasswordInfo);
+        Assert.assertTrue(errorPasswordInfo.isDisplayed());
+        Assert.assertEquals(errorPasswordInfo.getText(), "Podaj hasło");
+        verify_loginPage();
+        return this;
+    }
+
+    @Step
+    public LoginPage try_login_with_incorrect_login_and_correct_password() {
+        waitForPresenceOfElement(usernameField);
+        waitForPresenceOfElement(passwordField);
+        usernameField.clear();
+        passwordField.clear();
+        usernameField.sendKeys("jolakama666@gmail");
+        passwordField.sendKeys("123456");
+        loginButton.click();
+        waitForPresenceOfElement(incorrectLoginAndPasswordNotifications);
+        Assert.assertEquals(incorrectLoginAndPasswordNotifications.getText(), "Błędny login lub hasło");
+        verify_loginPage();
+        return this;
+    }
+
+    @Step
+    public LoginPage try_login_with_correct_login_and_without_password() {
+        waitForPresenceOfElement(usernameField);
+        waitForPresenceOfElement(passwordField);
+        usernameField.clear();
+        passwordField.clear();
+        usernameField.sendKeys("jolakama666@gmail.pl");
+        loginButton.click();
+        waitForPresenceOfElement(errorPasswordInfo);
+        Assert.assertTrue(errorPasswordInfo.isDisplayed());
+        Assert.assertEquals(errorPasswordInfo.getText(), "Podaj hasło");
+        verify_loginPage();
+        return this;
+    }
+
+    @Step
+    public LoginPage try_login_without_login_and_correct_password() {
+        waitForPresenceOfElement(usernameField);
+        waitForPresenceOfElement(passwordField);
+        usernameField.clear();
+        passwordField.clear();
+        passwordField.sendKeys("123456");
+        loginButton.click();
+        waitForPresenceOfElement(errorLoginInfo);
+        Assert.assertTrue(errorLoginInfo.isDisplayed());
+        Assert.assertEquals(errorLoginInfo.getText(), "Podaj prawidłowy login");
+        verify_loginPage();
+        return this;
+    }
+
 }

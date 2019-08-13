@@ -1,5 +1,6 @@
 package NPB.tests;
 
+import NPB.utilities.CaptureScreenshotOfElement;
 import NPB.utilities.DriverFactory;
 import NPB.utilities.DriverType;
 import NPB.utilities.NowSuchDriverException;
@@ -17,6 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -36,6 +38,7 @@ public class BaseTests {
         String url = "https://npb.jsdev.com.pl";
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(url);
+        driver.manage().deleteAllCookies();
 
     }
 
@@ -54,13 +57,15 @@ public class BaseTests {
 
             } catch (Exception e) {
                 System.out.println("Exception while taking screenshot " + e.getMessage());
-//            } finally {
+            }
+//            finally {
 //                driver.quit();
 //                DriverFactory.resetDriver();
 
-            }
+//            }
         }
     }
+
 }
 
 

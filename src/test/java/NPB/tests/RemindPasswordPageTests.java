@@ -22,8 +22,8 @@ public class RemindPasswordPageTests extends BaseTests {
         String newPsw = new RemindPasswordPage(driver).remind_password_and_get_new();
         System.out.println(newPsw);
         new LoginPage(driver)
-                .loginWithNewPassword(newPsw)
-                .verify_dashboardPge_for_employee();
+                .login_with_new_password(newPsw)
+                .verify_dashboardPge_for_employee("Novum");
     }
 
     @Test

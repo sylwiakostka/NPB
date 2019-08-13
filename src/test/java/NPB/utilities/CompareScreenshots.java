@@ -1,21 +1,19 @@
-package iTaxiPassanger.utilities;
-
+package NPB.utilities;
 
 import java.awt.*;
 import java.awt.image.PixelGrabber;
 
-public class CompareScreens {
+public class CompareScreenshots {
 
     public enum Result {
         Matched, SizeMismatch, PixelMismatch
     }
 
-
-
-    public static Result CompareImage(String baseFile, String actualFile) {
+    public static Result CompareImage(String baseFileName) {
         Result compareResult = Result.PixelMismatch;
-        Image baseImage = Toolkit.getDefaultToolkit().getImage(baseFile);
-        Image actualImage = Toolkit.getDefaultToolkit().getImage(actualFile);
+        Image baseImage = Toolkit.getDefaultToolkit().getImage("C://Users//user//Desktop//NPB//src//test//java//NPB//tests//ScreenshotsToCompareInTests//"+baseFileName);
+        String actualScreenshot = "C://Users//user//Desktop//NPB//src//test//java//iTaxiPassanger//tests//screenshotsToCompareInTests//screenshot.png";
+        Image actualImage = Toolkit.getDefaultToolkit().getImage(actualScreenshot);
         try {
             PixelGrabber baseImageGrab = new PixelGrabber(baseImage, 0, 0, -1, -1, false);
             PixelGrabber actualImageGrab = new PixelGrabber(actualImage, 0, 0, -1, -1, false);

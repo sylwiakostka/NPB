@@ -35,10 +35,13 @@ public class EmailHelper extends NPB.pages.BasePage {
     @FindBy(xpath = "//div[@id=':4']//div[@aria-label='Usuń']")
     WebElement deleteEmailButton;
 
+    @FindBy(partialLinkText = "Zaloguj się")
+    WebElement gmailLoginButton;
 
 
     public String openMail_and_readCode() {
         driver.get("https://mail.google.com/mail/u/0/?tab=km#inbox");
+        gmailLoginButton.click();
         waitForPresenceOfElement(emailField);
         emailField.sendKeys(EMAIL);
         waitForPresenceOfElement(nextButton);

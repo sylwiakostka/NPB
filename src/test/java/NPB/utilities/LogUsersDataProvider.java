@@ -3,25 +3,33 @@ package NPB.utilities;
 import org.apache.commons.lang3.ArrayUtils;
 import org.testng.annotations.DataProvider;
 
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
 
 public class LogUsersDataProvider {
 
-    @DataProvider(name = "correctDataLogIn")
+    @DataProvider(name = "correctDataLogin")
     public Object[][] correctDataLogIn() {
-        return new Object[][]{{"jolakama666@gmail.com", "123456"}};
+        return new Object[][]{{"jolakama666@gmail.com", "123456", "Karp"}};
     }
 
 
-    @DataProvider(name = "incorrectDataLogIn")
+    @DataProvider(name = "incorrectDataLogin")
     public Object[][] incorrectDataLogIn() {
         return new Object[][]{
-                {"", "", "Niepoprawny login/hasło."},
-                {"sylwia", "123", "Niepoprawny login/hasło."},
-                {"ada", "123456789", "Niepoprawny login/hasło."},
-                {"sylwia", "", "Niepoprawny login/hasło."},
-                {"", "123456789", "Niepoprawny login/hasło."}};
+                {"", ""},
+                {"jolakama666@gmail.com", "123"},
+                {"jola","123456"},
+                {"jolakama666@gmail.com", ""},
+                {"", "123456"}};
+    }
+
+    @DataProvider(name="correctDataFromExcel")
+    public Object[][] correctDataFromExcel() throws Exception{
+        Object[][] testObjArray = ExcelUtils.getData("C://Users//user//Desktop//NPB//src//test//java//NPB//tests//Excels//users_employee.xlsx", "users");
+        return (testObjArray);
     }
 
 
