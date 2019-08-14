@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginPageTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/LoginPageTests.java">
+      <file leaf-file-name="MpkPage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/MpkPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="160">
+              <caret line="137" column="110" selection-start-line="137" selection-start-column="62" selection-end-line="137" selection-end-column="110" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,42 +35,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/LoginPage.java">
+      <file leaf-file-name="MpkPageTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/MpkPageTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="75" column="71" selection-start-line="75" selection-start-column="71" selection-end-line="75" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DashboardPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/DashboardPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="148" column="70" selection-start-line="148" selection-start-column="8" selection-end-line="148" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/BaseTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CaptureScreenshotOfElement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/CaptureScreenshotOfElement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+            <state relative-caret-position="465">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#420#421#0" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,11 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/RegisterPageB2B.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/VoucherMapAndMenuPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/ChooseCorrectDigitOnKeyboard.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/ReadSMS.java" />
-        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/VerifyUserBySMSCodePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/VouchersDataProvider.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/pages/VoucherPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/tests/VoucherPageTests.java" />
@@ -157,13 +123,18 @@
         <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/CompareScreens.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/utilities/SpreadsheetData.java" />
-        <option value="$PROJECT_DIR$/src/test/java/NPB/tests/LoginPageTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/NPB/utilities/LogUsersDataProvider.java" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/utilities/ExcelUtils.java" />
-        <option value="$PROJECT_DIR$/src/test/java/NPB/pages/DashboardPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/NPB/utilities/CaptureScreenshotOfElement.java" />
+        <option value="$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/CaptureElementPicture.java" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/tests/BaseTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/NPB/utilities/CaptureScreenshotOfElement.java" />
+        <option value="$PROJECT_DIR$/src/test/java/NPB/pages/MpgPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/NPB/pages/DashboardPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/pages/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/NPB/tests/LoginPageTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/NPB/utilities/WebTable.java" />
+        <option value="$PROJECT_DIR$/src/test/java/NPB/utilities/LogUsersDataProvider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/NPB/tests/MpkPageTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/NPB/pages/MpkPage.java" />
       </list>
     </option>
   </component>
@@ -178,8 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,6 +198,25 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="NPB" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NPB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NPB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="NPB" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Excels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NPB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NPB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="NPB" type="462c0819:PsiDirectoryNode" />
               <item name="utilities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -241,6 +229,8 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,18 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.LoginPageTests.should_login_as_superAdmin_and_logout">
-    <configuration name="MailReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="NPB.utilities.MailReader" />
-      <module name="ExerciseTests" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="NPB.utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="TestNG.MpkPageTests.should_delete_mpk">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -314,7 +293,7 @@
       <option name="WORKING_DIRECTORY" />
       <module name="" />
     </configuration>
-    <configuration name="LoginPageTests.should_login_as_employee_and_logout" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginPageTests.should_verify_loginPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ExerciseTests" />
       <extension name="coverage">
         <pattern>
@@ -327,7 +306,7 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="NPB.tests" />
       <option name="MAIN_CLASS_NAME" value="NPB.tests.LoginPageTests" />
-      <option name="METHOD_NAME" value="should_login_as_employee_and_logout" />
+      <option name="METHOD_NAME" value="should_verify_loginPage" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -343,7 +322,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="LoginPageTests.should_login_as_employee_and_logout_excel" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MpkPageTests.add_new_mpk" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ExerciseTests" />
       <extension name="coverage">
         <pattern>
@@ -355,8 +334,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="NPB.tests" />
-      <option name="MAIN_CLASS_NAME" value="NPB.tests.LoginPageTests" />
-      <option name="METHOD_NAME" value="should_login_as_employee_and_logout_excel" />
+      <option name="MAIN_CLASS_NAME" value="NPB.tests.MpkPageTests" />
+      <option name="METHOD_NAME" value="add_new_mpk" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -372,7 +351,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="LoginPageTests.should_login_as_superAdmin_and_logout" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MpkPageTests.should_cant_add_new_mpk" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ExerciseTests" />
       <extension name="coverage">
         <pattern>
@@ -384,8 +363,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="NPB.tests" />
-      <option name="MAIN_CLASS_NAME" value="NPB.tests.LoginPageTests" />
-      <option name="METHOD_NAME" value="should_login_as_superAdmin_and_logout" />
+      <option name="MAIN_CLASS_NAME" value="NPB.tests.MpkPageTests" />
+      <option name="METHOD_NAME" value="should_cant_add_new_mpk" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -401,7 +380,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="RemindPasswordPageTests.should_change_password_and_login_as_employee" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MpkPageTests.should_delete_mpk" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ExerciseTests" />
       <extension name="coverage">
         <pattern>
@@ -413,8 +392,37 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="NPB.tests" />
-      <option name="MAIN_CLASS_NAME" value="NPB.tests.RemindPasswordPageTests" />
-      <option name="METHOD_NAME" value="should_change_password_and_login_as_employee" />
+      <option name="MAIN_CLASS_NAME" value="NPB.tests.MpkPageTests" />
+      <option name="METHOD_NAME" value="should_delete_mpk" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="MpkPageTests.verifyMpkPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ExerciseTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="NPB.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="NPB.tests" />
+      <option name="MAIN_CLASS_NAME" value="NPB.tests.MpkPageTests" />
+      <option name="METHOD_NAME" value="verifyMpkPage" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -453,19 +461,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="TestNG.RemindPasswordPageTests.should_change_password_and_login_as_employee" />
-      <item itemvalue="Application.MailReader" />
-      <item itemvalue="TestNG.LoginPageTests.should_login_as_employee_and_logout" />
-      <item itemvalue="TestNG.LoginPageTests.should_login_as_superAdmin_and_logout" />
-      <item itemvalue="TestNG.LoginPageTests.should_login_as_employee_and_logout_excel" />
+      <item itemvalue="TestNG.LoginPageTests.should_verify_loginPage" />
+      <item itemvalue="TestNG.MpkPageTests.verifyMpkPage" />
+      <item itemvalue="TestNG.MpkPageTests.add_new_mpk" />
+      <item itemvalue="TestNG.MpkPageTests.should_cant_add_new_mpk" />
+      <item itemvalue="TestNG.MpkPageTests.should_delete_mpk" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginPageTests.should_login_as_superAdmin_and_logout" />
-        <item itemvalue="TestNG.LoginPageTests.should_login_as_employee_and_logout_excel" />
-        <item itemvalue="TestNG.LoginPageTests.should_login_as_employee_and_logout" />
-        <item itemvalue="TestNG.RemindPasswordPageTests.should_change_password_and_login_as_employee" />
-        <item itemvalue="Application.MailReader" />
+        <item itemvalue="TestNG.MpkPageTests.should_delete_mpk" />
+        <item itemvalue="TestNG.MpkPageTests.should_cant_add_new_mpk" />
+        <item itemvalue="TestNG.MpkPageTests.add_new_mpk" />
+        <item itemvalue="TestNG.MpkPageTests.verifyMpkPage" />
+        <item itemvalue="TestNG.LoginPageTests.should_verify_loginPage" />
       </list>
     </recent_temporary>
   </component>
@@ -483,35 +491,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LoginPageTests_should_login_as_employee_and_logout_excel - 2019.08.13 at 12h 30m 03s.xml">
-      <configuration name="LoginPageTests.should_login_as_employee_and_logout_excel" configurationId="TestNG" />
+    <history-entry file="MpkPageTests_should_delete_mpk - 2019.08.14 at 14h 47m 15s.xml">
+      <configuration name="MpkPageTests.should_delete_mpk" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="LoginPageTests_should_login_as_employee_and_logout_excel - 2019.08.13 at 12h 30m 56s.xml">
-      <configuration name="LoginPageTests.should_login_as_employee_and_logout_excel" configurationId="TestNG" />
+    <history-entry file="MpkPageTests_should_delete_mpk - 2019.08.14 at 14h 48m 16s.xml">
+      <configuration name="MpkPageTests.should_delete_mpk" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="LoginPageTests_should_login_as_employee_and_logout_excel - 2019.08.13 at 12h 31m 25s.xml">
-      <configuration name="LoginPageTests.should_login_as_employee_and_logout_excel" configurationId="TestNG" />
+    <history-entry file="MpkPageTests_should_delete_mpk - 2019.08.14 at 14h 50m 11s.xml">
+      <configuration name="MpkPageTests.should_delete_mpk" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="LoginPageTests_should_login_as_employee_and_logout_excel - 2019.08.13 at 12h 32m 20s.xml">
-      <configuration name="LoginPageTests.should_login_as_employee_and_logout_excel" configurationId="TestNG" />
+    <history-entry file="MpkPageTests_should_delete_mpk - 2019.08.14 at 14h 50m 57s.xml">
+      <configuration name="MpkPageTests.should_delete_mpk" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="LoginPageTests_should_login_as_employee_and_logout_excel - 2019.08.13 at 12h 33m 08s.xml">
-      <configuration name="LoginPageTests.should_login_as_employee_and_logout_excel" configurationId="TestNG" />
+    <history-entry file="MpkPageTests_should_delete_mpk - 2019.08.14 at 14h 51m 55s.xml">
+      <configuration name="MpkPageTests.should_delete_mpk" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="LoginPageTests_should_login_as_employee_and_logout_excel - 2019.08.13 at 12h 35m 32s.xml">
-      <configuration name="LoginPageTests.should_login_as_employee_and_logout_excel" configurationId="TestNG" />
+    <history-entry file="MpkPageTests_should_delete_mpk - 2019.08.14 at 14h 53m 33s.xml">
+      <configuration name="MpkPageTests.should_delete_mpk" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="LoginPageTests_should_login_as_employee_and_logout_excel - 2019.08.13 at 12h 35m 48s.xml">
-      <configuration name="LoginPageTests.should_login_as_employee_and_logout_excel" configurationId="TestNG" />
+    <history-entry file="MpkPageTests_should_delete_mpk - 2019.08.14 at 14h 54m 06s.xml">
+      <configuration name="MpkPageTests.should_delete_mpk" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="LoginPageTests_should_login_as_employee_and_logout_excel - 2019.08.13 at 12h 36m 23s.xml">
-      <configuration name="LoginPageTests.should_login_as_employee_and_logout_excel" configurationId="TestNG" />
+    <history-entry file="MpkPageTests_should_delete_mpk - 2019.08.14 at 15h 11m 33s.xml">
+      <configuration name="MpkPageTests.should_delete_mpk" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="LoginPageTests_should_login_as_superAdmin_and_logout - 2019.08.13 at 12h 44m 34s.xml">
-      <configuration name="LoginPageTests.should_login_as_superAdmin_and_logout" configurationId="TestNG" />
+    <history-entry file="MpkPageTests_should_delete_mpk - 2019.08.14 at 15h 12m 19s.xml">
+      <configuration name="MpkPageTests.should_delete_mpk" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="LoginPageTests_should_login_as_superAdmin_and_logout - 2019.08.13 at 12h 46m 05s.xml">
-      <configuration name="LoginPageTests.should_login_as_superAdmin_and_logout" configurationId="TestNG" />
+    <history-entry file="MpkPageTests_should_delete_mpk - 2019.08.14 at 15h 13m 41s.xml">
+      <configuration name="MpkPageTests.should_delete_mpk" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -536,11 +544,12 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3298969" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3264516" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3519553" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3519553" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32516128" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31503198" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31823027" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32513967" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -553,34 +562,33 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32513967" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24946696" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.11914324" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3530726" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3519553" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34381664" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.31284916" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31503198" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32729805" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3264516" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3264516" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32513967" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3944134" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39225808" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3256617" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.11914324" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3298969" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32681242" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3150838" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32516128" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info id="Favorites" order="6" side_tool="true" />
     </layout-to-restore>
@@ -590,22 +598,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="69" />
+      <option name="time" value="73" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/MobileSittings/sauceLabsDesktop/souceLabTestNGDesktop.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/NowSuchDriverException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/VoucherCodesPage.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/DashboardPageTests.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/PartnerChoseTests.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/PartnerChosePage.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/DriverFactory.java">
@@ -727,13 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/BasePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/mail/mail/1.4.7/mail-1.4.7.jar!/javax/mail/Folder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -745,9 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="74" selection-start-line="13" selection-start-column="4" selection-end-line="14" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -776,13 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/awt/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="224" column="25" selection-start-line="224" selection-start-column="10" selection-end-line="224" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -821,16 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/ScreenshotsToCompareInTests/menu.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/CaptureElementPicture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.1.0/poi-4.1.0.jar!/org/apache/poi/ss/usermodel/Cell.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-306">
@@ -845,13 +814,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/SpreadsheetData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/SpreadsheetData.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
@@ -876,56 +839,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/LogUsersDataProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/ScreenshotsToCompareInTests/menu.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/iTaxiPassanger/utilities/CaptureElementPicture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+        <state relative-caret-position="272">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/ScreenshotsToCompareInTests/screenshot.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/DashboardPage.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/awt/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="148" column="70" selection-start-line="148" selection-start-column="8" selection-end-line="148" selection-end-column="70" />
+        <state relative-caret-position="287">
+          <caret line="184" column="11" selection-start-line="184" selection-start-column="11" selection-end-line="184" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/BasePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/ScreenshotsToCompareInTests/screenshot.png" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/CaptureScreenshotOfElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/BaseTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="51">
+          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/LoginPageTests.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/CaptureScreenshotOfElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-19">
+          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="75" column="71" selection-start-line="75" selection-start-column="71" selection-end-line="75" selection-end-column="71" />
+        <state relative-caret-position="453">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/LoginPageTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="33" column="114" selection-start-line="33" selection-start-column="114" selection-end-line="33" selection-end-column="114" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/DashboardPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/WebTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/LogUsersDataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="43" column="2" lean-forward="true" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/MpkPageTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/MpkPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="137" column="110" selection-start-line="137" selection-start-column="62" selection-end-line="137" selection-end-column="110" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

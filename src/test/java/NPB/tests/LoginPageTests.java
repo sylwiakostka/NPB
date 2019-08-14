@@ -20,17 +20,18 @@ public class LoginPageTests extends BaseTests {
     }
 
     @Test
-    public void should_login_as_superAdmin_and_logout() throws IOException, AWTException {
+    public void should_login_as_superAdmin_and_logout() {
         new LoginPage(driver)
                 .verify_loginPage()
                 .login_as_superAdmin()
                 .choose_business_partner_from_list("ABC")
                 .verify_dashboardPge_for_admin("ABC")
-                .takeScreen();
+                .logout();
+
     }
 
     @Test(dataProvider = "correctDataLogin", dataProviderClass = LogUsersDataProvider.class)
-    public void should_login_as_employee_and_logout(String username, String password, String businessPartnerName) {
+    public void should_login_as_employee_and_logout(String username, String password, String businessPartnerName)  {
         new LoginPage(driver)
                 .verify_loginPage()
                 .login_as_employee(username, password)
@@ -41,7 +42,7 @@ public class LoginPageTests extends BaseTests {
 
 
     @Test(dataProvider = "correctDataFromExcel", dataProviderClass = LogUsersDataProvider.class)
-    public void should_login_as_employee_and_logout_excel(String username, String password, String businessPartnerName) {
+    public void should_login_as_employee_and_logout_excel(String username, String password, String businessPartnerName)  {
         new LoginPage(driver)
                 .verify_loginPage()
                 .login_as_employee(username, password)
@@ -85,6 +86,5 @@ public class LoginPageTests extends BaseTests {
                 .verify_loginPage()
                 .try_login_without_login_and_password();
     }
-
 
 }

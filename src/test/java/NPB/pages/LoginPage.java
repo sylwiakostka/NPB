@@ -2,16 +2,14 @@ package NPB.pages;
 
 
 import NPB.utilities.CaptureScreenshotOfElement;
-import iTaxiPassanger.pages.LogInPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import sun.plugin.javascript.navig.Array;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -73,7 +71,6 @@ public class LoginPage extends BasePage {
         waitForVisibilityOfElement(headerLogin);
         Assert.assertEquals(headerLogin.getText(), "LOGOWANIE");
         waitForVisibilityOfElement(benefitsSection);
-        new CaptureScreenshotOfElement(driver).takeScreenshotOfElement();
         return this;
     }
 
@@ -153,7 +150,7 @@ public class LoginPage extends BasePage {
     }
 
     @Step
-    public LoginPage try_login_without_login_and_password() {
+    public LoginPage try_login_without_login_and_password()  {
         waitForPresenceOfElement(usernameField);
         waitForPresenceOfElement(passwordField);
         usernameField.clear();
@@ -170,7 +167,7 @@ public class LoginPage extends BasePage {
     }
 
     @Step
-    public LoginPage try_login_with_correct_login_and_incorrect_password() {
+    public LoginPage try_login_with_correct_login_and_incorrect_password()  {
         waitForPresenceOfElement(usernameField);
         waitForPresenceOfElement(passwordField);
         usernameField.clear();
@@ -186,7 +183,7 @@ public class LoginPage extends BasePage {
     }
 
     @Step
-    public LoginPage try_login_with_incorrect_login_and_correct_password() {
+    public LoginPage try_login_with_incorrect_login_and_correct_password()  {
         waitForPresenceOfElement(usernameField);
         waitForPresenceOfElement(passwordField);
         usernameField.clear();

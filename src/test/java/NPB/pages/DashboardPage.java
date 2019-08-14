@@ -48,26 +48,8 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//span[@class='company']")
     private WebElement companyName;
 
-    @FindBy(xpath = "//img[@src='/assets/img/icons/dashboard-icon.png']")
-    private WebElement dashboardIcon;
-
-    @FindBy(xpath = "//img[@src='/assets/img/icons/order-icon.png']")
-    private WebElement orderIcon;
-
-    @FindBy(xpath = "//img[@src='/assets/img/icons/ordered-icon.png']")
-    private WebElement orderedIcon;
-
-    @FindBy(xpath = "//img[@src='/assets/img/icons/reports-icon.png']")
-    private WebElement reportsIcon;
-
-    @FindBy(xpath = "//img[@src='/assets/img/icons/manage-icon.svg']")
-    private WebElement manageIcon;
-
-    @FindBy(xpath = "//img[@src='/assets/img/icons/manage-icon.png']")
-    private WebElement usersIcon;
-
-    @FindBy(xpath = "//img[@src='/assets/img/icons/settings-icon.png']")
-    private WebElement seetingsIcon;
+    @FindBy(xpath = "//a[@href='/manage']//span[.='Zarządzanie']")
+    private WebElement manageButton;
 
 
     @Step
@@ -138,15 +120,11 @@ public class DashboardPage extends BasePage {
     }
 
     @Step
-    public void compareScreenshots(String baseFileName) throws IOException, AWTException {
-        new CaptureScreenshotOfElement(driver).takeScreenshotOfElement(menuSection);
-        Assert.assertEquals(CompareScreens.Result.SizeMismatch, CompareScreenshots.CompareImage("menu"));
-    }
-
-    @Step
-    public void takeScreen() throws IOException {
-        waitForPresenceOfElement(menuSection);
-        new CaptureScreenshotOfElement(driver).takeScreenshotOfElement(menuSection);
+    public MpkPage go_to_MpkPage() {
+        waitForPresenceOfElement(manageButton);
+        waitForElementToBeClickable(manageButton);
+        manageButton.click();
+        return new MpkPage(driver);
     }
 }
 

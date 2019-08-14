@@ -4,12 +4,10 @@ import NPB.utilities.CaptureScreenshotOfElement;
 import NPB.utilities.DriverFactory;
 import NPB.utilities.DriverType;
 import NPB.utilities.NowSuchDriverException;
+import iTaxiPassanger.utilities.CaptureElementPicture;
 import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -21,11 +19,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.By.id;
+import static org.openqa.selenium.By.name;
 
 public class BaseTests {
 
@@ -35,12 +35,15 @@ public class BaseTests {
     public void setUp() throws NowSuchDriverException {
 
         driver = DriverFactory.getDriver(DriverType.CHROME);
-        String url = "https://npb.jsdev.com.pl";
+        String url = "https://npb.jsdev.com.pl/login";
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(url);
         driver.manage().deleteAllCookies();
 
     }
+
+
+
 
     @AfterMethod
     @Attachment(value = "Error screenshot", type = "image/png")

@@ -19,7 +19,9 @@ public class CaptureElementPicture extends BasePage {
     public File takeScreenshotOfElement(WebElement element) throws IOException {
 
 // Get entire page screenshot
-        File screen = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File screen = driver
+                .getScreenshotAs(OutputType.FILE);
+
         BufferedImage eleImg = ImageIO.read(screen);
 
 // Get the location of element on the page

@@ -1,43 +1,47 @@
 package NPB.utilities;
 
-import java.awt.Rectangle;
-import java.awt.image.BufferedImage;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.Point;
+import org.openqa.selenium.remote.Augmenter;
 
+import java.awt.Rectangle;
 import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+public class CaptureScreenshotOfElement {
 
-public class CaptureScreenshotOfElement extends NPB.pages.BasePage {
+    private final String screenshotFolder = "C://Users//user//Desktop//NPB//src//test//java//NPB//tests//ScreenshotsToCompareInTests//screenshot.png";
+    protected WebDriver driver;
 
     public CaptureScreenshotOfElement(WebDriver driver) {
-        super(driver);
+        this.driver = driver;
     }
 
-    public File takeScreenshotOfElement(WebElement element) throws IOException {
+    public File takeScreenshot(WebElement element) throws IOException {
 
-        // Take screen shot of whole web page
-        File screenShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        Point point = element.getLocation();
+
+        File screen = ((TakesScreenshot) driver)
+                .getScreenshotAs(OutputType.FILE);
+
+        Point p = element.getLocation();
+
         int width = element.getSize().getWidth();
         int height = element.getSize().getHeight();
+        Rectangle rectangle = new Rectangle(width,height);
 
-        Rectangle rectangle = new Rectangle(width, height);
+        BufferedImage img = ImageIO.read(screen);
 
-        BufferedImage img = ImageIO.read(screenShot);
+        BufferedImage dest = img.getSubimage(p.getX(), p.getY(), rectangle.width,
+               rectangle.height);
 
-        BufferedImage dest = img.getSubimage(point.getX(), point.getY(), rectangle.width, rectangle.height);
+        ImageIO.write(dest, "png", screen);
+        FileUtils.copyFile(screen, new File(screenshotFolder));
 
-        // write cropped image into File Object
-        ImageIO.write(dest, "png", screenShot);
 
-        // Copy the element screenshot to disk
-        File screenshotLocation = new File("C://Users//user//Desktop//NPB//src//test//java//NPB//tests//ScreenshotsToCompareInTests//screenshot.png");
-        FileUtils.copyFile(screenShot, screenshotLocation);
-        return screenShot;
+        return screen;
+
     }
 }
