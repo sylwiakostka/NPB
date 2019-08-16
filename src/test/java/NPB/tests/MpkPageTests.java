@@ -37,7 +37,21 @@ public class MpkPageTests extends BaseTests {
                 .choose_business_partner_from_list("ABC")
                 .go_to_MpkPage()
                 .verify_MpkPage()
-                .choose_appropriate_mpk_without_users_and_click_delete("c");
+                .show_amount_of_rows_per_page("20")
+                .choose_appropriate_mpk_without_users_and_click_delete("erw")
+                .verify_if_deleted_mpk_isnt_on_list("erw");
+    }
+
+    @Test
+    public void should_active_deleted_mpk() throws InterruptedException {
+        new LoginPage(driver)
+                .verify_loginPage()
+                .login_as_superAdmin()
+                .choose_business_partner_from_list("ABC")
+                .go_to_MpkPage()
+                .verify_MpkPage()
+                .active_deleted_mpk("dd");
+
     }
 
 }
