@@ -1,8 +1,5 @@
 package NPB.pages;
 
-import NPB.utilities.WebTable;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.github.javafaker.Bool;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -44,7 +41,7 @@ public class MpkPage extends BasePage {
     @FindBy(xpath = "//div[@class='notification green notification-enter-done']//p[.='Pomyślnie dodano']")
     private WebElement notificationSucessfullAdded;
 
-    @FindBy(tagName = "h3")
+    @FindBy(xpath = "//h3[contains(.,'Zarządzanie MPK - firma')]")
     private WebElement mpkHeader;
 
     @FindBy(xpath = "//div[@class='tabs']//a[@href='/manage/mpk']")
@@ -74,6 +71,31 @@ public class MpkPage extends BasePage {
     @FindBy(xpath = "//select[@aria-label='rows per page']")
     private WebElement selectRowsPerPage;
 
+    @FindBy(xpath = "//div[@class='notification green notification-enter-done']//p[.='Powyślnie aktywowano']")
+    private WebElement notificationSucessActivated;
+
+    @FindBy(xpath = "//div[@class='inputs']//h3[.='Edytuj']")
+    private WebElement editMpkForm;
+
+    @FindBy(xpath = "//input[@placeholder='Wpisz...']")
+    private WebElement mpkListToAssignEmployee;
+
+    @FindBy(xpath = "//div[@class='notification green notification-enter-done']//p[.='Pomyślnie zapisano']")
+    private WebElement notificationSucessSaved;
+
+    @FindBy(xpath = "//div[@class='notification green notification-enter-done']//p[.='Pomyślnie przypisano użytkowników']")
+    private WebElement notificationSucessUserAssigned;
+
+    @FindBy(xpath = "//button[.='Następna']")
+    private WebElement nextPageButton;
+
+    @FindBy(xpath = "//button[.='Poprzednia']")
+    private WebElement backPageButton;
+
+    @FindBy(xpath = "//span[@class='-totalPages']")
+    private WebElement totalPagesCount;
+
+
     @Step
     public MpkPage verify_MpkPage() throws InterruptedException {
         Thread.sleep(3000);
@@ -89,6 +111,24 @@ public class MpkPage extends BasePage {
         Assert.assertEquals(officesButtonHeader.getText(), "Firma");
         return this;
     }
+
+    @Step
+    public MpkPage verify_mpk_tab_header_names() {
+        List<String> expectedTexts = Arrays.asList("Limit kwotowy", "Wykorzystano", "Alert gdy pozostało mniej niż", "Uwagi", "Opcje");
+        List<String> actualTexts = new ArrayList<>();
+
+        List<WebElement> listOfHeaderNames = driver.findElements(By.xpath("//div[@class='rt-thead -header']//div[@role='row']/descendant::div[@class='rt-resizable-header-content']"));
+        for (WebElement header : listOfHeaderNames) {
+            System.out.println(header.getText());
+            actualTexts.add(header.getText());
+        }
+
+        System.out.println("expected: "+ expectedTexts.toString() + " " + "actual: "+actualTexts.toString());
+        Assert.assertEquals(actualTexts.toString(), expectedTexts.toString());
+
+        return this;
+    }
+
 
     @Step
     public MpkPage add_new_mpk(String mpkName, String maxAmount, String alertAmount, String comment) {
@@ -129,7 +169,7 @@ public class MpkPage extends BasePage {
     }
 
     @Step
-    public MpkPage cant_add_mpk_without_data() throws InterruptedException {
+    public MpkPage cant_add_mpk_without_data() {
         waitForPresenceOfElement(addMpkButton);
         addMpkButton.click();
         waitForPresenceOfElement(addMpkForm);
@@ -146,8 +186,7 @@ public class MpkPage extends BasePage {
         for (WebElement row : rows) {
             if (row.getText().equals(mpkName)) {
                 System.out.println(row.getText());
-                WebElement optionsRow = row.findElement(By.xpath("./following-sibling::div[5]"));
-                WebElement deleteButton = optionsRow.findElement(By.xpath("//div[@class='options']//span[.='Usuń']"));
+                WebElement deleteButton = row.findElement(By.xpath("./following-sibling::div[5]//span[.='Usuń']"));
                 deleteButton.click();
             }
         }
@@ -167,8 +206,7 @@ public class MpkPage extends BasePage {
         for (WebElement row : rows) {
             if (row.getText().equals(mpkName)) {
                 System.out.println(row.getText());
-                WebElement optionsRow = row.findElement(By.xpath("./following-sibling::div[5]"));
-                WebElement activeButton = optionsRow.findElement(By.xpath("//div[@class='options']//span[.='Aktywuj']"));
+                WebElement activeButton = row.findElement(By.xpath("./following-sibling::div[5]//span[.='Aktywuj']"));
                 Assert.assertTrue(activeButton.isDisplayed());
                 Assert.assertEquals(activeButton.getText(), "Aktywuj");
             }
@@ -178,17 +216,17 @@ public class MpkPage extends BasePage {
 
 
     @Step
-    public MpkPage edit_mpk(String mpkName) throws InterruptedException {
+    public MpkPage choose_appropriate_mpk_without_users_and_click_edit(String mpkName) throws InterruptedException {
         Thread.sleep(2000);
         List<WebElement> rows = driver.findElements(By.xpath("//div[@class='rt-tr-group']//div[@class='rt-td']"));
         for (WebElement row : rows) {
             if (row.getText().equals(mpkName)) {
-                WebElement optionsRow = row.findElement(By.xpath("./following-sibling::div[5]"));
-                WebElement editButton = optionsRow.findElement(By.xpath("//div[@class='options']//span[.='Edytuj']"));
+                WebElement editButton = row.findElement(By.xpath("./following-sibling::div[5]//span[.='Edytuj']"));
                 editButton.click();
             }
         }
-
+        waitForPresenceOfElement(editMpkForm);
+        Assert.assertEquals(nameField.getAttribute("value"), mpkName);
         return this;
     }
 
@@ -209,22 +247,104 @@ public class MpkPage extends BasePage {
                 WebElement optionsRow = row.findElement(By.xpath("./following-sibling::div[5]"));
                 Assert.assertEquals(optionsRow.getText(), "Aktywuj");
                 optionsRow.click();
+                waitForPresenceOfElement(notificationSucessActivated);
+                Assert.assertEquals(notificationSucessActivated.getText(), "Powyślnie aktywowano");
 
-//                Assert.assertEquals(activeButton.getText(), "Aktywuj");
-//                activeButton.click();
+                WebElement editButton = optionsRow.findElement(By.xpath("//div[@class='options']//span[.='Edytuj']"));
+                Assert.assertTrue(editButton.isDisplayed());
+                Assert.assertEquals(editButton.getText(), "Edytuj");
 
-//                WebElement editButton = optionsRow.findElement(By.xpath("//div[@class='options']//span[.='Edytuj']"));
-//                Assert.assertTrue(editButton.isDisplayed());
-//                Assert.assertEquals(editButton.getText(), "Edytuj");
-//
-//                WebElement deleteButton = optionsRow.findElement(By.xpath("//div[@class='options']//span[.='Usuń']"));
-//                Assert.assertTrue(deleteButton.isDisplayed());
-//                Assert.assertEquals(deleteButton.getText(), "Usuń");
+                WebElement deleteButton = optionsRow.findElement(By.xpath("//div[@class='options']//span[.='Usuń']"));
+                Assert.assertTrue(deleteButton.isDisplayed());
+                Assert.assertEquals(deleteButton.getText(), "Usuń");
             }
         }
         return this;
     }
 
+    @Step
+    public MpkPage edit_mpk_fields(String mpkName, String maxAmount, String alertAmount, String comment, String newMpkToAssignEmployee) throws InterruptedException {
+        waitForPresenceOfElement(editMpkForm);
+        nameField.clear();
+        maxAmountField.clear();
+        alertAmountField.clear();
+        commentField.clear();
+
+        nameField.sendKeys(mpkName);
+        maxAmountField.sendKeys(maxAmount);
+        alertAmountField.sendKeys(alertAmount);
+        commentField.sendKeys(comment);
+        mpkListToAssignEmployee.sendKeys(newMpkToAssignEmployee);
+        mpkListToAssignEmployee.click();
+        Thread.sleep(1000);
+        WebElement firstElementFromList = driver.findElement(By.xpath("//div[@class='select-search']//ul[@class='open']//li[1]"));
+        firstElementFromList.click();
+        Thread.sleep(1000);
+        waitForPresenceOfElement(saveMpkButton);
+        saveMpkButton.click();
+        waitForPresenceOfElement(notificationSucessSaved);
+        waitForPresenceOfElement(notificationSucessUserAssigned);
+
+        Assert.assertEquals(notificationSucessSaved.getText(), "Pomyślnie zapisano");
+        Assert.assertEquals(notificationSucessUserAssigned.getText(), "Pomyślnie przypisano użytkowników");
+        return this;
+    }
+
+    @Step
+    public MpkPage choose_appropriate_mpk_with_users_and_click_delete(String mpkName, String newMpkToAssignEmployee) throws InterruptedException {
+        Thread.sleep(2000);
+        List<WebElement> rows = driver.findElements(By.xpath("//div[@class='rt-tr-group']//div[@class='rt-td']"));
+        for (WebElement row : rows) {
+            if (row.getText().equals(mpkName)) {
+                System.out.println(row.getText());
+                WebElement deleteButton = row.findElement(By.xpath("./following-sibling::div[5]//span[.='Usuń']"));
+                deleteButton.click();
+            }
+        }
+        waitForPresenceOfElement(deleteMpkConfirmSection);
+        System.out.println(deleteMpkConfirmSection.getText());
+        Assert.assertEquals(deleteMpkConfirmSection.getText(), "Usuwanie\n" +
+                "Uwaga! Ten MPK ma przypisanych użytkowników!\n" +
+                "Wybierz do jakiego MPK ich przypisać:");
+        mpkListToAssignEmployee.sendKeys(newMpkToAssignEmployee);
+        mpkListToAssignEmployee.click();
+        Thread.sleep(1000);
+        WebElement firstElementFromList = driver.findElement(By.xpath("//div[@class='select-search']//ul[@class='open']//li[1]"));
+        firstElementFromList.click();
+        Thread.sleep(1000);
+        deleteMpkConfirmButton.click();
+        waitForPresenceOfElement(notificationSucessDeleted);
+        Assert.assertEquals(notificationSucessDeleted.getText(), "Pomyślnie usunięto");
+        Assert.assertEquals(notificationSucessUserAssigned.getText(), "Pomyślnie przypisano użytkowników");
+        return this;
+    }
+
+    @Step
+    public MpkPage verify_if_next_and_back_buttons_are_active_and_clickable() throws InterruptedException {
+        Thread.sleep(2000);
+        int pageCount = Integer.parseInt(totalPagesCount.getText());
+        System.out.println(pageCount);
+        if (pageCount > 1) {
+            Assert.assertTrue(nextPageButton.isEnabled());
+            Assert.assertFalse(backPageButton.isEnabled());
+            nextPageButton.click();
+            Assert.assertTrue(backPageButton.isEnabled());
+            Assert.assertFalse(nextPageButton.isEnabled());
+            backPageButton.click();
+        } else {
+            Assert.assertFalse(nextPageButton.isEnabled());
+            Assert.assertFalse(backPageButton.isEnabled());
+        }
+
+        return this;
+    }
+
+    @Step
+    public ProfilesPage go_to_ProfilesPage(){
+        profilesButtonHeader.click();
+        return new ProfilesPage(driver);
+
+    }
 }
 
 
