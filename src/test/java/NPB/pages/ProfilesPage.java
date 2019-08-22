@@ -125,8 +125,6 @@ public class ProfilesPage extends BasePage {
     @FindBy(xpath = "//div[@class='rt-thead -filters']//div[@class='rt-th'][6]//input")
     private WebElement usersNumberSearchField;
 
-    @FindBy(xpath = "//div[@class='rt-noData']")
-    private WebElement noResultInfo;
 
     @Step
     public ProfilesPage verify_profilesPage() throws InterruptedException {

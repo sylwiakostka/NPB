@@ -1,5 +1,6 @@
 package NPB.pages;
 
+import NPB.utilities.SearchFromTables;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -95,7 +96,20 @@ public class MpkPage extends BasePage {
     @FindBy(xpath = "//span[@class='-totalPages']")
     private WebElement totalPagesCount;
 
+    @FindBy(xpath = "//div[@class='rt-thead -filters']//div[@class='rt-th'][1]//input")
+    private WebElement nameSearchField;
 
+    @FindBy(xpath = "//div[@class='rt-thead -filters']//div[@class='rt-th'][2]//input")
+    private WebElement maxAmountSearchField;
+
+    @FindBy(xpath = "//div[@class='rt-thead -filters']//div[@class='rt-th'][3]//input")
+    private WebElement usedAmountSearchField;
+
+    @FindBy(xpath = "//div[@class='rt-thead -filters']//div[@class='rt-th'][4]//input")
+    private WebElement alertAmountSearchField;
+
+    @FindBy(xpath = "//div[@class='rt-thead -filters']//div[@class='rt-th'][5]//input")
+    private WebElement commentSearchField;
 
 
     @Step
@@ -134,7 +148,7 @@ public class MpkPage extends BasePage {
     @Step
     public MpkPage verify_new_mpk_form_fields_name() {
 
-        List<String> expectedTexts = Arrays.asList("Nazwa", "Limit kwotowy","Alert gdy pozostało mniej niż", "Uwagi");
+        List<String> expectedTexts = Arrays.asList("Nazwa", "Limit kwotowy", "Alert gdy pozostało mniej niż", "Uwagi");
         List<String> actualTexts = new ArrayList<>();
 
         List<WebElement> mpkFields = driver.findElements(By.xpath("//div[@class='inputs']//div[@class='input']"));
@@ -373,7 +387,7 @@ public class MpkPage extends BasePage {
     }
 
     @Step
-    public MpkPage verify_is_mpk_edited (String newMpkName, String newMaxAmount, String newAlertAmount, String newComment) throws InterruptedException {
+    public MpkPage verify_is_mpk_edited(String newMpkName, String newMaxAmount, String newAlertAmount, String newComment) throws InterruptedException {
         Thread.sleep(3000);
         List<WebElement> rows = driver.findElements(By.xpath("//div[@class='rt-tr-group']//div[@class='rt-td']"));
         for (WebElement row : rows) {
@@ -393,12 +407,44 @@ public class MpkPage extends BasePage {
             }
         }
 
-
-
-
-
         return this;
     }
+
+    @Step
+    public MpkPage sort_data_by_name(String nameToSearch) throws InterruptedException {
+        List<WebElement> rowsWithName = driver.findElements(By.xpath("//div[@class='rt-tr-group']/descendant::div[2]"));
+        new SearchFromTables(driver).sort_data_by(nameToSearch, rowsWithName, nameSearchField);
+        return this;
+    }
+
+    @Step
+    public MpkPage sort_data_by_maxAmount(String maxAmountToSearch) throws InterruptedException {
+        List<WebElement> rowsWithMaxAmount = driver.findElements(By.xpath("//div[@class='rt-tr-group']/descendant::div[3]"));
+        new SearchFromTables(driver).sort_data_by(maxAmountToSearch, rowsWithMaxAmount, maxAmountSearchField);
+        return this;
+    }
+
+    @Step
+    public MpkPage sort_data_by_usedAmount(String usedAmountToSearch) throws InterruptedException {
+        List<WebElement> rowsWithUsedAmount = driver.findElements(By.xpath("//div[@class='rt-tr-group']/descendant::div[4]"));
+        new SearchFromTables(driver).sort_data_by(usedAmountToSearch, rowsWithUsedAmount, usedAmountSearchField);
+        return this;
+    }
+
+    @Step
+    public MpkPage sort_data_by_maxAlert(String alertAmountToSearch) throws InterruptedException {
+        List<WebElement> rowsWithMaxAlert = driver.findElements(By.xpath("//div[@class='rt-tr-group']/descendant::div[5]"));
+        new SearchFromTables(driver).sort_data_by(alertAmountToSearch, rowsWithMaxAlert, alertAmountSearchField);
+        return this;
+    }
+
+    @Step
+    public MpkPage sort_data_by_comments(String commetsToSearch) throws InterruptedException {
+        List<WebElement> rowsWithComments = driver.findElements(By.xpath("//div[@class='rt-tr-group']/descendant::div[6]"));
+        new SearchFromTables(driver).sort_data_by(commetsToSearch, rowsWithComments, alertAmountSearchField);
+        return this;
+    }
+
 }
 
 

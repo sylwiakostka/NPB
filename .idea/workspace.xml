@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MpkPage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MpkPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/MpkPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="781">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="333">
+              <caret line="435" column="119" selection-start-line="435" selection-start-column="119" selection-end-line="435" selection-end-column="119" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,15 +35,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchFromTables.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/SearchFromTables.java">
+      <file leaf-file-name="MpkPageTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/MpkPageTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="449">
+              <caret line="130" column="1" lean-forward="true" selection-start-line="130" selection-start-column="1" selection-end-line="130" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#457#458#0" expanded="true" />
-                <element signature="e#486#487#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfilesPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/ProfilesPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="722" column="5" lean-forward="true" selection-start-line="717" selection-start-column="3" selection-end-line="722" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfilesPageTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/ProfilesPageTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,7 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>poi</find>
       <find>get</find>
       <find>getCe</find>
       <find>right</find>
@@ -91,6 +112,7 @@
       <find>remove</find>
       <find>array</find>
       <find>by_da</find>
+      <find>name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -144,11 +166,11 @@
         <option value="$PROJECT_DIR$/src/test/java/NPB/utilities/LogUsersDataProvider.java" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/tests/LoginPageTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/utilities/ManageDataProvider.java" />
-        <option value="$PROJECT_DIR$/src/test/java/NPB/tests/MpkPageTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/pages/BasePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/NPB/tests/ProfilesPageTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/utilities/SearchFromTables.java" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/pages/ProfilesPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/NPB/tests/ProfilesPageTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/NPB/tests/MpkPageTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/NPB/pages/MpkPage.java" />
       </list>
     </option>
@@ -269,7 +291,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ProfilesPageTests.should_verify_data_sort_in_columns">
+  <component name="RunManager" selected="TestNG.MpkPageTests.verify_data_sort_in_columns">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -299,7 +321,7 @@
       <option name="WORKING_DIRECTORY" />
       <module name="" />
     </configuration>
-    <configuration name="MpkPageTests.should_edit_mpk" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MpkPageTests.verify_data_sort_in_columns" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ExerciseTests" />
       <extension name="coverage">
         <pattern>
@@ -312,7 +334,7 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="NPB.tests" />
       <option name="MAIN_CLASS_NAME" value="NPB.tests.MpkPageTests" />
-      <option name="METHOD_NAME" value="should_edit_mpk" />
+      <option name="METHOD_NAME" value="verify_data_sort_in_columns" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -467,19 +489,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="TestNG.MpkPageTests.should_edit_mpk" />
       <item itemvalue="TestNG.ProfilesPageTests.should_cant_add_new_profile_without_data_with_incorrect_limits_and_with_incorrect_hours" />
       <item itemvalue="TestNG.ProfilesPageTests.should_take_names" />
       <item itemvalue="TestNG.ProfilesPageTests.should_compare_profile_list_in_delete_and_edit_section" />
       <item itemvalue="TestNG.ProfilesPageTests.should_verify_data_sort_in_columns" />
+      <item itemvalue="TestNG.MpkPageTests.verify_data_sort_in_columns" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.MpkPageTests.verify_data_sort_in_columns" />
         <item itemvalue="TestNG.ProfilesPageTests.should_verify_data_sort_in_columns" />
         <item itemvalue="TestNG.ProfilesPageTests.should_compare_profile_list_in_delete_and_edit_section" />
         <item itemvalue="TestNG.ProfilesPageTests.should_take_names" />
         <item itemvalue="TestNG.ProfilesPageTests.should_cant_add_new_profile_without_data_with_incorrect_limits_and_with_incorrect_hours" />
-        <item itemvalue="TestNG.MpkPageTests.should_edit_mpk" />
       </list>
     </recent_temporary>
   </component>
@@ -497,18 +519,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProfilesPageTests_should_verify_data_sort_in_columns - 2019.08.22 at 14h 13m 28s.xml">
-      <configuration name="ProfilesPageTests.should_verify_data_sort_in_columns" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ProfilesPageTests_should_verify_data_sort_in_columns - 2019.08.22 at 14h 14m 22s.xml">
-      <configuration name="ProfilesPageTests.should_verify_data_sort_in_columns" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ProfilesPageTests_should_verify_data_sort_in_columns - 2019.08.22 at 14h 15m 36s.xml">
-      <configuration name="ProfilesPageTests.should_verify_data_sort_in_columns" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ProfilesPageTests_should_verify_data_sort_in_columns - 2019.08.22 at 14h 19m 48s.xml">
-      <configuration name="ProfilesPageTests.should_verify_data_sort_in_columns" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="ProfilesPageTests_should_verify_data_sort_in_columns - 2019.08.22 at 14h 23m 03s.xml">
       <configuration name="ProfilesPageTests.should_verify_data_sort_in_columns" configurationId="TestNG" />
     </history-entry>
@@ -527,6 +537,18 @@
     <history-entry file="ProfilesPageTests_should_verify_data_sort_in_columns - 2019.08.22 at 14h 33m 06s.xml">
       <configuration name="ProfilesPageTests.should_verify_data_sort_in_columns" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="MpkPageTests_verify_data_sort_in_columns - 2019.08.22 at 15h 31m 27s.xml">
+      <configuration name="MpkPageTests.verify_data_sort_in_columns" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MpkPageTests_verify_data_sort_in_columns - 2019.08.22 at 15h 32m 09s.xml">
+      <configuration name="MpkPageTests.verify_data_sort_in_columns" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MpkPageTests_verify_data_sort_in_columns - 2019.08.22 at 15h 35m 03s.xml">
+      <configuration name="MpkPageTests.verify_data_sort_in_columns" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MpkPageTests_verify_data_sort_in_columns - 2019.08.22 at 15h 37m 25s.xml">
+      <configuration name="MpkPageTests.verify_data_sort_in_columns" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -539,6 +561,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3264516" />
@@ -549,11 +572,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3298969" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3264516" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34972066" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34972066" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32516128" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26545843" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26545843" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32513967" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -865,16 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/MpkPageTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/JsHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -930,10 +943,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/SearchFromTables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding>
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/MpkPageTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="130" column="1" lean-forward="true" selection-start-line="130" selection-start-column="1" selection-end-line="130" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/NPB/tests/ProfilesPageTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="319">
+          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -942,34 +976,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/ProfilesPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="696" selection-start-line="696" selection-end-line="696" />
+        <state relative-caret-position="339">
+          <caret line="722" column="5" lean-forward="true" selection-start-line="717" selection-start-column="3" selection-end-line="722" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/NPB/pages/MpkPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="333">
+          <caret line="435" column="119" selection-start-line="435" selection-start-column="119" selection-end-line="435" selection-end-column="119" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NPB/utilities/SearchFromTables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
           </folding>
         </state>
       </provider>

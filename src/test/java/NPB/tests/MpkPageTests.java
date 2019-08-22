@@ -54,8 +54,6 @@ public class MpkPageTests extends BaseTests {
     }
 
 
-
-
 //    @Test
 //    public void should_cant_add_new_mpk_reapeted_name() throws InterruptedException {
 //        new LoginPage(driver)
@@ -93,7 +91,7 @@ public class MpkPageTests extends BaseTests {
                 .active_deleted_mpk("cb");
     }
 
-// moze być z users i bez users oddzielnie - to jest do poprawki!
+    // moze być z users i bez users oddzielnie - to jest do poprawki!
     @Test
     public void should_edit_mpk() throws InterruptedException {
         new LoginPage(driver)
@@ -120,6 +118,19 @@ public class MpkPageTests extends BaseTests {
                 .verify_if_deleted_mpk_isnt_on_list("cd");
     }
 
-// zrobic test, ze nie ma nieaktywnych mpk na liscie do przypisania
-
+    @Test
+    public void verify_data_sort_in_columns() throws InterruptedException {
+        new LoginPage(driver)
+                .verify_loginPage()
+                .login_as_superAdmin()
+                .choose_business_partner_from_list("HH")
+                .go_to_MpkPage()
+                .verify_MpkPage()
+                .sort_data_by_name("te")
+                .sort_data_by_maxAmount("12")
+                .sort_data_by_usedAmount("33")
+                .sort_data_by_maxAlert("2")
+                .sort_data_by_comments("x")
+        ;
+    }
 }
