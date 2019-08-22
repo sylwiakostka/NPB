@@ -81,7 +81,7 @@ public class MpkPage extends BasePage {
     private WebElement mpkListToAssignEmployee;
 
     @FindBy(xpath = "//div[@class='notification green notification-enter-done']//p[.='Pomyślnie zapisano']")
-    private WebElement notificationSucessSaved;
+    private WebElement notificationSucessSavedChanges;
 
     @FindBy(xpath = "//div[@class='notification green notification-enter-done']//p[.='Pomyślnie przypisano użytkowników']")
     private WebElement notificationSucessUserAssigned;
@@ -94,6 +94,8 @@ public class MpkPage extends BasePage {
 
     @FindBy(xpath = "//span[@class='-totalPages']")
     private WebElement totalPagesCount;
+
+
 
 
     @Step
@@ -123,7 +125,25 @@ public class MpkPage extends BasePage {
             actualTexts.add(header.getText());
         }
 
-        System.out.println("expected: "+ expectedTexts.toString() + " " + "actual: "+actualTexts.toString());
+        System.out.println("expected: " + expectedTexts.toString() + " " + "actual: " + actualTexts.toString());
+        Assert.assertEquals(actualTexts.toString(), expectedTexts.toString());
+
+        return this;
+    }
+
+    @Step
+    public MpkPage verify_new_mpk_form_fields_name() {
+
+        List<String> expectedTexts = Arrays.asList("Nazwa", "Limit kwotowy","Alert gdy pozostało mniej niż", "Uwagi");
+        List<String> actualTexts = new ArrayList<>();
+
+        List<WebElement> mpkFields = driver.findElements(By.xpath("//div[@class='inputs']//div[@class='input']"));
+        for (WebElement field : mpkFields) {
+            System.out.println(field.getText());
+            actualTexts.add(field.getText());
+        }
+
+        System.out.println("expected: " + expectedTexts.toString() + " " + "actual: " + actualTexts.toString());
         Assert.assertEquals(actualTexts.toString(), expectedTexts.toString());
 
         return this;
@@ -135,6 +155,7 @@ public class MpkPage extends BasePage {
         waitForPresenceOfElement(addMpkButton);
         addMpkButton.click();
         waitForPresenceOfElement(addMpkForm);
+        verify_new_mpk_form_fields_name();
         nameField.sendKeys(mpkName);
         maxAmountField.sendKeys(maxAmount);
         alertAmountField.sendKeys(alertAmount);
@@ -263,17 +284,21 @@ public class MpkPage extends BasePage {
     }
 
     @Step
-    public MpkPage edit_mpk_fields(String mpkName, String maxAmount, String alertAmount, String comment, String newMpkToAssignEmployee) throws InterruptedException {
+    public MpkPage edit_mpk_fields_and_verify_if_is_edited(String newMpkName, String newMaxAmount, String newAlertAmount, String newComment, String newMpkToAssignEmployee) throws InterruptedException {
         waitForPresenceOfElement(editMpkForm);
-        nameField.clear();
-        maxAmountField.clear();
-        alertAmountField.clear();
-        commentField.clear();
 
-        nameField.sendKeys(mpkName);
-        maxAmountField.sendKeys(maxAmount);
-        alertAmountField.sendKeys(alertAmount);
-        commentField.sendKeys(comment);
+        nameField.clear();
+        nameField.sendKeys(newMpkName);
+
+        maxAmountField.clear();
+        maxAmountField.sendKeys(newMaxAmount);
+
+        alertAmountField.clear();
+        alertAmountField.sendKeys(newAlertAmount);
+
+        commentField.clear();
+        commentField.sendKeys(newComment);
+
         mpkListToAssignEmployee.sendKeys(newMpkToAssignEmployee);
         mpkListToAssignEmployee.click();
         Thread.sleep(1000);
@@ -282,11 +307,13 @@ public class MpkPage extends BasePage {
         Thread.sleep(1000);
         waitForPresenceOfElement(saveMpkButton);
         saveMpkButton.click();
-        waitForPresenceOfElement(notificationSucessSaved);
+        waitForPresenceOfElement(notificationSucessSavedChanges);
         waitForPresenceOfElement(notificationSucessUserAssigned);
 
-        Assert.assertEquals(notificationSucessSaved.getText(), "Pomyślnie zapisano");
-        Assert.assertEquals(notificationSucessUserAssigned.getText(), "Pomyślnie przypisano użytkowników");
+        Assert.assertEquals(notificationSucessSavedChanges.getText(), "Pomyślnie zapisano");
+
+
+        verify_is_mpk_edited(newMpkName, newMaxAmount, newAlertAmount, newComment);
         return this;
     }
 
@@ -315,7 +342,6 @@ public class MpkPage extends BasePage {
         deleteMpkConfirmButton.click();
         waitForPresenceOfElement(notificationSucessDeleted);
         Assert.assertEquals(notificationSucessDeleted.getText(), "Pomyślnie usunięto");
-        Assert.assertEquals(notificationSucessUserAssigned.getText(), "Pomyślnie przypisano użytkowników");
         return this;
     }
 
@@ -340,10 +366,38 @@ public class MpkPage extends BasePage {
     }
 
     @Step
-    public ProfilesPage go_to_ProfilesPage(){
+    public ProfilesPage go_to_ProfilesPage() {
         profilesButtonHeader.click();
         return new ProfilesPage(driver);
 
+    }
+
+    @Step
+    public MpkPage verify_is_mpk_edited (String newMpkName, String newMaxAmount, String newAlertAmount, String newComment) throws InterruptedException {
+        Thread.sleep(3000);
+        List<WebElement> rows = driver.findElements(By.xpath("//div[@class='rt-tr-group']//div[@class='rt-td']"));
+        for (WebElement row : rows) {
+            if (row.getText().equals(newMpkName)) {
+                WebElement maxAmountRow = row.findElement(By.xpath("./following-sibling::div[1]"));
+                WebElement alertRow = row.findElement(By.xpath("./following-sibling::div[3]"));
+                WebElement commentRow = row.findElement(By.xpath("./following-sibling::div[4]"));
+                WebElement optionsRow = row.findElement(By.xpath("./following-sibling::div[5]"));
+
+                Assert.assertEquals(row.getText(), newMpkName);
+                Assert.assertEquals(maxAmountRow.getText(), newMaxAmount);
+                Assert.assertEquals(alertRow.getText(), newAlertAmount);
+                Assert.assertEquals(commentRow.getText(), newComment);
+                Assert.assertTrue(optionsRow.getText().contains("Edytuj"));
+                Assert.assertTrue(optionsRow.getText().contains("Usuń"));
+                Assert.assertFalse(optionsRow.getText().contains("Aktywuj"));
+            }
+        }
+
+
+
+
+
+        return this;
     }
 }
 

@@ -32,12 +32,6 @@ public class LogUsersDataProvider {
         return (testObjArray);
     }
 
-    @DataProvider(name="correctDataToAddMPK")
-    public Object[][] correctDataMPK() throws Exception{
-        Object[][] testObjArray = ExcelUtils.getData("C://Users//user//Desktop//NPB//src//test//java//NPB//tests//Excels//mpk.xlsx", "correctData");
-        return (testObjArray);
-    }
-
 
 
 

@@ -1,7 +1,7 @@
 package NPB.tests;
 
 import NPB.pages.LoginPage;
-import NPB.utilities.LogUsersDataProvider;
+import NPB.utilities.ManageDataProvider;
 import org.testng.annotations.Test;
 
 public class MpkPageTests extends BaseTests {
@@ -30,7 +30,7 @@ public class MpkPageTests extends BaseTests {
     }
 
 
-    @Test(dataProvider = "correctDataToAddMPK", dataProviderClass = LogUsersDataProvider.class)
+    @Test(dataProvider = "correctDataToAddMPK", dataProviderClass = ManageDataProvider.class)
     public void should_add_new_mpk(String mpkName, String maxAmount, String alertAmount, String comment) throws InterruptedException {
         new LoginPage(driver)
                 .verify_loginPage()
@@ -43,7 +43,7 @@ public class MpkPageTests extends BaseTests {
     }
 
     @Test
-    public void should_cant_add_new_mpk() throws InterruptedException {
+    public void should_cant_add_new_mpk_without_data() throws InterruptedException {
         new LoginPage(driver)
                 .verify_loginPage()
                 .login_as_superAdmin()
@@ -53,8 +53,23 @@ public class MpkPageTests extends BaseTests {
                 .cant_add_mpk_without_data();
     }
 
+
+
+
+//    @Test
+//    public void should_cant_add_new_mpk_reapeted_name() throws InterruptedException {
+//        new LoginPage(driver)
+//                .verify_loginPage()
+//                .login_as_superAdmin()
+//                .choose_business_partner_from_list("ABC")
+//                .go_to_MpkPage()
+//                .verify_MpkPage();
+//
+//    }
+
+
     @Test
-    public void should_delete_mpk_without_users() throws InterruptedException {
+    public void should_delete_mpk_without_users_added() throws InterruptedException {
         new LoginPage(driver)
                 .verify_loginPage()
                 .login_as_superAdmin()
@@ -78,7 +93,7 @@ public class MpkPageTests extends BaseTests {
                 .active_deleted_mpk("cb");
     }
 
-
+// moze być z users i bez users oddzielnie - to jest do poprawki!
     @Test
     public void should_edit_mpk() throws InterruptedException {
         new LoginPage(driver)
@@ -87,22 +102,24 @@ public class MpkPageTests extends BaseTests {
                 .choose_business_partner_from_list("ABC")
                 .go_to_MpkPage()
                 .verify_MpkPage()
-                .choose_appropriate_mpk_without_users_and_click_edit("cf")
-                .edit_mpk_fields("deraw", "257", "134", "chopek roztropek2", "Cała firma");
+                .show_amount_of_rows_per_page("50")
+                .choose_appropriate_mpk_without_users_and_click_edit("wwww")
+                .edit_mpk_fields_and_verify_if_is_edited("Promenada", "290", "120", "fajny seans", "dd");
     }
 
 
-//    @Test
-//    public void should_delete_mpk_with_users() throws InterruptedException {
-//        new LoginPage(driver)
-//                .verify_loginPage()
-//                .login_as_superAdmin()
-//                .choose_business_partner_from_list("ABC")
-//                .go_to_MpkPage()
-//                .verify_MpkPage()
-//                .choose_appropriate_mpk_with_users_and_click_delete("123", "ca")
-//                .verify_if_deleted_mpk_isnt_on_list("123");
-//    }
+    @Test
+    public void should_delete_mpk_with_users() throws InterruptedException {
+        new LoginPage(driver)
+                .verify_loginPage()
+                .login_as_superAdmin()
+                .choose_business_partner_from_list("ABC")
+                .go_to_MpkPage()
+                .verify_MpkPage()
+                .choose_appropriate_mpk_with_users_and_click_delete("cd", "cf")
+                .verify_if_deleted_mpk_isnt_on_list("cd");
+    }
 
+// zrobic test, ze nie ma nieaktywnych mpk na liscie do przypisania
 
 }

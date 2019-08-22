@@ -5,9 +5,6 @@ import NPB.utilities.LogUsersDataProvider;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
-import java.awt.*;
-import java.io.IOException;
-
 
 @Feature("LogIn Test")
 public class LoginPageTests extends BaseTests {

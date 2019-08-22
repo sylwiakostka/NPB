@@ -1,14 +1,19 @@
 package NPB.pages;
 
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.function.Function;
 
 public class BasePage {
@@ -22,11 +27,38 @@ public class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    private static final int WAIT_TIMEOUT = 10;
+    private static final int WAIT_TIMEOUT = 20;
 
     protected void waitForVisibilityOfElement(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+
+    protected void waitForVisibilityOfElement2(List<WebElement> elements) {
+        List<WebElement> waitElement = null;
+
+
+        FluentWait<WebDriver> fwait = new FluentWait<WebDriver>(driver)
+                .withTimeout(3, TimeUnit.SECONDS)
+                .pollingEvery(500, TimeUnit.MILLISECONDS)
+                .ignoring(NoSuchElementException.class)
+                .ignoring(TimeoutException.class)
+                .ignoring(StaleElementReferenceException.class);
+
+        try {
+            waitElement = fwait.until(new Function<WebDriver, List<WebElement>>() {
+                public List<WebElement> apply(WebDriver driver) {
+                    return elements;
+                }
+            });
+        } catch (Exception e) {
+        }
+
+        if (waitElement != null) {
+            WebDriverWait wait = new WebDriverWait(driver, 60);
+            wait.until(ExpectedConditions.visibilityOfAllElements(elements));
+        }
+    }
+
 
     protected void waitForElementToBeClickable(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -49,27 +81,24 @@ public class BasePage {
         });
     }
 
-    public void checkPageIsReady() {
-
-        JavascriptExecutor js = (JavascriptExecutor)driver;
-
-
-        //Initially bellow given if condition will check ready state of page.
-        if (js.executeScript("return document.readyState").toString().equals("complete")){
-            System.out.println("Page Is loaded.");
-            return;
-        }
-
-        //This loop will rotate for 25 times to check If page Is ready after every 1 second.
-        //You can replace your value with 25 If you wants to Increase or decrease wait time.
-        for (int i=0; i<25; i++){
-            try {
-                Thread.sleep(1000);
-            }catch (InterruptedException e) {}
-            //To check page ready state.
-            if (js.executeScript("return document.readyState").toString().equals("complete")){
-                break;
+    protected void waitUntilElementNotDisplayed(WebElement element) {
+        Boolean element1 = wait.until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                try {
+                    element.isDisplayed();
+                    return false;
+                } catch (NoSuchElementException e) {
+                    return true;
+                } catch (StaleElementReferenceException f) {
+                    return true;
+                }
             }
-        }
+        });
     }
+
+
 }
+
+
+
+
